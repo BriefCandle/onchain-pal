@@ -1,6 +1,5 @@
-import { useSendUserOperation } from "@coinbase/cdp-hooks";
+import { useSendUserOperation, useCurrentUser } from "@coinbase/cdp-hooks";
 import { useWriteContract, useAccount } from "wagmi";
-import { useCDPWallet } from "./useCDPWallet";
 import { useWallet, WalletType } from "./useWallet";
 import { Hex, encodeFunctionData, Abi } from "viem";
 
@@ -29,7 +28,10 @@ export function useSendTransaction() {
     data: cdpData,
     error: cdpError,
   } = useSendUserOperation();
-  const { smartAccount } = useCDPWallet();
+  const { currentUser } = useCurrentUser();
+
+  // Get smart account from current user
+  const smartAccount = currentUser?.evmSmartAccounts?.[0];
 
   // Wagmi hooks
   const {

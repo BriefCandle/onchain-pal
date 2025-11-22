@@ -3,7 +3,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Analytics } from "@vercel/analytics/react";
-import { CDPEmbeddedWalletProvider } from "./react/wallet/CDPEmbeddedWalletProvider";
+import {
+  CDPHooksProvider,
+  type Config as CDPConfig,
+} from "@coinbase/cdp-hooks";
+import { CDP_PROJECT_ID } from "./react/wallet/wagmiConfig";
 import { useState } from "react";
 import { useEffect } from "react";
 import { setup } from "./mud/setup";
@@ -14,21 +18,32 @@ import { createNoaLayer } from "./noa/createNoaLayer";
 import { setupPreComputed } from "./setup/setupPreComputed";
 import { WagmiProvider } from "wagmi";
 import { wagmiConfig } from "./react/wallet/wagmiConfig";
+import { Toaster } from "@/components/ui/sonner";
 // import { createMockSystem } from "./mock/createMockSystem";
 
 globalThis.Buffer = Buffer;
 
 const queryClient = new QueryClient();
 
+// CDP config for hooks provider
+const cdpConfig: CDPConfig = {
+  projectId: CDP_PROJECT_ID,
+  ethereum: {
+    createOnLogin: "smart",
+  },
+};
+
+// Provider order: CDPHooksProvider must wrap WagmiProvider for CDP hooks to work
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <WagmiProvider config={wagmiConfig}>
-    <QueryClientProvider client={queryClient}>
-      <CDPEmbeddedWalletProvider>
+  <CDPHooksProvider config={cdpConfig}>
+    <WagmiProvider config={wagmiConfig}>
+      <QueryClientProvider client={queryClient}>
         <Root />
+        <Toaster />
         <Analytics />
-      </CDPEmbeddedWalletProvider>
-    </QueryClientProvider>
-  </WagmiProvider>,
+      </QueryClientProvider>
+    </WagmiProvider>
+  </CDPHooksProvider>,
 );
 
 function Root() {

@@ -1,7 +1,7 @@
 import { useMUD } from "../MUDContext";
 // import { Entity, getComponentValue, Has } from "@latticexyz/recs";
 // import { useComponentValue, useEntityQuery } from "@latticexyz/react";
-// import { AccountPanel } from "./panels/AccountPanel";
+import { MultiWalletButton } from "./wallet/MultiWalletButton";
 import React, { useRef, useEffect, useState } from "react";
 import { MoveButton } from "./actions/Move";
 import { SpawnTrainerButton } from "./actions/SpawnTrainer";
@@ -14,7 +14,6 @@ import { HoeverEntityPanel } from "./panels/HoveredEntityPanel";
 // import { HeroDetailPanel } from "./panels/HeroDetailPanel";
 //   import { EventLogsPanel } from "./panels/EventLogsPanel";
 // import { MintHeroPanel } from "./panels/MintHeroPanel";
-// import { ConnectButton } from "./panels/AccountPanel";
 
 export function Overlay() {
   const { components } = useMUD();
@@ -42,6 +41,11 @@ export function Overlay() {
   return (
     <div className="absolute inset-0 pointer-events-none text-white overflow-hidden">
       <div className="relative h-full w-full">
+        {/* Unified Wallet Button */}
+        <div className="absolute pointer-events-auto top-1 right-1 z-50">
+          <MultiWalletButton />
+        </div>
+
         {/* {source !== undefined && (
           <div className="absolute pointer-events-auto top-2 left-2">
             <HeroPanel heroId={source} isSource={true} />

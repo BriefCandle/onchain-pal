@@ -26,6 +26,8 @@
     "@latticexyz/recs": "2.0.12",
     "@latticexyz/noise": "^1.43.0",
     "@onchain-pal/contract": "workspace:^",
+    "@coinbase/agentkit": "^0.10.3",
+    "@coinbase/cdp-sdk": "^1.38.5",
     "viem": "^2.37.5"
   }
 }

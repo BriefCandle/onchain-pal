@@ -1,544 +1,244 @@
-# External Wallet Integration Guide
+# Chain Switching Implementation Guide
 
 ## Overview
 
-This guide documents the implementation plan for supporting both CDP embedded wallet and external wallets (via wagmi) in the onchain-pal client.
-
-**Design Decisions:**
-- User can choose between CDP wallet OR external wallet (not both simultaneously active)
-- External wallet supports all configured chains with chain switching
-- Two separate connect buttons in UI
-- Transaction hook exposes which wallet type is being used
-
----
-
-## File Changes
-
-### 1. `src/react/wallet/wagmiConfig.tsx`
-
-Add connectors for external wallets and include `baseSepolia` chain.
-
-```tsx
-import { createConfig, http } from "wagmi";
-import { ronin, zeroGMainnet, base, baseSepolia } from "wagmi/chains";
-import { injected, walletConnect, coinbaseWallet } from "wagmi/connectors";
-
-// Get from https://cloud.walletconnect.com
-const WALLETCONNECT_PROJECT_ID = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || "";
-
-export const wagmiConfig = createConfig({
-  chains: [base, baseSepolia, ronin, zeroGMainnet],
-  connectors: [
-    injected(),
-    coinbaseWallet({ appName: "onchain-pal" }),
-    walletConnect({ projectId: WALLETCONNECT_PROJECT_ID }),
-  ],
-  transports: {
-    [base.id]: http(),
-    [baseSepolia.id]: http(),
-    [ronin.id]: http(),
-    [zeroGMainnet.id]: http(),
-  },
-});
-
-// Export chain list for UI usage
-export const supportedChains = [base, baseSepolia, ronin, zeroGMainnet];
-```
-
-**Notes:**
-- Add `VITE_WALLETCONNECT_PROJECT_ID` to `.env` file
-- WalletConnect projectId is required for WalletConnect connector to work
-
----
-
-### 2. `src/react/wallet/useWallet.ts` (NEW FILE)
-
-Unified wallet hook that manages both wallet types and exposes active wallet info.
-
-```tsx
-import { useAccount, useConnect, useDisconnect, useSwitchChain } from "wagmi";
-import { useCDPWallet } from "./useCDPWallet";
-import { Hex } from "viem";
-import { useState, useCallback } from "react";
-
-export type WalletType = "cdp" | "external" | null;
-
-export function useWallet() {
-  // Track which wallet user has chosen to use
-  const [activeWalletType, setActiveWalletType] = useState<WalletType>(null);
-
-  // CDP wallet state
-  const cdp = useCDPWallet();
-
-  // External wallet state (wagmi)
-  const { 
-    address: externalAddress, 
-    isConnected: externalConnected,
-    chain: currentChain,
-    chainId,
-  } = useAccount();
-  const { disconnect: wagmiDisconnect } = useDisconnect();
-  const { switchChain, isPending: isSwitchingChain } = useSwitchChain();
-
-  // Determine effective connection based on user choice
-  const isConnected = activeWalletType === "cdp" 
-    ? cdp.isConnected 
-    : activeWalletType === "external" 
-      ? externalConnected 
-      : false;
-
-  const address: Hex | undefined = activeWalletType === "cdp"
-    ? cdp.address
-    : activeWalletType === "external"
-      ? externalAddress
-      : undefined;
-
-  // Activate CDP wallet
-  const activateCDP = useCallback(() => {
-    if (cdp.isConnected) {
-      // Disconnect external if connected
-      if (externalConnected) wagmiDisconnect();
-      setActiveWalletType("cdp");
-    }
-  }, [cdp.isConnected, externalConnected, wagmiDisconnect]);
-
-  // Activate external wallet (called after successful wagmi connect)
-  const activateExternal = useCallback(() => {
-    if (externalConnected) {
-      // Sign out CDP if connected
-      if (cdp.isConnected) cdp.signOut();
-      setActiveWalletType("external");
-    }
-  }, [externalConnected, cdp]);
-
-  // Unified disconnect
-  const disconnect = useCallback(() => {
-    if (activeWalletType === "cdp") {
-      cdp.signOut();
-    } else if (activeWalletType === "external") {
-      wagmiDisconnect();
-    }
-    setActiveWalletType(null);
-  }, [activeWalletType, cdp, wagmiDisconnect]);
-
-  // Auto-detect wallet type on mount if already connected
-  // (handles page refresh scenarios)
-  useEffect(() => {
-    if (activeWalletType === null) {
-      if (cdp.isConnected) {
-        setActiveWalletType("cdp");
-      } else if (externalConnected) {
-        setActiveWalletType("external");
-      }
-    }
-  }, [cdp.isConnected, externalConnected, activeWalletType]);
-
-  return {
-    // Unified state
-    isConnected,
-    address,
-    walletType: activeWalletType,
-
-    // CDP-specific
-    cdp: {
-      ...cdp,
-      activate: activateCDP,
-    },
-
-    // External wallet specific
-    external: {
-      address: externalAddress,
-      isConnected: externalConnected,
-      currentChain,
-      chainId,
-      switchChain,
-      isSwitchingChain,
-      disconnect: wagmiDisconnect,
-      activate: activateExternal,
-    },
-
-    // Actions
-    disconnect,
-    setActiveWalletType,
-  };
-}
-```
-
-**Notes:**
-- Add `import { useEffect } from "react";` at the top
-- The hook tracks which wallet type the user has chosen
-- Auto-detects existing connections on page refresh
-- Provides chain switching for external wallets
-
----
-
-### 3. `src/react/wallet/useSendTransaction.ts`
-
-Update to support both wallet types with explicit type exposure.
-
-```tsx
-import { useSendUserOperation } from "@coinbase/cdp-hooks";
-import { useWriteContract, useAccount } from "wagmi";
-import { useCDPWallet } from "./useCDPWallet";
-import { useWallet, WalletType } from "./useWallet";
-import { Hex, encodeFunctionData, Abi } from "viem";
-
-type ContractCallOptions = {
-  address: Hex;
-  abi: Abi;
-  functionName: string;
-  args: unknown[];
-  value?: bigint;
-};
-
-type SendTransactionResult = {
-  // CDP returns userOperationHash, wagmi returns txHash
-  hash?: Hex;
-  userOperationHash?: string;
-  walletType: WalletType;
-};
-
-export function useSendTransaction() {
-  const { walletType, isConnected } = useWallet();
-  
-  // CDP hooks
-  const { 
-    sendUserOperation, 
-    status: cdpStatus, 
-    data: cdpData, 
-    error: cdpError 
-  } = useSendUserOperation();
-  const { smartAccount } = useCDPWallet();
-
-  // Wagmi hooks
-  const { 
-    writeContractAsync, 
-    status: wagmiStatus, 
-    data: wagmiData, 
-    error: wagmiError,
-    reset: resetWagmi,
-  } = useWriteContract();
-  const { chainId } = useAccount();
-
-  const sendContractTransaction = async (
-    options: ContractCallOptions
-  ): Promise<SendTransactionResult> => {
-    if (!isConnected) {
-      throw new Error("No wallet connected");
-    }
-
-    if (walletType === "cdp") {
-      if (!smartAccount) {
-        throw new Error("CDP smart account not found");
-      }
-
-      const calldata = encodeFunctionData({
-        abi: options.abi,
-        functionName: options.functionName,
-        args: options.args,
-      });
-
-      const result = await sendUserOperation({
-        evmSmartAccount: smartAccount as Hex,
-        network: "base-sepolia",
-        calls: [
-          {
-            to: options.address,
-            data: calldata,
-            value: options.value ?? 0n,
-          },
-        ],
-      });
-
-      return {
-        userOperationHash: result.userOperationHash,
-        walletType: "cdp",
-      };
-    }
-
-    if (walletType === "external") {
-      const hash = await writeContractAsync({
-        address: options.address,
-        abi: options.abi,
-        functionName: options.functionName,
-        args: options.args,
-        value: options.value,
-      });
-
-      return {
-        hash,
-        walletType: "external",
-      };
-    }
-
-    throw new Error("Unknown wallet type");
-  };
-
-  // Determine current status based on active wallet type
-  const status = walletType === "cdp" ? cdpStatus : wagmiStatus;
-  const data = walletType === "cdp" ? cdpData : wagmiData;
-  const error = walletType === "cdp" ? cdpError : wagmiError;
-
-  return {
-    sendContractTransaction,
-    status,
-    data,
-    error,
-    walletType,
-    isConnected,
-    // Expose chain info for external wallet
-    chainId: walletType === "external" ? chainId : undefined,
-    // Reset function (useful for clearing errors)
-    reset: walletType === "external" ? resetWagmi : undefined,
-  };
-}
-```
-
----
-
-### 4. `src/react/panels/AccountPanel.tsx`
-
-Add separate buttons for CDP and external wallet, with chain selector for external.
-
-```tsx
-import React, { useState } from "react";
-import { useWallet } from "../wallet/useWallet";
-import { useConnect } from "wagmi";
-import { AuthButton } from "@coinbase/cdp-react";
-import { truncateAddress } from "@onchain-pal/contract-client/utils";
-import { supportedChains } from "../wallet/wagmiConfig";
-
-// CDP Connect Button - used in landing overlay
-export function CDPConnectButton() {
-  const { cdp } = useWallet();
-  if (cdp.isConnected) return null;
-
-  return <AuthButton />;
-}
-
-// External Wallet Connect Button
-export function ExternalConnectButton() {
-  const { connectors, connect, isPending } = useConnect();
-  const { external, setActiveWalletType } = useWallet();
-  const [showOptions, setShowOptions] = useState(false);
-
-  if (external.isConnected) return null;
-
-  return (
-    <div className="relative">
-      <button
-        onClick={() => setShowOptions((prev) => !prev)}
-        className="px-2 py-1.5 rounded text-white text-sm shadow bg-blue-700 hover:bg-blue-600 transition-colors"
-        disabled={isPending}
-      >
-        {isPending ? "Connecting..." : "External Wallet"}
-      </button>
-      
-      {showOptions && (
-        <div className="absolute right-0 mt-1 bg-gray-800 rounded-lg shadow-xl border border-gray-600 p-2 min-w-[160px] z-50">
-          {connectors.map((connector) => (
-            <button
-              key={connector.uid}
-              onClick={() => {
-                connect(
-                  { connector },
-                  {
-                    onSuccess: () => {
-                      setActiveWalletType("external");
-                      setShowOptions(false);
-                    },
-                  }
-                );
-              }}
-              disabled={isPending}
-              className="w-full text-left px-3 py-2 rounded text-white text-sm hover:bg-gray-700 transition-colors"
-            >
-              {connector.name}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-// Chain Selector for External Wallet
-export function ChainSelector() {
-  const { external, walletType } = useWallet();
-
-  if (walletType !== "external" || !external.isConnected) return null;
-
-  return (
-    <select
-      value={external.chainId}
-      onChange={(e) => external.switchChain({ chainId: Number(e.target.value) })}
-      disabled={external.isSwitchingChain}
-      className="px-2 py-1 rounded bg-gray-700 text-white text-xs border border-gray-600"
-    >
-      {supportedChains.map((chain) => (
-        <option key={chain.id} value={chain.id}>
-          {chain.name}
-        </option>
-      ))}
-    </select>
-  );
-}
-
-// Connect Buttons Container (for landing overlay)
-export function ConnectButton() {
-  const { isConnected } = useWallet();
-  if (isConnected) return null;
-
-  return (
-    <div className="absolute pointer-events-auto top-1 right-1 z-30 flex flex-col-reverse items-start">
-      <div className="flex flex-col items-end space-y-2">
-        <CDPConnectButton />
-        <ExternalConnectButton />
-      </div>
-    </div>
-  );
-}
-
-// Main Account Panel
-export function AccountPanel() {
-  const { address, isConnected, walletType } = useWallet();
-  const [toggled, setToggled] = useState<boolean>(false);
-
-  if (!isConnected) return null;
-
-  return (
-    <div className="absolute pointer-events-auto top-1 right-1 z-50 flex flex-col-reverse items-start">
-      <div className="flex flex-col items-end space-y-0.5">
-        <div className="flex items-center gap-2">
-          <ChainSelector />
-          <button
-            onClick={() => setToggled((prev) => !prev)}
-            className={`px-2 py-1.5 rounded text-white text-sm shadow transition-colors ${
-              walletType === "cdp" 
-                ? "bg-gray-800 hover:bg-gray-700" 
-                : "bg-blue-700 hover:bg-blue-600"
-            } ${toggled ? "border border-green-500" : ""}`}
-          >
-            <span className="text-xs opacity-70 mr-1">
-              {walletType === "cdp" ? "[CDP]" : "[EXT]"}
-            </span>
-            {address ? truncateAddress(address) : "Connect"}
-          </button>
-        </div>
-        {toggled && <ConnectedAccountPanel />}
-      </div>
-    </div>
-  );
-}
-
-// Connected Account Details Panel
-export function ConnectedAccountPanel() {
-  const { disconnect, walletType, external } = useWallet();
-
-  return (
-    <div className="relative bg-black rounded-lg shadow-xl border border-gray-200 px-2 py-1 flex flex-col items-center space-y-1 text-xs">
-      {walletType === "external" && external.currentChain && (
-        <div className="text-gray-400 text-xs py-1">
-          Chain: {external.currentChain.name}
-        </div>
-      )}
-      <button
-        onClick={() => disconnect()}
-        className="m-1 px-4 py-2 rounded bg-black text-white border border-gray-300 hover:bg-gray-900 transition self-end"
-      >
-        Disconnect
-      </button>
-    </div>
-  );
-}
-```
-
----
-
-### 5. Environment Variables
-
-Add to `.env` or `.env.local`:
-
-```env
-VITE_WALLETCONNECT_PROJECT_ID=your_project_id_here
-```
-
-Get a project ID from https://cloud.walletconnect.com
-
----
-
-## Implementation Checklist
-
-- [ ] Update `wagmiConfig.tsx` with connectors and chains
-- [ ] Create `useWallet.ts` unified wallet hook
-- [ ] Update `useSendTransaction.ts` to support both wallet types
-- [ ] Update `AccountPanel.tsx` with dual connect buttons and chain selector
-- [ ] Add WalletConnect project ID to environment variables
-- [ ] Test CDP wallet flow (sign in, transaction, disconnect)
-- [ ] Test external wallet flow (connect, chain switch, transaction, disconnect)
-- [ ] Test switching between wallet types
-- [ ] Update any components that import from old `useCDPWallet` to use `useWallet`
-
----
-
-## Dependencies to Verify
-
-Ensure these packages are installed:
-
+Add chain switching functionality to `MultiWalletButton.tsx` with:
+- Dropdown submenu for chain selection
+- Chain filtering by wallet type (CDP vs External)
+- Toast notifications for switch failures
+- Visual indicator of current chain
+
+## Prerequisites
+
+Install shadcn toast component:
 ```bash
-pnpm add wagmi viem @tanstack/react-query
+# Already have Radix primitives, just need the toast component files
 ```
 
-The wagmi connectors are included in the wagmi package, no separate install needed.
+## Implementation Steps
 
----
+### Step 1: Create Toast Component
 
-## Architecture Diagram
+Create `src/components/ui/toast.tsx` and `src/components/ui/toaster.tsx` using shadcn/ui toast pattern with Radix `@radix-ui/react-toast`.
 
-```
-                    +------------------+
-                    |   useWallet()    |  <-- Unified hook
-                    +------------------+
-                           |
-          +----------------+----------------+
-          |                                 |
-  +-------v-------+               +---------v---------+
-  |  useCDPWallet |               |  wagmi hooks      |
-  |  (CDP hooks)  |               |  (useAccount,     |
-  +---------------+               |   useConnect,     |
-          |                       |   useDisconnect,  |
-          |                       |   useSwitchChain) |
-          |                       +-------------------+
-          |                                 |
-  +-------v-------+               +---------v---------+
-  | CDP Provider  |               |  WagmiProvider    |
-  | (Smart Acct)  |               |  (EOA)            |
-  +---------------+               +-------------------+
+Create `src/components/ui/use-toast.ts` hook for toast state management.
+
+### Step 2: Define Chain Configuration
+
+Update `src/react/wallet/wagmiConfig.tsx`:
+
+```typescript
+import { base, baseSepolia } from "wagmi/chains";
+import type { Chain } from "viem";
+
+// Define which chains each wallet type supports
+export const CDP_SUPPORTED_CHAINS: Chain[] = [baseSepolia]; // CDP smart wallet - testnet only for now
+export const EXTERNAL_SUPPORTED_CHAINS: Chain[] = [base, baseSepolia]; // External wallets - both networks
+
+// All supported chains (union)
+export const ALL_SUPPORTED_CHAINS: Chain[] = [base, baseSepolia];
 ```
 
----
+### Step 3: Create Chain Selector Submenu Component
 
-## Transaction Flow
+Create `src/react/wallet/ChainSelector.tsx`:
 
+```typescript
+import { useSwitchChain, useAccount } from "wagmi";
+import type { Chain } from "viem";
+import {
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import { useToast } from "@/components/ui/use-toast";
+import { CDP_SUPPORTED_CHAINS, EXTERNAL_SUPPORTED_CHAINS } from "./wagmiConfig";
+
+interface ChainSelectorProps {
+  walletType: "cdp" | "external";
+}
+
+export function ChainSelector({ walletType }: ChainSelectorProps) {
+  const { chain: currentChain } = useAccount();
+  const { switchChain, isPending } = useSwitchChain();
+  const { toast } = useToast();
+
+  // Filter chains based on wallet type
+  const availableChains = walletType === "cdp" 
+    ? CDP_SUPPORTED_CHAINS 
+    : EXTERNAL_SUPPORTED_CHAINS;
+
+  const handleSwitchChain = async (chain: Chain) => {
+    if (chain.id === currentChain?.id) return;
+    
+    try {
+      await switchChain({ chainId: chain.id });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Failed to switch chain",
+        description: error instanceof Error ? error.message : "Unknown error occurred",
+      });
+    }
+  };
+
+  return (
+    <DropdownMenuSub>
+      <DropdownMenuSubTrigger disabled={isPending}>
+        {isPending ? "Switching..." : `Chain: ${currentChain?.name || "Unknown"}`}
+      </DropdownMenuSubTrigger>
+      <DropdownMenuSubContent>
+        {availableChains.map((chain) => (
+          <DropdownMenuItem
+            key={chain.id}
+            onClick={() => handleSwitchChain(chain)}
+            disabled={chain.id === currentChain?.id || isPending}
+          >
+            {chain.name}
+            {chain.id === currentChain?.id && " (current)"}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuSubContent>
+    </DropdownMenuSub>
+  );
+}
 ```
-useSendTransaction.sendContractTransaction(options)
-    |
-    v
-Check walletType from useWallet()
-    |
-    +-- walletType === "cdp"
-    |       |
-    |       v
-    |   sendUserOperation() --> ERC-4337 UserOp
-    |       |
-    |       v
-    |   Return { userOperationHash, walletType: "cdp" }
-    |
-    +-- walletType === "external"
-            |
-            v
-        writeContractAsync() --> Standard TX
-            |
-            v
-        Return { hash, walletType: "external" }
+
+### Step 4: Update MultiWalletButton.tsx
+
+Add chain indicator and ChainSelector to the connected state dropdown:
+
+```typescript
+import { ChainSelector } from "./ChainSelector";
+
+// In the connected state return:
+if (isConnected && address) {
+  const isCDP = connector?.id === "cdp-embedded-wallet";
+  const walletType = isCDP ? "cdp" : "external";
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant={isCDP ? "secondary" : "default"} size="sm" className="gap-2">
+          {/* Chain indicator */}
+          <span className="text-xs opacity-70">[{chain?.name || "?"}]</span>
+          {/* Wallet type indicator */}
+          <span className="text-xs opacity-70">{isCDP ? "[CDP]" : "[EXT]"}</span>
+          {truncateAddress(address)}
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuLabel>{connector?.name || "Wallet"}</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        
+        {/* Chain Selector Submenu */}
+        <ChainSelector walletType={walletType} />
+        
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={() => navigator.clipboard.writeText(address)}>
+          Copy Address
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={() => disconnect()}>
+          Disconnect
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
 ```
+
+### Step 5: Add Toaster to App Root
+
+Update `src/main.tsx` to include the Toaster component:
+
+```typescript
+import { Toaster } from "@/components/ui/toaster";
+
+// In the render:
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <CDPHooksProvider config={cdpConfig}>
+    <WagmiProvider config={wagmiConfig}>
+      <QueryClientProvider client={queryClient}>
+        <Root />
+        <Toaster />
+        <Analytics />
+      </QueryClientProvider>
+    </WagmiProvider>
+  </CDPHooksProvider>,
+);
+```
+
+### Step 6: Update dropdown-menu.tsx
+
+Add submenu components to `src/components/ui/dropdown-menu.tsx`:
+
+```typescript
+// Add these exports for submenu support
+const DropdownMenuSub = DropdownMenuPrimitive.Sub;
+const DropdownMenuSubTrigger = React.forwardRef<...>(...);
+const DropdownMenuSubContent = React.forwardRef<...>(...);
+
+export {
+  // ... existing exports
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
+};
+```
+
+## File Changes Summary
+
+| File | Action |
+|------|--------|
+| `src/components/ui/toast.tsx` | Create |
+| `src/components/ui/toaster.tsx` | Create |
+| `src/components/ui/use-toast.ts` | Create |
+| `src/components/ui/dropdown-menu.tsx` | Update (add submenu components) |
+| `src/react/wallet/wagmiConfig.tsx` | Update (add chain type exports) |
+| `src/react/wallet/ChainSelector.tsx` | Create |
+| `src/react/wallet/MultiWalletButton.tsx` | Update (add chain indicator + selector) |
+| `src/main.tsx` | Update (add Toaster) |
+
+## Chain Support Configuration
+
+Adjust these arrays in `wagmiConfig.tsx` based on your requirements:
+
+```typescript
+// CDP embedded wallet supported chains
+export const CDP_SUPPORTED_CHAINS: Chain[] = [baseSepolia];
+
+// External wallet supported chains  
+export const EXTERNAL_SUPPORTED_CHAINS: Chain[] = [base, baseSepolia];
+```
+
+## Visual Design
+
+**Button appearance when connected:**
+```
+[Base Sepolia] [CDP] 0x1234...5678
+```
+
+**Dropdown menu structure:**
+```
+Coinbase Wallet
+─────────────────
+Chain: Base Sepolia  →  ┌─────────────────┐
+                        │ Base            │
+                        │ Base Sepolia ✓  │
+                        └─────────────────┘
+─────────────────
+Copy Address
+─────────────────
+Disconnect
+```
+
+## Error Handling
+
+Toast notifications appear for:
+- Chain switch rejection by user (external wallets)
+- Network errors during switch
+- Unsupported chain errors
+
+Toast styling uses `variant="destructive"` for errors.
