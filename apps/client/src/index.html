@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>onchain-pal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style type="text/css">
+    body {
+      background-color: white;
+      margin: 0px;
+      overflow: hidden;
+    }
+
+    #root {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    #reticle {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      margin: -10px 0 0 -10px;
+      z-index: 99;
+      color: white;
+      text-shadow: 1px 1px 0px black;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="reticle">+</div>
+  <script type="module" src="./main.tsx"></script>
+</body>
+
+</html>
