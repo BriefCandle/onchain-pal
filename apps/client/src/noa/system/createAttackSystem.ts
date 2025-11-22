@@ -6,9 +6,9 @@ import { Engine } from "noa-engine";
 import { getPalEntity, isPalEntity } from "./createPalSystem";
 
 // Shared ball mesh
-let ballMesh: any;
+export let ballMesh: any;
 // Track active ball entities with their creation time and target entity ID
-const activeBalls = new Map<
+export const activeBalls = new Map<
   number,
   {
     createdAt: number;
@@ -19,7 +19,7 @@ const activeBalls = new Map<
 >();
 
 // Helper function to remove a ball
-function removeBall(noa: Engine, ballId: number) {
+export function removeBall(noa: Engine, ballId: number) {
   try {
     noa.entities.getPosition(ballId); // Check if entity exists
     noa.entities.deleteEntity(ballId);
@@ -34,7 +34,7 @@ export const createAttackSystem = (result: SetupResult, noa: Engine) => {
     network: { world },
     components,
   } = result;
-  const { TokenData, AttackedEvent } = components;
+  const { TokenData, AttackedEvent, CaptureAttemptedEvent } = components;
 
   // Set up ball cleanup tick handler
   setupBallCleanupTick(noa);
@@ -59,6 +59,35 @@ export const createAttackSystem = (result: SetupResult, noa: Engine) => {
     // Shoot multiple balls in a burst from attacker to target
     shootAttackBurst(noa, attackerEntity, targetEntity);
   });
+
+  defineSystem(world, [Has(CaptureAttemptedEvent)], ({ entity, type }) => {
+    if (type === UpdateType.Exit) return;
+    const eventData = getComponentValue(CaptureAttemptedEvent, entity)!;
+    const { attackerTokenId, targetTokenId, inRange } = eventData;
+
+    // Get attacker and target PalEntity instances
+    const attackerEntity = getPalEntity(Number(attackerTokenId));
+    const targetEntity = getPalEntity(Number(targetTokenId));
+
+    if (!attackerEntity || !targetEntity) {
+      console.warn("Attacker or target entity not found:", {
+        attackerTokenId,
+        targetTokenId,
+      });
+      return;
+    }
+
+    // Shoot one large ball from attacker to target
+    shootAttackBall(noa, attackerEntity, targetEntity, 0, 1, 3, 5);
+  });
+};
+
+export const createCatchSystem = (result: SetupResult, noa: Engine) => {
+  const {
+    network: { world },
+    components,
+  } = result;
+  const { TokenData, CaptureAttemptedEvent } = components;
 };
 
 // Shoot multiple balls in a burst
@@ -76,13 +105,14 @@ function shootAttackBurst(
   }
 }
 
-function shootAttackBall(
+export function shootAttackBall(
   noa: Engine,
   attackerEntity: any,
   targetEntity: any,
   index: number = 0,
   total: number = 1,
-  radius: number = 0.2
+  radius: number = 0.2,
+  speed: number = 50
 ) {
   const ents = noa.entities;
 
@@ -170,7 +200,6 @@ function shootAttackBall(
   }
 
   // Apply impulse toward target
-  const speed = 50;
   const imp: [number, number, number] = [
     normalizedDir[0] * speed,
     normalizedDir[1] * speed,
