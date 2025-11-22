@@ -12,10 +12,10 @@ const PRIVATE_KEY = import.meta.env.VITE_PRIVATE_KEY as Hex | undefined;
 export const adminClient = PRIVATE_KEY
   ? createWalletClient({
       account: privateKeyToAccount(PRIVATE_KEY),
-      chain: localhost,
-      transport: http("http://127.0.0.1:8545"),
-      // chain: baseSepolia,
-      // transport: http("https://sepolia.base.org"),
+      // chain: localhost,
+      // transport: http("http://127.0.0.1:8545"),
+      chain: baseSepolia,
+      transport: http("https://sepolia.base.org"),
     })
   : undefined;
 
