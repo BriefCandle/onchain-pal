@@ -76,6 +76,15 @@ export function createNetworkComponents() {
       tokenId: Type.BigInt,
       health: Type.Number,
     }),
+    MovedEvent: defineComponent(world, {
+      tokenId: Type.BigInt,
+      message: Type.String,
+    }),
+    TalkedEvent: defineComponent(world, {
+      fromTokenId: Type.BigInt,
+      toTokenId: Type.BigInt,
+      message: Type.String,
+    }),
   };
   return components;
 }
