@@ -1,6 +1,5 @@
 import { Hex } from "viem";
 import { ClientComponents } from "../mud/createClientComponents";
-import { adminClient } from "../react/actions/Move";
 import {
   getCurrPositionMUD,
   getPlayerTokenIds,
@@ -11,9 +10,11 @@ import { Entity, getComponentValue, setComponent } from "@latticexyz/recs";
 
 export const setupPreComputed = (
   components: ClientComponents,
-  playerAddress?: Hex
+  playerAddress?: Hex,
 ) => {
-  playerAddress = playerAddress ?? (adminClient?.account.address as Hex);
+  // Note: playerAddress should be passed in from useCDPWallet when available
+  if (!playerAddress) return;
+
   const { SelectedTrainer, TokenData } = components;
   const trainerIds = getPlayerTrainerIds(components, playerAddress);
   if (!!trainerIds && trainerIds.length > 0) {
