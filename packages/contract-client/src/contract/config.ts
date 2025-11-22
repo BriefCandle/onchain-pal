@@ -26,9 +26,14 @@ export const localhost = /*#__PURE__*/ defineChain({
   },
 });
 
+// export const publicClient = createPublicClient({
+//   chain: baseSepolia,
+//   transport: http("https://sepolia.base.org"),
+// });
+
 export const publicClient = createPublicClient({
-  chain: baseSepolia,
-  transport: http("https://sepolia.base.org"),
+  chain: localhost,
+  transport: http("http://127.0.0.1:8545"),
 });
 
 // anvil local
