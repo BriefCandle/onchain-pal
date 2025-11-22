@@ -53,9 +53,11 @@ struct CaptureAttemptData {
 interface IGameV1 {
   function revive(uint256 tokenId) external;
 
-  function move(uint256 tokenId, uint32 toX, uint32 toY) external;
+  function move(uint256 tokenId, uint32 toX, uint32 toY, string calldata message) external;
 
   function attack(uint256 tokenId, uint256 targetTokenId) external;
+
+  function talk(uint256 fromTokenId, uint256 toTokenId, string calldata message) external;
 
   function mintWildPal() external;
 
@@ -74,6 +76,9 @@ interface IGameV1 {
   event Attacked(uint256 attackerTokenId, uint256 targetTokenId, bool inRange, bool defeated);
   event CaptureAttempted(uint256 attackerTokenId, uint256 targetTokenId, bool inRange);
   event CaptureSettled(uint256 targetTokenId, address playerAddress, bool caught);
+
+  event Moved(uint256 tokenId, string message);
+  event Talked(uint256 fromTokenId, uint256 toTokenId, string message);
 }
 
 contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
@@ -81,8 +86,10 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
   IRNGProvider public rngProvider;
   AgentNFT public agentNFT;
 
-  uint32 public constant MOVE_SPEED = 100;
-  uint32 public constant ATTACK_RANGE = 800000; //  800;
+  uint32 public MOVE_SPEED = 100;
+  uint32 public ATTACK_RANGE = 800;
+  uint32 public SPAWN_WIDTH = MOVE_SPEED * 1 minutes;
+  uint40 public REVIVE_TIME = 1 minutes;
 
   mapping(uint256 tokenId => PathData) public pathDatas;
   mapping(uint256 tokenId => StatsData) public statsDatas;
@@ -96,7 +103,28 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
     rngProvider = IRNGProvider(_rngProvider);
   }
 
-  function move(uint256 tokenId, uint32 toX, uint32 toY) external onlyAllowedCaller onlyAlive(tokenId) {
+  function setConstant(
+    uint32 moveSpeed,
+    uint32 attackRange,
+    uint32 spawnWidth,
+    uint40 revivedTime
+  ) external onlyAllowedCaller {
+    MOVE_SPEED = moveSpeed;
+    ATTACK_RANGE = attackRange;
+    SPAWN_WIDTH = spawnWidth;
+    REVIVE_TIME = revivedTime;
+  }
+
+  function talk(uint256 fromTokenId, uint256 toTokenId, string calldata message) external {
+    emit Talked(fromTokenId, toTokenId, message);
+  }
+
+  function move(
+    uint256 tokenId,
+    uint32 toX,
+    uint32 toY,
+    string calldata message
+  ) external onlyAllowedCaller onlyAlive(tokenId) {
     PathData memory nextPathData = pathLogic.computeNextPathData(
       pathDatas[tokenId],
       toX,
@@ -105,6 +133,8 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
       MOVE_SPEED
     );
     _updatePath(tokenId, nextPathData);
+
+    emit Moved(tokenId, message);
   }
 
   function attack(
@@ -148,7 +178,7 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
   }
 
   function canRevive(uint256 tokenId) internal view returns (bool) {
-    return timeDatas[tokenId].lastDeadTime + 1 minutes <= uint40(block.timestamp);
+    return timeDatas[tokenId].lastDeadTime + REVIVE_TIME <= uint40(block.timestamp);
   }
 
   function mintTrainer() external {
@@ -207,7 +237,7 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
     PathData memory pathData = pathLogic.getRandomPathData(
       uint256(keccak256(abi.encodePacked(tokenId, "spawnX"))),
       uint256(keccak256(abi.encodePacked(tokenId, "spawnY"))),
-      MOVE_SPEED * 8 // temp map size
+      SPAWN_WIDTH // temp map size
     );
     pathDatas[tokenId] = pathData;
     statsDatas[tokenId] = StatsData({ health: 100 });

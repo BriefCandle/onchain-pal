@@ -3,7 +3,7 @@ pragma solidity >=0.8.0;
 
 import { AllowedCaller } from "../utils/AllowedCaller.sol";
 
-uint40 constant KEY_VALID_SESSION = 2 hours;
+uint40 constant KEY_VALID_SESSION = 2 days;
 
 struct Key {
   bytes32 commitment; // keccak256("RNG_KEY", keyId, secret)
