@@ -28,9 +28,7 @@ const agentDataSchema = {
 } as const;
 
 const timeDataSchema = {
-  lastJoinedTime: Type.Number,
-  lastLeftTime: Type.Number,
-  lastActedTime: Type.Number,
+  lastDeadTime: Type.Number,
 } as const;
 
 const statsDataSchema = {
