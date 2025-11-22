@@ -14,6 +14,8 @@ import {
   flattenTokenData,
   DefeatedEventData,
   RevivedEventData,
+  TalkedEventData,
+  MovedEventData,
 } from "../contract/types";
 import { Hex, PublicClient } from "viem";
 import { readContract } from "viem/actions";
@@ -114,6 +116,8 @@ export const handleGameEvent = (
     SpawnedEvent,
     RevivedEvent,
     DefeatedEvent,
+    MovedEvent,
+    TalkedEvent,
   } = components;
   const { eventName, transactionHash: tx, args, blockNumber } = parsedLog;
   if (eventName === "PathUpdated") {
@@ -150,6 +154,14 @@ export const handleGameEvent = (
     setTokenData(TokenData, data);
     console.log("Revived event received", data);
     setComponent(RevivedEvent, tx as Entity, data);
+  } else if (eventName === "Moved") {
+    const data = args as unknown as MovedEventData;
+    console.log("Moved event received", data);
+    setComponent(MovedEvent, tx as Entity, data);
+  } else if (eventName === "Talked") {
+    const data = args as unknown as TalkedEventData;
+    console.log("Talked event received", data);
+    setComponent(TalkedEvent, tx as Entity, data);
   }
 };
 

@@ -146,6 +146,17 @@ export interface RNGRequestedEventData {
   keyId: number;
 }
 
+export interface MovedEventData {
+  tokenId: bigint;
+  message: string;
+}
+
+export interface TalkedEventData {
+  fromTokenId: bigint;
+  toTokenId: bigint;
+  message: string;
+}
+
 export const rngEventSignatures = {
   [keccak256(toHex("KeyCommitted(uint40,bytes32)"))]: "KeyCommitted",
   [keccak256(toHex("KeyRevealed(uint40,bytes32)"))]: "KeyRevealed",
@@ -170,4 +181,6 @@ export const gameEventSignatures = {
   [keccak256(toHex("CaptureSettled(uint256,address,bool)"))]: "CaptureSettled",
   [keccak256(toHex("Revived(uint256,uint32)"))]: "Revived",
   [keccak256(toHex("Defeated(uint256,uint40)"))]: "Defeated",
+  [keccak256(toHex("Moved(uint256,string)"))]: "Moved",
+  [keccak256(toHex("Talked(uint256,uint256,string)"))]: "Talked",
 } as const;

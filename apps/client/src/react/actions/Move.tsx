@@ -3,7 +3,23 @@ import { Hex } from "viem";
 import { gameContractConfig } from "@onchain-pal/contract-client";
 import { useMUD } from "../../MUDContext";
 import { useCurrPositionMUD } from "../hooks/usePath";
+<<<<<<< HEAD
 import { useSendTransaction } from "../wallet/useSendTransaction";
+=======
+import { baseSepolia } from "viem/chains";
+
+const PRIVATE_KEY = import.meta.env.VITE_PRIVATE_KEY as Hex | undefined;
+
+export const adminClient = PRIVATE_KEY
+  ? createWalletClient({
+      account: privateKeyToAccount(PRIVATE_KEY),
+      // chain: localhost,
+      // transport: http("http://127.0.0.1:8545"),
+      chain: baseSepolia,
+      transport: http("https://sepolia.base.org"),
+    })
+  : undefined;
+>>>>>>> 3385cb687da3519003ec9c4019c187c45695c3cf
 
 export function Move2Button() {}
 

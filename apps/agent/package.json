@@ -1,0 +1,40 @@
+{
+  "name": "@onchain-pal/agent",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sleep 8 && tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "test:webhook": "tsx src/server.ts & sleep 3 && node test-local.js && pkill -f 'tsx src/server.ts'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.7",
+    "@types/ws": "^8.18.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3",
+    "wait-port": "^1.1.0"
+  },
+  "dependencies": {
+    "@ai-sdk/deepseek": "^1.0.20",
+    "@ai-sdk/openai": "^2.0.69",
+    "@coinbase/agentkit": "^0.10.3",
+    "@coinbase/cdp-sdk": "^1.38.5",
+    "@latticexyz/recs": "2.0.12",
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "@openrouter/ai-sdk-provider": "^1.2.0",
+    "@onchain-pal/contract": "workspace:*",
+    "@onchain-pal/contract-client": "workspace:*",
+    "ai": "^5.0.39",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "viem": "^2.37.5",
+    "ws": "^8.18.2",
+    "zod": "^4.1.5"
+  }
+}

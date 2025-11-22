@@ -31,7 +31,8 @@ export const moveTx = async (
 export const moveTxWithSmartAccount = async (
   smartAccount: EvmSmartAccount,
   tokenId: number,
-  toCoord: Vector
+  toCoord: Vector,
+  message: string
 ): Promise<void> => {
   const baseAccount = await smartAccount.useNetwork("base-sepolia");
 
@@ -40,7 +41,7 @@ export const moveTxWithSmartAccount = async (
     const calldata = encodeFunctionData({
       abi: gameContractConfig.abi,
       functionName: "move",
-      args: [BigInt(tokenId), BigInt(toCoord.x), BigInt(toCoord.y)],
+      args: [BigInt(tokenId), BigInt(toCoord.x), BigInt(toCoord.y), message],
     });
 
     // 3. Send via UserOperation
