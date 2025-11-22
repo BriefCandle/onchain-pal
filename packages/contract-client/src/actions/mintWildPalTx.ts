@@ -3,24 +3,24 @@ import { gameContractConfig, publicClient } from "../contract";
 import { EvmSmartAccount } from "@coinbase/cdp-sdk";
 
 // called by player
-export const mintTrainerTx = async (walletClient: WalletClient) => {
+export const mintWildPalTx = async (walletClient: WalletClient) => {
   try {
     const { request } = await publicClient.simulateContract({
       ...gameContractConfig,
-      functionName: "mintTrainer",
+      functionName: "mintWildPal",
       args: [],
       account: walletClient.account!,
     });
 
     const hash = await walletClient.writeContract(request);
     const receipt = await publicClient.waitForTransactionReceipt({ hash });
-    console.log("Spawn trainer tx confirmed:", receipt);
+    console.log("Mint wild pal tx confirmed:", receipt);
   } catch (error) {
     console.error("Tx failed:", error);
   }
 };
 
-export const mintTrainerTxWithSmartAccount = async (
+export const mintWildPalTxWithSmartAccount = async (
   smartAccount: EvmSmartAccount
 ): Promise<void> => {
   const baseAccount = await smartAccount.useNetwork("base-sepolia");
@@ -28,7 +28,7 @@ export const mintTrainerTxWithSmartAccount = async (
   try {
     const calldata = encodeFunctionData({
       ...gameContractConfig,
-      functionName: "mintTrainer",
+      functionName: "mintWildPal",
       args: [],
     });
 
@@ -41,10 +41,6 @@ export const mintTrainerTxWithSmartAccount = async (
         },
       ],
     });
-
-    console.log("UserOperation sent:", userOpHash);
-    const receipt = await baseAccount.waitForUserOperation(userOpHash);
-    console.log("Mint trainer tx confirmed:", receipt);
   } catch (error: any) {
     console.error("Tx failed:", error);
     throw error; // re-throw for caller to handle
