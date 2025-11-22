@@ -19,7 +19,7 @@ export function MovePanel() {
 
   const handleMove = async () => {
     if (!adminClient) return;
-    await moveTx(adminClient, components, trainerId, coord);
+    await moveTx(adminClient, components, trainerId, coord, "");
   };
 
   return (

@@ -1,7 +1,7 @@
 // display playerEntity (i.e., move to coord) & trainerEntity (what is to moved), their distance, and a move button
 
 import { useComponentValue } from "@latticexyz/react";
-import { attackTx, moveTx, SOURCE, TARGET } from "@onchain-pal/contract-client";
+import { attackTx, SOURCE, TARGET } from "@onchain-pal/contract-client";
 import { useMUD } from "../../MUDContext";
 import { useCurrPositionMUD } from "../hooks/usePath";
 import { adminClient } from "../actions/Move";

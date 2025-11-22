@@ -32,7 +32,7 @@ export function MoveButton() {
 
   const handleMove = async () => {
     if (!adminClient) return;
-    await moveTx(adminClient, components, tokenId, { x, y });
+    await moveTx(adminClient, components, tokenId, { x, y }, "");
   };
 
   return (
