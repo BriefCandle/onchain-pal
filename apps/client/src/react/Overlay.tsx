@@ -10,7 +10,7 @@ import { MovePanel } from "./panels/MovePanel";
 import { HoeverEntityPanel } from "./panels/HoveredEntityPanel";
 // import { AttackPanel } from "./panels/AttackPanel";
 // import { CatchPanel } from "./panels/CatchPanel";
-// import { MintPanel } from "./panels/MintPanel";
+import { MintPanel } from "./panels/MintPanel";
 // import { HeroDetailPanel } from "./panels/HeroDetailPanel";
 //   import { EventLogsPanel } from "./panels/EventLogsPanel";
 // import { MintHeroPanel } from "./panels/MintHeroPanel";
@@ -54,10 +54,10 @@ export function Overlay() {
         )} */}
         <NoPropagation>
           <div className="absolute pointer-events-auto top-1 left-1 z-50 flex flex-col items-start bg-gray-500 p-2 rounded-md">
-            <EntitiesPanel />
-            <MoveButton />
+            {/* <EntitiesPanel /> */}
+            {/* <MoveButton /> */}
             {/* <AttemptCaptureButton /> */}
-            <SpawnTrainerButton />
+            {/* <SpawnTrainerButton /> */}
             {/* <LeaveButton /> */}
           </div>
           {/* <HeroDetailPanel /> */}
@@ -66,6 +66,7 @@ export function Overlay() {
           {/* <EventLogsPanel /> */}
           {/* <HeroListPanel /> */}
           {/* <HeroEventsPanel /> */}
+          <MintPanel />
           <MovePanel />
           <HoeverEntityPanel />
           {/* <AttackPanel /> */}

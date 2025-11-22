@@ -9,6 +9,7 @@ import { mintTrainerTx } from "@onchain-pal/contract-client";
 export function MintPanel() {
   const handleMint = async () => {
     if (!adminClient) return;
+    // To Kelsen: change this to use mintTrainerTxWithSmartAccount
     await mintTrainerTx(adminClient);
   };
 
