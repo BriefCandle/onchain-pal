@@ -1,0 +1,31 @@
+{
+  "name": "@onchain-pal/contract-client",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./utils": "./src/utils/index.ts",
+    "./logics": "./src/logics/index.ts",
+    "./contract": "./src/contract/index.ts",
+    "./mud": "./src/mud/index.ts",
+    "./sync": "./src/sync/index.ts"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@latticexyz/react": "2.0.12",
+    "@latticexyz/recs": "2.0.12",
+    "@latticexyz/noise": "^1.43.0",
+    "@onchain-pal/contract": "workspace:^",
+    "viem": "^2.37.5"
+  }
+}

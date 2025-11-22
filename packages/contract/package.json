@@ -1,0 +1,28 @@
+{
+  "name": "@onchain-pal/contract",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "./*": "./out/*"
+  },
+  "scripts": {
+    "build": "forge build",
+    "prepare": "pnpm run build",
+    "test": "forge test",
+    "deploy:local": "forge script script/Deploy.s.sol:DeployScript --rpc-url 127.0.0.1:8545 --broadcast",
+    "dev": "concurrently \"anvil -b 2\" \"wait-port 127.0.0.1:8545 && pnpm run build && pnpm run deploy:local\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.2",
+    "wait-port": "^1.1.0"
+  },
+  "dependencies": {
+    "viem": "^2.37.5"
+  }
+}
