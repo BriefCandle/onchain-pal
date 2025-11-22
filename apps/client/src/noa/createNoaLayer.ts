@@ -174,6 +174,11 @@ export function createNoaLayer(result: SetupResult) {
 
       // Get player entity position (use player position instead of camera position)
       const playerPos = noa.entities.getPosition(noa.playerEntity);
+      const cameraPosition: [number, number, number] = [
+        playerPos[0],
+        playerPos[1], // + 1.6, // Add eye height
+        playerPos[2],
+      ];
 
       // set PlayerEntityCoord if changes
       const playerComp = result.components.PlayerEntityCoord;
@@ -189,46 +194,54 @@ export function createNoaLayer(result: SetupResult) {
         setComponent(playerComp, SOURCE, currPathCoord);
       }
 
-      // for (const palEntity of palEntities) {
-      //   // Check if palEntity's position is on terrain that camera is facing
-      //   const palPosition = palEntity.getCurrentPosition();
-      //   const [palX, palY, palZ] = palPosition;
+      // Get camera forward direction robustly
+      const cameraDirection = getCameraForwardDirection(camera);
 
-      //   // Get the block position below the pal entity (the terrain it's standing on)
-      //   const terrainBlockX = Math.floor(palX);
-      //   const terrainBlockY = Math.floor(palY); // Check block just below entity
-      //   const terrainBlockZ = Math.floor(palZ);
+      if (!cameraDirection) {
+        // Could not determine a direction
+        if (Math.random() < 0.01)
+          console.warn("Couldn't determine camera direction");
+        return;
+      }
 
-      //   // Check if camera is targeting a block and if it matches the terrain block below pal entity
-      //   if (noa.targetedBlock) {
-      //     const targetedPos = noa.targetedBlock.position;
-      //     const [targetX, targetY, targetZ] = targetedPos;
-      //     console.log("targetedPos", targetedPos);
-      //     console.log("pal", terrainBlockX, terrainBlockY, terrainBlockY);
-
-      //     // Check if the targeted block matches the terrain block below the pal entity
-      //     if (targetX === terrainBlockX && targetZ === terrainBlockZ) {
-      //       const tokenEntity = palEntity.getTokenEntity();
-      //       console.log(
-      //         "Player camera is facing terrain with pal entity:",
-      //         tokenEntity
-      //       );
-      //       if (lastCenteredPalEntity !== tokenEntity) {
-      //         lastCenteredPalEntity = tokenEntity;
-      //         // set hoveredTarget comp
-      //         const targetComp = result.components.HoveredTarget;
-      //         const targetId =
-      //           getComponentValue(targetComp, TARGET)?.tokenId ?? 0;
-      //         if (targetId !== Number(tokenEntity)) {
-      //           setComponent(targetComp, TARGET, {
-      //             tokenId: Number(tokenEntity),
-      //           });
-      //         }
-      //       }
-      //       return;
-      //     }
-      //   }
+      // // Optional quick debug log occasionally
+      // if (Math.random() < 0.01) {
+      //   console.log("Camera debug:", {
+      //     position: cameraPosition,
+      //     direction: cameraDirection,
+      //     hasGetTarget: typeof (camera as any).getTarget === "function",
+      //     hasGetForwardRay: typeof (camera as any).getForwardRay === "function",
+      //   });
       // }
+
+      for (const palEntity of palEntities) {
+        const isCentered = palEntity.isCameraCentered(
+          cameraPosition,
+          cameraDirection
+        );
+        if (isCentered) {
+          const tokenEntity = palEntity.getTokenEntity();
+          if (lastCenteredPalEntity !== tokenEntity) {
+            // console.log(
+            //   "Player camera is centered on pal entity:",
+            //   tokenEntity,
+            //   lastCenteredPalEntity
+            // );
+
+            lastCenteredPalEntity = tokenEntity;
+            // set hoveredTarget comp
+            const targetComp = result.components.HoveredTarget;
+            const targetId =
+              getComponentValue(targetComp, TARGET)?.tokenId ?? 0;
+            if (targetId !== Number(tokenEntity)) {
+              setComponent(targetComp, TARGET, {
+                tokenId: Number(tokenEntity),
+              });
+            }
+          }
+          break;
+        }
+      }
 
       lastCenteredPalEntity = null;
     } catch (err) {
@@ -245,20 +258,33 @@ export function createNoaLayer(result: SetupResult) {
 export function getCameraForwardDirection(
   camera: any
 ): [number, number, number] | null {
-  // 1) Prefer a built-in forward ray/direction if available
   try {
-    // Babylon's Camera.getForwardRay exists in many versions
+    // Method 1: Use getForwardRay
     if (typeof camera.getForwardRay === "function") {
-      const fr = camera.getForwardRay(); // returns Ray with direction Vector3
+      const fr = camera.getForwardRay();
       if (fr && fr.direction) {
         const d = fr.direction;
-        return normalizeVec3([d.x, d.y, d.z]);
+        const normalized = normalizeVec3([d.x, d.y, d.z]);
+        if (normalized) return normalized;
       }
     }
+
+    // Method 3: Calculate from rotation (fallback)
+    if (camera.rotation) {
+      const pitch = camera.rotation.x;
+      const yaw = camera.rotation.y;
+
+      const x = Math.sin(yaw) * Math.cos(pitch);
+      const y = -Math.sin(pitch);
+      const z = Math.cos(yaw) * Math.cos(pitch);
+
+      const normalized = normalizeVec3([x, y, z]);
+      if (normalized) return normalized;
+    }
   } catch (e) {
-    // Silently fail
-    return null;
+    console.error("Error getting camera direction:", e);
   }
+
   return null;
 }
 

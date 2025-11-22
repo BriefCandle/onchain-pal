@@ -15,6 +15,7 @@ import { unixTime, unixTimeSecond } from "@onchain-pal/contract-client/utils";
 import { Engine } from "noa-engine";
 import { normalizeVec3 } from "../createNoaLayer";
 import { createLlamaVoxel, getLlamaDimensions } from "./createLlamaVoxel";
+import { ButtonEntity } from "./ButtonEntity";
 
 export const getVoxelHeight = (x: number, z: number): number => {
   return 2 * Math.sin(x / 10) + 3 * Math.cos(z / 20);
@@ -35,6 +36,7 @@ export class PalEntity {
   private healthBarMesh: any; // Health bar mesh
   private healthBarEntityId: number | null = null; // Health bar entity ID in noa
   private currentHealth: number = 100; // Current health value (0-100)
+  private buttons: ButtonEntity[] = []; // Button entities
 
   constructor(
     components: NetworkComponents,
@@ -125,6 +127,9 @@ export class PalEntity {
 
     // Create health bar below the text label
     this.createHealthBar();
+
+    // // Create buttons on the left side
+    // this.createButtons();
   }
 
   // Shared function to create/update text label texture
@@ -462,6 +467,27 @@ export class PalEntity {
     healthMaterial.useAlphaFromDiffuseTexture = true;
   }
 
+  private createButtons(): void {
+    const buttonLabels = ["Button 1", "Button 2"];
+    const buttonSpacing = 1.2; // Vertical spacing between buttons
+
+    buttonLabels.forEach((label, index) => {
+      const buttonId = `pal-${this.tokenId}-button-${index}`;
+      const button = new ButtonEntity(this.noa, buttonId, label, () => {
+        console.log(`Button ${index + 1} clicked for pal ${this.tokenId}`);
+        // Add your button click handler here
+      });
+
+      // Position button to the left of the entity
+      const buttonPosition = this.getNoaPosition();
+      const buttonX = buttonPosition[0] - 2.5; // 2.5 units to the left
+      const buttonY = buttonPosition[1] + 0.5 - index * buttonSpacing; // Stack vertically
+      button.addToNoa([buttonX, buttonY, buttonPosition[2]], 1, 0.4);
+
+      this.buttons.push(button);
+    });
+  }
+
   private updateTextPosition(): void {
     if (!this.textMesh) {
       console.warn(`Text mesh not found for tokenId ${this.tokenId}`);
@@ -505,6 +531,14 @@ export class PalEntity {
       this.healthBarMesh.position.set(entityPos[0], healthY, entityPos[2]);
       this.healthBarMesh.computeWorldMatrix(true);
     }
+
+    // Update button positions (to the left of the entity)
+    const buttonSpacing = 1.2;
+    const buttonX = entityPos[0] - 2.5; // 2.5 units to the left
+    this.buttons.forEach((button, index) => {
+      const buttonY = entityPos[1] + 0.5 - index * buttonSpacing;
+      button.updatePosition([buttonX, buttonY, entityPos[2]]);
+    });
   }
 
   getNoaPosition(): [number, number, number] {
@@ -583,13 +617,23 @@ export class PalEntity {
     return [pos[0], pos[1], pos[2]];
   }
 
-  // Check if camera is centered on this pal entity
+  // Get button meshes for click handling
+  getButtonMeshes(): any[] {
+    return this.buttons.map((button) => button.getMesh());
+  }
+
+  // Get button entities
+  getButtons(): ButtonEntity[] {
+    return this.buttons;
+  }
+
   isCameraCentered(
     cameraPosition: [number, number, number],
     cameraDirection: [number, number, number],
     maxAngleDegrees: number = 5,
     maxDistance: number = 200,
-    horizontalOnly: boolean = false
+    minDistance: number = 0.5, // Add configurable minimum distance
+    horizontalOnly: boolean = true
   ): boolean {
     const palPosition = this.getCurrentPosition();
     // console.log("palPosition", palPosition);
@@ -601,18 +645,35 @@ export class PalEntity {
     const dz = palZ - camZ;
     const dist = Math.hypot(dx, dy, dz);
 
-    // Check distance bounds
-    if (dist > maxDistance || dist < 0.1) {
-      console.log("Distance check failed:", dist);
+    // Check distance bounds - now with configurable minimum
+    if (dist > maxDistance || dist < minDistance) {
+      // console.log(
+      //   `Distance check failed: ${dist.toFixed(2)} (min: ${minDistance}, max: ${maxDistance})`
+      // );
       return false;
     }
 
-    // Vector from camera to pal
+    // Vector from camera to pal (normalized)
     let toPal: [number, number, number] = [dx / dist, dy / dist, dz / dist];
-    let camDir: [number, number, number] = [...cameraDirection];
+
+    // Ensure camera direction is normalized before use
+    const camDirLen = Math.hypot(
+      cameraDirection[0],
+      cameraDirection[1],
+      cameraDirection[2]
+    );
+    if (camDirLen < 1e-8) {
+      // Invalid camera direction
+      return false;
+    }
+    let camDir: [number, number, number] = [
+      cameraDirection[0] / camDirLen,
+      cameraDirection[1] / camDirLen,
+      cameraDirection[2] / camDirLen,
+    ];
 
     if (horizontalOnly) {
-      // Project both onto XZ plane
+      // Project both onto XZ plane (after normalization)
       toPal = [toPal[0], 0, toPal[2]];
       camDir = [camDir[0], 0, camDir[2]];
 
@@ -625,7 +686,7 @@ export class PalEntity {
         return false;
       }
 
-      // Normalize
+      // Normalize horizontal projections
       toPal = [toPal[0] / toPalHorizLen, 0, toPal[2] / toPalHorizLen];
       camDir = [camDir[0] / camDirHorizLen, 0, camDir[2] / camDirHorizLen];
     }
@@ -634,19 +695,18 @@ export class PalEntity {
     const dot =
       toPal[0] * camDir[0] + toPal[1] * camDir[1] + toPal[2] * camDir[2];
 
-    // Calculate threshold with some tolerance
+    // Calculate threshold
     const cosThreshold = Math.cos((maxAngleDegrees * Math.PI) / 180);
 
     // Debug output
     const angleDegrees =
       (Math.acos(Math.max(-1, Math.min(1, dot))) * 180) / Math.PI;
     // console.log(
-    //   `Angle: ${angleDegrees.toFixed(2)}°, Threshold: ${maxAngleDegrees}°, Dot: ${dot.toFixed(4)}, CosThreshold: ${cosThreshold.toFixed(4)}`
+    //   `📏 Distance: ${dist.toFixed(2)}m | 📐 Angle: ${angleDegrees.toFixed(2)}° (threshold: ${maxAngleDegrees}°), ${this.tokenEntity}`
     // );
 
     // Use a slightly more forgiving tolerance
     const isCentered = dot >= cosThreshold - 0.01;
-    // console.log("Is centered:", isCentered);
 
     return isCentered;
   }
@@ -654,6 +714,12 @@ export class PalEntity {
   // Cleanup and dispose
   dispose(): void {
     console.log("Disposing entity:", this.tokenEntity);
+
+    // Dispose button entities
+    this.buttons.forEach((button) => {
+      button.dispose();
+    });
+    this.buttons = [];
 
     // Remove health bar entity from noa
     if (this.healthBarEntityId !== null) {
