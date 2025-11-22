@@ -1,6 +1,6 @@
 // display playerEntity (i.e., move to coord) & trainerEntity (what is to moved), their distance, and a move button
 
-import { agentNFTContractConfig } from "@onchain-pal/contract-client";
+import { gameContractConfig } from "@onchain-pal/contract-client";
 import { useSendTransaction } from "../wallet/useSendTransaction";
 import { Hex } from "viem";
 
@@ -11,8 +11,8 @@ export function MintPanel() {
     if (!isConnected) return;
     try {
       await sendContractTransaction({
-        address: agentNFTContractConfig.address as Hex,
-        abi: agentNFTContractConfig.abi,
+        address: gameContractConfig.address as Hex,
+        abi: gameContractConfig.abi,
         functionName: "mintTrainer",
         args: [],
       });
