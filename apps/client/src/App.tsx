@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 // import { loadComputedComponents } from "./mud/loadComputedComponents";
 import { useMUD } from "./MUDContext";
 import { Entity } from "@latticexyz/recs";
-// import { Overlay } from "./react/Overlay";
+import { Overlay } from "./react/Overlay";
 
 export default function App() {
   const { address, isConnected } = useAccount();
@@ -16,6 +16,5 @@ export default function App() {
     // loadComputedComponents(components, address);
   }, []);
 
-  // return <Overlay />;
-  return <div>Hello World</div>;
+  return <Overlay />;
 }

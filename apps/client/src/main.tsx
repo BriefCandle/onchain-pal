@@ -5,7 +5,6 @@ import ReactDOM from "react-dom/client";
 import { WagmiProvider } from "wagmi";
 import { Analytics } from "@vercel/analytics/react";
 import { config } from "./wagmi";
-// import { createNoaLayer } from "./noa/createNoaLayer";
 import { useState } from "react";
 import { useEffect } from "react";
 import { setup } from "./mud/setup";
@@ -13,8 +12,8 @@ import { MUDProvider } from "./MUDContext";
 import App from "./App";
 import "./index.css";
 import { createNoaLayer } from "./noa/createNoaLayer";
+import { setupPreComputed } from "./setup/setupPreComputed";
 // import { createMockSystem } from "./mock/createMockSystem";
-// import { setupPreComputed } from "./setup/setupPreComputed";
 
 globalThis.Buffer = Buffer;
 
@@ -43,7 +42,7 @@ function Root() {
         // Setup network and components
         const setupResult = await setup();
 
-        // setupPreComputed(setupResult.components);
+        setupPreComputed(setupResult.components);
 
         // Initialize noa engine
         const noa = createNoaLayer(setupResult);
