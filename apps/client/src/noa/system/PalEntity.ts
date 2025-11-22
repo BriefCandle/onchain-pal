@@ -588,10 +588,11 @@ export class PalEntity {
     cameraPosition: [number, number, number],
     cameraDirection: [number, number, number],
     maxAngleDegrees: number = 5,
-    maxDistance: number = 50,
-    horizontalOnly: boolean = false // set true if vertical pitch shouldn't matter
+    maxDistance: number = 200,
+    horizontalOnly: boolean = false
   ): boolean {
     const palPosition = this.getCurrentPosition();
+    // console.log("palPosition", palPosition);
     const [palX, palY, palZ] = palPosition;
     const [camX, camY, camZ] = cameraPosition;
 
@@ -599,26 +600,55 @@ export class PalEntity {
     const dy = palY - camY;
     const dz = palZ - camZ;
     const dist = Math.hypot(dx, dy, dz);
-    if (dist > maxDistance || dist < 1e-6) return false;
+
+    // Check distance bounds
+    if (dist > maxDistance || dist < 0.1) {
+      console.log("Distance check failed:", dist);
+      return false;
+    }
 
     // Vector from camera to pal
     let toPal: [number, number, number] = [dx / dist, dy / dist, dz / dist];
-    let camDir = cameraDirection;
+    let camDir: [number, number, number] = [...cameraDirection];
 
     if (horizontalOnly) {
-      // project both onto XZ plane and renormalize
-      toPal = normalizeVec3([toPal[0], 0, toPal[2]])!;
-      camDir = normalizeVec3([camDir[0], 0, camDir[2]])!;
+      // Project both onto XZ plane
+      toPal = [toPal[0], 0, toPal[2]];
+      camDir = [camDir[0], 0, camDir[2]];
+
+      // Check if horizontal projection is valid
+      const toPalHorizLen = Math.hypot(toPal[0], toPal[2]);
+      const camDirHorizLen = Math.hypot(camDir[0], camDir[2]);
+
+      if (toPalHorizLen < 1e-6 || camDirHorizLen < 1e-6) {
+        // console.log("Horizontal projection too small");
+        return false;
+      }
+
+      // Normalize
+      toPal = [toPal[0] / toPalHorizLen, 0, toPal[2] / toPalHorizLen];
+      camDir = [camDir[0] / camDirHorizLen, 0, camDir[2] / camDirHorizLen];
     }
 
-    // Use dot product and cosine threshold (avoid acos)
+    // Calculate dot product
     const dot =
       toPal[0] * camDir[0] + toPal[1] * camDir[1] + toPal[2] * camDir[2];
 
+    // Calculate threshold with some tolerance
     const cosThreshold = Math.cos((maxAngleDegrees * Math.PI) / 180);
-    // numerical safety clamp
-    if (dot >= cosThreshold - 1e-6) return true;
-    return false;
+
+    // Debug output
+    const angleDegrees =
+      (Math.acos(Math.max(-1, Math.min(1, dot))) * 180) / Math.PI;
+    // console.log(
+    //   `Angle: ${angleDegrees.toFixed(2)}°, Threshold: ${maxAngleDegrees}°, Dot: ${dot.toFixed(4)}, CosThreshold: ${cosThreshold.toFixed(4)}`
+    // );
+
+    // Use a slightly more forgiving tolerance
+    const isCentered = dot >= cosThreshold - 0.01;
+    // console.log("Is centered:", isCentered);
+
+    return isCentered;
   }
 
   // Cleanup and dispose

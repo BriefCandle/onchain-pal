@@ -174,11 +174,6 @@ export function createNoaLayer(result: SetupResult) {
 
       // Get player entity position (use player position instead of camera position)
       const playerPos = noa.entities.getPosition(noa.playerEntity);
-      const cameraPosition: [number, number, number] = [
-        playerPos[0],
-        playerPos[1] + 1.6, // Add eye height
-        playerPos[2],
-      ];
 
       // set PlayerEntityCoord if changes
       const playerComp = result.components.PlayerEntityCoord;
@@ -194,55 +189,46 @@ export function createNoaLayer(result: SetupResult) {
         setComponent(playerComp, SOURCE, currPathCoord);
       }
 
-      // Get camera forward direction robustly
-      const cameraDirection = getCameraForwardDirection(camera);
+      // for (const palEntity of palEntities) {
+      //   // Check if palEntity's position is on terrain that camera is facing
+      //   const palPosition = palEntity.getCurrentPosition();
+      //   const [palX, palY, palZ] = palPosition;
 
-      if (!cameraDirection) {
-        // Could not determine a direction
-        if (Math.random() < 0.01)
-          console.warn("Couldn't determine camera direction");
-        return;
-      }
+      //   // Get the block position below the pal entity (the terrain it's standing on)
+      //   const terrainBlockX = Math.floor(palX);
+      //   const terrainBlockY = Math.floor(palY); // Check block just below entity
+      //   const terrainBlockZ = Math.floor(palZ);
 
-      // // Optional quick debug log occasionally
-      // if (Math.random() < 0.01) {
-      //   console.log("Camera debug:", {
-      //     position: cameraPosition,
-      //     direction: cameraDirection,
-      //     hasGetTarget: typeof (camera as any).getTarget === "function",
-      //     hasGetForwardRay: typeof (camera as any).getForwardRay === "function",
-      //   });
+      //   // Check if camera is targeting a block and if it matches the terrain block below pal entity
+      //   if (noa.targetedBlock) {
+      //     const targetedPos = noa.targetedBlock.position;
+      //     const [targetX, targetY, targetZ] = targetedPos;
+      //     console.log("targetedPos", targetedPos);
+      //     console.log("pal", terrainBlockX, terrainBlockY, terrainBlockY);
+
+      //     // Check if the targeted block matches the terrain block below the pal entity
+      //     if (targetX === terrainBlockX && targetZ === terrainBlockZ) {
+      //       const tokenEntity = palEntity.getTokenEntity();
+      //       console.log(
+      //         "Player camera is facing terrain with pal entity:",
+      //         tokenEntity
+      //       );
+      //       if (lastCenteredPalEntity !== tokenEntity) {
+      //         lastCenteredPalEntity = tokenEntity;
+      //         // set hoveredTarget comp
+      //         const targetComp = result.components.HoveredTarget;
+      //         const targetId =
+      //           getComponentValue(targetComp, TARGET)?.tokenId ?? 0;
+      //         if (targetId !== Number(tokenEntity)) {
+      //           setComponent(targetComp, TARGET, {
+      //             tokenId: Number(tokenEntity),
+      //           });
+      //         }
+      //       }
+      //       return;
+      //     }
+      //   }
       // }
-
-      // Optional: visual debug (uncomment while debugging)
-      // drawCameraDebugLine(scene, cameraPosition, cameraDirection);
-
-      for (const palEntity of palEntities) {
-        const isCentered = palEntity.isCameraCentered(
-          cameraPosition,
-          cameraDirection
-        );
-        if (isCentered) {
-          const tokenEntity = palEntity.getTokenEntity();
-          if (lastCenteredPalEntity !== tokenEntity) {
-            console.log(
-              "Player camera is centered on pal entity:",
-              tokenEntity
-            );
-            lastCenteredPalEntity = tokenEntity;
-            // set hoveredTarget comp
-            const targetComp = result.components.HoveredTarget;
-            const targetId =
-              getComponentValue(targetComp, TARGET)?.tokenId ?? 0;
-            if (targetId !== Number(tokenEntity)) {
-              setComponent(targetComp, TARGET, {
-                tokenId: Number(tokenEntity),
-              });
-            }
-          }
-          return;
-        }
-      }
 
       lastCenteredPalEntity = null;
     } catch (err) {
