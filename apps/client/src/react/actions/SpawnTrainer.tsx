@@ -1,18 +1,22 @@
-import { useState } from "react";
 import { Hex } from "viem";
-import { createWalletClient, http } from "viem";
-import { privateKeyToAccount } from "viem/accounts";
-import { mintTrainerTx } from "@onchain-pal/contract-client";
-import { useMUD } from "../../MUDContext";
-import { useCurrPositionMUD } from "../hooks/usePath";
-import { adminClient } from "./Move";
+import { agentNFTContractConfig } from "@onchain-pal/contract-client";
+import { useSendTransaction } from "../wallet/useSendTransaction";
 
 export function SpawnTrainerButton() {
-  const { components } = useMUD();
+  const { sendContractTransaction, isConnected } = useSendTransaction();
 
   const handleMintTrainer = async () => {
-    if (!adminClient) return;
-    await mintTrainerTx(adminClient);
+    if (!isConnected) return;
+    try {
+      await sendContractTransaction({
+        address: agentNFTContractConfig.address as Hex,
+        abi: agentNFTContractConfig.abi,
+        functionName: "mintTrainer",
+        args: [],
+      });
+    } catch (error) {
+      console.error("Mint trainer tx failed:", error);
+    }
   };
 
   return (
@@ -20,6 +24,7 @@ export function SpawnTrainerButton() {
       <button
         className="btn btn-primary bg-blue-500 text-white"
         onClick={async () => await handleMintTrainer()}
+        disabled={!isConnected}
       >
         Mint Trainer
       </button>

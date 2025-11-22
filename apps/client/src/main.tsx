@@ -2,9 +2,8 @@ import { Buffer } from "buffer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { WagmiProvider } from "wagmi";
 import { Analytics } from "@vercel/analytics/react";
-import { config } from "./wagmi";
+import { CDPEmbeddedWalletProvider } from "./react/wallet/CDPEmbeddedWalletProvider";
 import { useState } from "react";
 import { useEffect } from "react";
 import { setup } from "./mud/setup";
@@ -20,12 +19,12 @@ globalThis.Buffer = Buffer;
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <WagmiProvider config={config}>
-    <QueryClientProvider client={queryClient}>
+  <QueryClientProvider client={queryClient}>
+    <CDPEmbeddedWalletProvider>
       <Root />
       <Analytics />
-    </QueryClientProvider>
-  </WagmiProvider>
+    </CDPEmbeddedWalletProvider>
+  </QueryClientProvider>,
 );
 
 function Root() {

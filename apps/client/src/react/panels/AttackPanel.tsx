@@ -1,10 +1,15 @@
 // display playerEntity (i.e., move to coord) & trainerEntity (what is to moved), their distance, and a move button
 
 import { useComponentValue } from "@latticexyz/react";
-import { attackTx, moveTx, SOURCE, TARGET } from "@onchain-pal/contract-client";
+import {
+  gameContractConfig,
+  SOURCE,
+  TARGET,
+} from "@onchain-pal/contract-client";
 import { useMUD } from "../../MUDContext";
 import { useCurrPositionMUD } from "../hooks/usePath";
-import { adminClient } from "../actions/Move";
+import { useSendTransaction } from "../wallet/useSendTransaction";
+import { Hex } from "viem";
 
 export function AttackPanel() {
   const { components } = useMUD();
@@ -12,13 +17,24 @@ export function AttackPanel() {
   const targetId = useComponentValue(HoveredTarget, TARGET)?.tokenId ?? 0;
   const trainerId = useComponentValue(SelectedTrainer, SOURCE)?.tokenId ?? 0;
   const trainerCoord = useCurrPositionMUD(components, trainerId);
+  const { sendContractTransaction, isConnected } = useSendTransaction();
+
   if (!trainerCoord || !targetId) return null;
 
   // TODO: add in range check
 
   const handleAttack = async () => {
-    if (!adminClient) return;
-    await attackTx(adminClient, components, trainerId, targetId);
+    if (!isConnected) return;
+    try {
+      await sendContractTransaction({
+        address: gameContractConfig.address as Hex,
+        abi: gameContractConfig.abi,
+        functionName: "attack",
+        args: [BigInt(trainerId), BigInt(targetId)],
+      });
+    } catch (error) {
+      console.error("Attack tx failed:", error);
+    }
   };
 
   return (
@@ -29,6 +45,7 @@ export function AttackPanel() {
         <button
           className="btn btn-primary bg-blue-500 text-white"
           onClick={async () => await handleAttack()}
+          disabled={!isConnected}
         >
           Attack
         </button>

@@ -1,10 +1,11 @@
 // display playerEntity (i.e., move to coord) & trainerEntity (what is to moved), their distance, and a move button
 
 import { useComponentValue } from "@latticexyz/react";
-import { moveTx, SOURCE } from "@onchain-pal/contract-client";
+import { gameContractConfig, SOURCE } from "@onchain-pal/contract-client";
 import { useMUD } from "../../MUDContext";
 import { useCurrPositionMUD } from "../hooks/usePath";
-import { adminClient } from "../actions/Move";
+import { useSendTransaction } from "../wallet/useSendTransaction";
+import { Hex } from "viem";
 
 export function MovePanel() {
   const { components } = useMUD();
@@ -12,14 +13,25 @@ export function MovePanel() {
   const coord = useComponentValue(PlayerEntityCoord, SOURCE);
   const trainerId = useComponentValue(SelectedTrainer, SOURCE)?.tokenId ?? 0;
   const trainerCoord = useCurrPositionMUD(components, trainerId);
+  const { sendContractTransaction, isConnected } = useSendTransaction();
+
   if (!trainerCoord || !coord) return null;
 
   const { x: fromX, y: fromY } = trainerCoord;
   const { x: toX, y: toY } = coord;
 
   const handleMove = async () => {
-    if (!adminClient) return;
-    await moveTx(adminClient, components, trainerId, coord);
+    if (!isConnected) return;
+    try {
+      await sendContractTransaction({
+        address: gameContractConfig.address as Hex,
+        abi: gameContractConfig.abi,
+        functionName: "move",
+        args: [BigInt(trainerId), toX, toY],
+      });
+    } catch (error) {
+      console.error("Move tx failed:", error);
+    }
   };
 
   return (
@@ -31,6 +43,7 @@ export function MovePanel() {
         <button
           className="btn btn-primary bg-blue-500 text-white"
           onClick={async () => await handleMove()}
+          disabled={!isConnected}
         >
           Move
         </button>

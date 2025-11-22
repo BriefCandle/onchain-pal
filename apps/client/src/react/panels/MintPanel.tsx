@@ -1,15 +1,24 @@
 // display playerEntity (i.e., move to coord) & trainerEntity (what is to moved), their distance, and a move button
 
-import { useComponentValue } from "@latticexyz/react";
-import { useMUD } from "../../MUDContext";
-import { useCurrPositionMUD } from "../hooks/usePath";
-import { adminClient } from "../actions/Move";
-import { mintTrainerTx } from "@onchain-pal/contract-client";
+import { agentNFTContractConfig } from "@onchain-pal/contract-client";
+import { useSendTransaction } from "../wallet/useSendTransaction";
+import { Hex } from "viem";
 
 export function MintPanel() {
+  const { sendContractTransaction, isConnected } = useSendTransaction();
+
   const handleMint = async () => {
-    if (!adminClient) return;
-    await mintTrainerTx(adminClient);
+    if (!isConnected) return;
+    try {
+      await sendContractTransaction({
+        address: agentNFTContractConfig.address as Hex,
+        abi: agentNFTContractConfig.abi,
+        functionName: "mintTrainer",
+        args: [],
+      });
+    } catch (error) {
+      console.error("Mint trainer tx failed:", error);
+    }
   };
 
   return (
@@ -18,6 +27,7 @@ export function MintPanel() {
         <button
           className="btn btn-primary bg-blue-500 text-white"
           onClick={async () => await handleMint()}
+          disabled={!isConnected}
         >
           Mint Trainer
         </button>
