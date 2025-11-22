@@ -12,6 +12,8 @@ import App from "./App";
 import "./index.css";
 import { createNoaLayer } from "./noa/createNoaLayer";
 import { setupPreComputed } from "./setup/setupPreComputed";
+import { WagmiProvider } from "wagmi";
+import { wagmiConfig } from "./react/wallet/wagmiConfig";
 // import { createMockSystem } from "./mock/createMockSystem";
 
 globalThis.Buffer = Buffer;
@@ -19,12 +21,14 @@ globalThis.Buffer = Buffer;
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <QueryClientProvider client={queryClient}>
-    <CDPEmbeddedWalletProvider>
-      <Root />
-      <Analytics />
-    </CDPEmbeddedWalletProvider>
-  </QueryClientProvider>,
+  <WagmiProvider config={wagmiConfig}>
+    <QueryClientProvider client={queryClient}>
+      <CDPEmbeddedWalletProvider>
+        <Root />
+        <Analytics />
+      </CDPEmbeddedWalletProvider>
+    </QueryClientProvider>
+  </WagmiProvider>,
 );
 
 function Root() {
