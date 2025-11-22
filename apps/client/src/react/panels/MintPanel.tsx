@@ -8,7 +8,6 @@ export function MintPanel() {
   const { sendContractTransaction, isConnected } = useSendTransaction();
 
   const handleMint = async () => {
-<<<<<<< HEAD
     if (!isConnected) return;
     try {
       await sendContractTransaction({
@@ -20,11 +19,6 @@ export function MintPanel() {
     } catch (error) {
       console.error("Mint trainer tx failed:", error);
     }
-=======
-    if (!adminClient) return;
-    // To Kelsen: change this to use mintTrainerTxWithSmartAccount
-    await mintTrainerTx(adminClient);
->>>>>>> 3385cb687da3519003ec9c4019c187c45695c3cf
   };
 
   return (
