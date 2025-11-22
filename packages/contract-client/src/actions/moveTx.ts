@@ -8,13 +8,14 @@ export const moveTx = async (
   walletClient: WalletClient,
   components: NetworkComponents,
   tokenId: number,
-  toCoord: Vector
+  toCoord: Vector,
+  message: string
 ) => {
   try {
     const { request } = await publicClient.simulateContract({
       ...gameContractConfig,
       functionName: "move",
-      args: [BigInt(tokenId), toCoord.x, toCoord.y],
+      args: [BigInt(tokenId), toCoord.x, toCoord.y, message],
       account: walletClient.account!,
     });
 
