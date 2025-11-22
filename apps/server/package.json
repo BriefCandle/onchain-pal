@@ -1,0 +1,34 @@
+{
+  "name": "@onchain-pal/server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sleep 8 && tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "test:webhook": "tsx src/server.ts & sleep 3 && node test-local.js && pkill -f 'tsx src/server.ts'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.7",
+    "@types/ws": "^8.18.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3",
+    "wait-port": "^1.1.0"
+  },
+  "dependencies": {
+    "@onchain-pal/contract": "workspace:*",
+    "@onchain-pal/contract-client": "workspace:*",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "viem": "^2.37.5",
+    "ws": "^8.18.2",
+    "zod": "^4.1.5"
+  }
+}
