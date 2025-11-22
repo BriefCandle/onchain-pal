@@ -1,25 +1,10 @@
 import { useState } from "react";
 import { Hex } from "viem";
-import { createWalletClient, http } from "viem";
-import { privateKeyToAccount } from "viem/accounts";
-import { localhost, moveTx } from "@onchain-pal/contract-client";
+import { gameContractConfig } from "@onchain-pal/contract-client";
 import { useMUD } from "../../MUDContext";
 import { useCurrPositionMUD } from "../hooks/usePath";
-import { baseSepolia } from "viem/chains";
 
-const PRIVATE_KEY = import.meta.env.VITE_PRIVATE_KEY as Hex | undefined;
-
-export const adminClient = PRIVATE_KEY
-  ? createWalletClient({
-      account: privateKeyToAccount(PRIVATE_KEY),
-      // chain: localhost,
-      // transport: http("http://127.0.0.1:8545"),
-      chain: baseSepolia,
-      transport: http("https://sepolia.base.org"),
-    })
-  : undefined;
-
-export function Move2Button() {}
+import { useSendTransaction } from "../wallet/useSendTransaction";
 
 // for testing purpose
 export function MoveButton() {
@@ -27,12 +12,22 @@ export function MoveButton() {
   const [tokenId, setTokenId] = useState(0);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
+  const { sendContractTransaction, isConnected } = useSendTransaction();
 
   const currCoord = useCurrPositionMUD(components, tokenId);
 
   const handleMove = async () => {
-    if (!adminClient) return;
-    await moveTx(adminClient, components, tokenId, { x, y }, "");
+    if (!isConnected) return;
+    try {
+      await sendContractTransaction({
+        address: gameContractConfig.address as Hex,
+        abi: gameContractConfig.abi,
+        functionName: "move",
+        args: [BigInt(tokenId), x, y],
+      });
+    } catch (error) {
+      console.error("Move tx failed:", error);
+    }
   };
 
   return (
@@ -72,6 +67,7 @@ export function MoveButton() {
       <button
         className="btn btn-primary bg-blue-500 text-white"
         onClick={async () => await handleMove()}
+        disabled={!isConnected}
       >
         Move
       </button>

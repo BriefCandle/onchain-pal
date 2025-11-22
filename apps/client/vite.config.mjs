@@ -17,7 +17,9 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 
     resolve: {
       extensions: [".tsx", ".ts", ".jsx", ".js"],
-      alias: {},
+      alias: {
+        "@": resolve(__dirname, "src"),
+      },
       dedupe: [
         // This is needed if importing noa-engine from the local filesystem,
         // but doesn't hurt anything if you're importing normally.

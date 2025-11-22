@@ -1,5 +1,78 @@
 @import "tailwindcss";
 
+/* shadcn/ui CSS variables for dark theme (game UI) */
+:root {
+  --background: 0 0% 10%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 10%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 9%;
+  --secondary: 0 0% 20%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 64%;
+  --accent: 0 0% 20%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62% 50%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 0 0% 83%;
+  --radius: 0.5rem;
+}
+
+/* Theme color classes for shadcn */
+.bg-background {
+  background-color: hsl(var(--background));
+}
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+.bg-popover {
+  background-color: hsl(var(--popover));
+}
+.text-popover-foreground {
+  color: hsl(var(--popover-foreground));
+}
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+.bg-secondary {
+  background-color: hsl(var(--secondary));
+}
+.text-secondary-foreground {
+  color: hsl(var(--secondary-foreground));
+}
+.bg-muted {
+  background-color: hsl(var(--muted));
+}
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+.bg-accent {
+  background-color: hsl(var(--accent));
+}
+.text-accent-foreground {
+  color: hsl(var(--accent-foreground));
+}
+.bg-destructive {
+  background-color: hsl(var(--destructive));
+}
+.text-destructive-foreground {
+  color: hsl(var(--destructive-foreground));
+}
+.border-input {
+  border-color: hsl(var(--input));
+}
+.ring-ring {
+  --tw-ring-color: hsl(var(--ring));
+}
 
 .btn-blue {
   @apply px-1 bg-blue-500 text-white  rounded;
@@ -11,7 +84,6 @@
 
 .btn-blue:active {
   @apply bg-blue-500;
-
 }
 
 .btn-blue:disabled {
@@ -19,7 +91,7 @@
 }
 
 .btn-pink {
-  @apply m-0 px-1 py-0 bg-pink-500 text-white ;
+  @apply m-0 px-1 py-0 bg-pink-500 text-white;
 }
 
 .btn-pink:hover {
@@ -31,7 +103,7 @@
 }
 
 .btn-pink.deactivated {
-  @apply bg-gray-400 text-white ;
+  @apply bg-gray-400 text-white;
 }
 
 .btn-pink:disabled {

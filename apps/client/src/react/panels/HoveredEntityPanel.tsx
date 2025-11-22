@@ -1,15 +1,9 @@
 // display playerEntity (i.e., move to coord) & trainerEntity (what is to moved), their distance, and a move button
 
 import { useComponentValue } from "@latticexyz/react";
-import {
-  AgentType,
-  catchTx,
-  SOURCE,
-  TARGET,
-} from "@onchain-pal/contract-client";
+import { AgentType, SOURCE, TARGET } from "@onchain-pal/contract-client";
 import { useMUD } from "../../MUDContext";
 import { useCurrPositionMUD } from "../hooks/usePath";
-import { adminClient } from "../actions/Move";
 import { Entity } from "@latticexyz/recs";
 import { AttackPanel } from "./AttackPanel";
 import { CatchPanel } from "./CatchPanel";
@@ -20,7 +14,7 @@ export function HoeverEntityPanel() {
   const targetId = useComponentValue(HoveredTarget, TARGET)?.tokenId ?? 0;
   const targetData = useComponentValue(
     TokenData,
-    targetId.toString() as Entity
+    targetId.toString() as Entity,
   );
   const trainerId = useComponentValue(SelectedTrainer, SOURCE)?.tokenId ?? 0;
   const trainerCoord = useCurrPositionMUD(components, trainerId);

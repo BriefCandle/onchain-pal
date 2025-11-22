@@ -18,7 +18,8 @@
     "isolatedModules": true,
     "typeRoots": ["./node_modules/@types", "../node_modules/@types", "./types"],
     "paths": {
-      "SRC/*": ["./src/*"]
+      "SRC/*": ["./src/*"],
+      "@/*": ["./src/*"]
     }
   }
 }
