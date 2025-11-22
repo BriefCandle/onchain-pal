@@ -67,7 +67,8 @@ interface IGameV1 {
 
   function getTokensData(uint256 start, uint256 count) external view returns (TokenData[] memory tokenData);
 
-  event Revived(uint256 tokenId);
+  event Revived(uint256 tokenId, uint32 health);
+  event Defeated(uint256 tokenId, uint40 lastDeadTime);
   event Spawned(uint256 tokenId, TokenDataFlat tokenDataFlat);
   event PathUpdated(uint256 tokenId, PathData pathData);
   event Attacked(uint256 attackerTokenId, uint256 targetTokenId, bool inRange, bool defeated);
@@ -136,8 +137,7 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
   function revive(uint256 tokenId) external onlyCanRevive(tokenId) {
     if (agentNFT.ownerOf(tokenId) != msg.sender) revert("NotOwner");
     statsDatas[tokenId].health = 100;
-    timeDatas[tokenId].lastDeadTime = 0;
-    emit Revived(tokenId);
+    emit Revived(tokenId, statsDatas[tokenId].health);
   }
 
   modifier onlyCanRevive(uint256 tokenId) {
@@ -197,8 +197,9 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
 
   // TODO: whether to punish players for losing trainer and pal
   function _handleDefeat(uint256 tokenId) internal {
-    statsDatas[tokenId].health == 0;
+    statsDatas[tokenId].health = 0;
     timeDatas[tokenId].lastDeadTime = uint40(block.timestamp);
+    emit Defeated(tokenId, timeDatas[tokenId].lastDeadTime);
   }
 
   // pal & trainer first spawn in GAME
