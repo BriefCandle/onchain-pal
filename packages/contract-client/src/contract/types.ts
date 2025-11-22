@@ -92,13 +92,15 @@ export interface SpawnedEventData {
 
 export interface SpawnedEventFlatData extends TokenDataFlat {}
 
-export interface RespawnedEventData extends SpawnedEventData {}
+export interface DefeatedEventData {
+  tokenId: bigint;
+  lastDeadTime: number;
+}
 
-export interface RespawnedEventFlatData extends SpawnedEventFlatData {}
-
-export interface PalDeployedEventData extends SpawnedEventData {}
-
-export interface PalDeployedEventFlatData extends SpawnedEventFlatData {}
+export interface RevivedEventData {
+  tokenId: bigint;
+  health: number;
+}
 
 export interface PathUpdatedEventData {
   tokenId: bigint;
@@ -166,5 +168,6 @@ export const gameEventSignatures = {
   [keccak256(toHex("CaptureAttempted(uint256,uint256,bool)"))]:
     "CaptureAttempted",
   [keccak256(toHex("CaptureSettled(uint256,address,bool)"))]: "CaptureSettled",
-  [keccak256(toHex("Revived(uint256)"))]: "Revived",
+  [keccak256(toHex("Revived(uint256,uint32)"))]: "Revived",
+  [keccak256(toHex("Defeated(uint256,uint40)"))]: "Defeated",
 } as const;

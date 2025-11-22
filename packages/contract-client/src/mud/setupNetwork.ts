@@ -24,7 +24,6 @@ const pathDataSchema = {
 const agentDataSchema = {
   owner: Type.String,
   agentType: Type.Number,
-  credit: Type.Number,
 } as const;
 
 const timeDataSchema = {
@@ -59,9 +58,6 @@ export function createNetworkComponents() {
       defeated: Type.Boolean,
     }),
     SpawnedEvent: defineComponent(world, tokenDataSchema),
-    RevivedEvent: defineComponent(world, {
-      tokenId: Type.BigInt,
-    }),
     CaptureAttemptedEvent: defineComponent(world, {
       attackerTokenId: Type.BigInt,
       targetTokenId: Type.BigInt,
@@ -71,6 +67,14 @@ export function createNetworkComponents() {
       targetTokenId: Type.BigInt,
       playerAddress: Type.String,
       caught: Type.Boolean,
+    }),
+    DefeatedEvent: defineComponent(world, {
+      tokenId: Type.BigInt,
+      lastDeadTime: Type.Number,
+    }),
+    RevivedEvent: defineComponent(world, {
+      tokenId: Type.BigInt,
+      health: Type.Number,
     }),
   };
   return components;
