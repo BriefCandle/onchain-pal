@@ -8,6 +8,7 @@ import { Entity, getComponentValue } from "@latticexyz/recs";
 import {} from "@onchain-pal/contract-client";
 import { observe } from "./observe";
 import { EvmSmartAccount } from "@coinbase/cdp-sdk";
+import { AgentStorageManager } from "./services/storageManager";
 
 export class PalAgent extends Agent {
   constructor({
@@ -18,6 +19,7 @@ export class PalAgent extends Agent {
     publicClient,
     walletClient,
     store,
+    storageManager,
   }: {
     id: number;
     model: LanguageModel | string;
@@ -26,10 +28,11 @@ export class PalAgent extends Agent {
     publicClient?: PublicClient;
     walletClient?: EvmSmartAccount;
     store?: MessageStore;
+    storageManager?: AgentStorageManager;
   }) {
     const agentInfo = getComponentValue(
       components.TokenData,
-      id.toString() as Entity
+      id.toString() as Entity,
     );
     if (!agentInfo)
       throw new Error(`PalAgent: heroInfo not found for heroId ${id}`);
@@ -65,6 +68,8 @@ export class PalAgent extends Agent {
           },
         ];
       },
+      storageManager,
+      components,
     });
   }
 }
