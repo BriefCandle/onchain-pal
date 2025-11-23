@@ -62,3 +62,10 @@ export function lawOfCosines(a: number, b: number, angle: number) {
 export function dotVectors(vector1: Vector, vector2: Vector) {
   return vector1.x * vector2.x + vector1.y * vector2.y;
 }
+
+export function distanceBetweenVectors(vector1: Vector, vector2: Vector) {
+  return Math.sqrt(
+    (vector1.x - vector2.x) * (vector1.x - vector2.x) +
+      (vector1.y - vector2.y) * (vector1.y - vector2.y)
+  );
+}
