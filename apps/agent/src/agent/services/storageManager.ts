@@ -7,7 +7,7 @@ import type { AgentLogEntry } from "../types/chaoschain";
 
 /** Flush logs every N entries (configurable via env) */
 const FLUSH_THRESHOLD = parseInt(
-  process.env.AGENT_LOG_FLUSH_THRESHOLD || "1",
+  process.env.AGENT_LOG_FLUSH_THRESHOLD || "10",
   10,
 );
 

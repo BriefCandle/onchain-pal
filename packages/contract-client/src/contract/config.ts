@@ -26,11 +26,6 @@ export const localhost = /*#__PURE__*/ defineChain({
   },
 });
 
-// export const publicClient = createPublicClient({
-//   chain: baseSepolia,
-//   transport: http("https://sepolia.base.org"),
-// });
-
 export const publicClient = createPublicClient({
   // chain: localhost,
   chain: baseSepolia,
@@ -40,7 +35,14 @@ export const publicClient = createPublicClient({
   transport: http("https://sepolia.base.org"),
   // transport: http("https://polygon-mainnet.g.alchemy.com/v2/demo"),
   // transport: http("https://api.roninchain.com/rpc"),
+  chain: baseSepolia,
+  transport: http("https://sepolia.base.org"),
 });
+
+// export const publicClient = createPublicClient({
+//   chain: polygon,
+//   transport: http("https://polygon-mainnet.g.alchemy.com/v2/demo"),
+// });
 
 // export const publicClient = createPublicClient({
 //   chain: localhost,
@@ -68,6 +70,10 @@ if (
     transport: http("https://sepolia.base.org"),
     // transport: http("https://polygon-mainnet.g.alchemy.com/v2/demo"),
     // transport: http("https://api.roninchain.com/rpc"),
+    //chain: polygon,
+    // transport: http("http://127.0.0.1:8545"),
+    transport: http("https://sepolia.base.org"),
+    //transport: http("https://polygon-mainnet.g.alchemy.com/v2/demo"),
     account,
   });
 }
@@ -81,6 +87,7 @@ export { adminWallet };
 // export const GAME_ADDRESS = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9";
 
 // // base sepolia--test1
+// // // base sepolia--test1
 export const RNG_PROVIDER_ADDRESS =
   "0x6712619ef89c8aCF5d6407b4b57c807f05c29252";
 export const AGENT_NFT_ADDRESS = "0xe0a3f19BeD468a3cF938162A91ea60d2E898Eb13";
