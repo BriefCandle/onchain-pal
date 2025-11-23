@@ -86,9 +86,9 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
   IRNGProvider public rngProvider;
   AgentNFT public agentNFT;
 
-  uint32 public MOVE_SPEED = 100;
-  uint32 public ATTACK_RANGE = 800;
-  uint32 public SPAWN_WIDTH = MOVE_SPEED * 1 minutes;
+  uint32 public MOVE_SPEED = 150;
+  uint32 public ATTACK_RANGE = 8000;
+  uint32 public SPAWN_WIDTH = MOVE_SPEED * 30 seconds;
   uint40 public REVIVE_TIME = 1 minutes;
 
   mapping(uint256 tokenId => PathData) public pathDatas;
@@ -124,7 +124,7 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
     uint32 toX,
     uint32 toY,
     string calldata message
-  ) external onlyAllowedCaller onlyAlive(tokenId) {
+  ) external onlyOwnerOrAllowedCaller(tokenId) onlyAlive(tokenId) {
     PathData memory nextPathData = pathLogic.computeNextPathData(
       pathDatas[tokenId],
       toX,
@@ -140,7 +140,7 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
   function attack(
     uint256 tokenId,
     uint256 targetTokenId
-  ) external onlyAllowedCaller onlyAlive(tokenId) onlyAlive(targetTokenId) {
+  ) external onlyOwnerOrAllowedCaller(tokenId) onlyAlive(tokenId) onlyAlive(targetTokenId) {
     bool defeated = false;
     bool inRange = pathLogic.withinRange(
       pathDatas[tokenId],
@@ -156,6 +156,18 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
     // TODO: handle defeated
 
     emit Attacked(tokenId, targetTokenId, true, defeated);
+  }
+
+  modifier onlyOwnerOrAllowedCaller(uint256 tokenId) {
+    {
+      AgentType agentType = agentNFT.getAgentType(tokenId);
+      if (agentType == AgentType.TRAINER) {
+        if (agentNFT.ownerOf(tokenId) != msg.sender) revert("NotOwner");
+      } else if (agentType == AgentType.PAL) {
+        if (agentNFT.ownerOf(tokenId) != msg.sender && !isAllowedCaller(msg.sender)) revert("NotOwnerOrAllowedCaller");
+      }
+    }
+    _;
   }
 
   // called by server
@@ -189,7 +201,14 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
   function attemptCapture(
     uint256 tokenId,
     uint256 targetTokenId
-  ) external onlyAllowedCaller onlyAlive(tokenId) onlyAlive(targetTokenId) onlyPal(targetTokenId) onlyTrainer(tokenId) {
+  )
+    external
+    onlyOwnerOrAllowedCaller(tokenId)
+    onlyAlive(tokenId)
+    onlyAlive(targetTokenId)
+    onlyPal(targetTokenId)
+    onlyTrainer(tokenId)
+  {
     if (agentNFT.ownerOf(targetTokenId) != address(this)) revert("TargetNotOwnedByGame");
     bool inRange = pathLogic.withinRange(
       pathDatas[tokenId],
@@ -214,7 +233,7 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
     if (attemptData.playerAddress == address(0)) revert("AttemptNotFound");
     if (attemptData.targetTokenId == 0) revert("TargetNotFound");
     bytes32 rng = rngProvider.settleRNG(attemptHash, seed);
-    bool caught = uint256(rng) % 100 < 10;
+    bool caught = uint256(rng) % 100 < 60;
 
     delete captureAttempts[attemptHash];
 
@@ -245,43 +264,6 @@ contract GameV1 is AllowedCaller, IGameV1, IERC721Receiver {
 
     emit Spawned(tokenId, _getTokenDataFlat(tokenId));
   }
-
-  // // owner pal deploy
-  // function _deployPal(uint256 tokenId, uint256 trainerTokenId) internal {
-  //   PathData memory offsetPathData = pathLogic.getRandomPathData(
-  //     uint256(keccak256(abi.encodePacked(tokenId, "_deployPalX"))),
-  //     uint256(keccak256(abi.encodePacked(tokenId, "_deployPalY"))),
-  //     MOVE_SPEED * 10 // range to deploy
-  //   );
-  //   (uint32 x, uint32 y) = pathLogic.getCurrPosition(pathDatas[trainerTokenId], uint40(block.timestamp));
-  //   pathDatas[tokenId] = PathData({
-  //     fromX: x + offsetPathData.fromX,
-  //     fromY: y + offsetPathData.fromY,
-  //     toX: x + offsetPathData.toX,
-  //     toY: y + offsetPathData.toY,
-  //     lastUpdated: uint40(block.timestamp),
-  //     duration: 0
-  //   });
-  //   statsDatas[tokenId] = StatsData({ health: 100 });
-  //   timeDatas[tokenId].lastJoinedTime = uint40(block.timestamp);
-
-  //   emit PalDeployed(tokenId, _getTokenDataFlat(tokenId));
-  // }
-
-  // function _leave(uint256 tokenId) internal {
-  //   (uint32 x, uint32 y) = pathLogic.getCurrPosition(pathDatas[tokenId], uint40(block.timestamp));
-  //   pathDatas[tokenId] = PathData({
-  //     fromX: x,
-  //     fromY: y,
-  //     toX: x,
-  //     toY: y,
-  //     lastUpdated: uint40(block.timestamp),
-  //     duration: 0
-  //   });
-  //   timeDatas[tokenId].lastJoinedTime = 0;
-  //   timeDatas[tokenId].lastLeftTime = uint40(block.timestamp);
-  //   emit Left(tokenId);
-  // }
 
   // #region ------------------------------ getters ------------------------------
   modifier onlyNFTOwner(uint256 tokenId) {
