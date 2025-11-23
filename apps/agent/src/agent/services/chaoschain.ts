@@ -53,6 +53,9 @@ const sdkRegistry = new Map<number, InstanceType<typeof ChaosChainSDK>>();
 /** In-memory storage refs: gameTokenId -> storage references */
 const storageRefs = new Map<number, StorageReference[]>();
 
+/** In-flight registrations: gameTokenId -> Promise (guards against race conditions) */
+const pendingRegistrations = new Map<number, Promise<ChaosIdentity>>();
+
 /** Shared operations wallet for storage fees */
 let operationsWallet: Wallet | null = null;
 
@@ -62,6 +65,9 @@ let zeroGStorage: ZeroGStorageProvider | null = null;
 /** Service configuration */
 let serviceConfig: ChaosChainServiceConfig | null = null;
 
+/** Service initialization flag */
+let serviceInitialized = false;
+
 // ============================================
 // Initialization
 // ============================================
@@ -69,6 +75,14 @@ let serviceConfig: ChaosChainServiceConfig | null = null;
 export function initializeChaosChainService(
   config: ChaosChainServiceConfig,
 ): void {
+  // Guard against re-initialization
+  if (serviceInitialized) {
+    logWarn(
+      "ChaosChain service already initialized. Skipping re-initialization.",
+    );
+    return;
+  }
+
   logInfo("Initializing ChaosChain service...");
   logDebug("Config:", {
     gameContractAddress: config.gameContractAddress,
@@ -88,6 +102,8 @@ export function initializeChaosChainService(
     privateKey: config.operationsPrivateKey,
   });
 
+  serviceInitialized = true;
+
   logInfo("Service initialized successfully!");
   logInfo(`  Operations wallet: ${operationsWallet.address}`);
   logInfo(`  Game contract: ${config.gameContractAddress}`);
@@ -101,6 +117,8 @@ export function initializeChaosChainService(
 /**
  * Register a new agent identity on ChaosChain.
  * The agent's CDP smart account will own the ERC-8004 identity NFT.
+ * Only registers once per agent - returns existing identity if already registered.
+ * Guards against race conditions with concurrent registration attempts.
  */
 export async function registerAgentIdentity(
   config: AgentIdentityConfig,
@@ -111,6 +129,44 @@ export async function registerAgentIdentity(
     `[Token ${config.gameTokenId}] Private key provided: ${config.agentPrivateKey ? "YES" : "NO"}`,
   );
 
+  // Check if already registered - only register once per agent
+  const existingIdentity = identityRegistry.get(config.gameTokenId);
+  if (existingIdentity) {
+    logInfo(
+      `[Token ${config.gameTokenId}] Already registered with ChaosChain Agent ID: ${existingIdentity.chaosAgentId}. Skipping registration.`,
+    );
+    return existingIdentity;
+  }
+
+  // Check if registration is already in progress (race condition guard)
+  const pendingRegistration = pendingRegistrations.get(config.gameTokenId);
+  if (pendingRegistration) {
+    logInfo(
+      `[Token ${config.gameTokenId}] Registration already in progress. Waiting for existing registration...`,
+    );
+    return pendingRegistration;
+  }
+
+  // Create and store the registration promise to prevent concurrent registrations
+  const registrationPromise = performRegistration(config);
+  pendingRegistrations.set(config.gameTokenId, registrationPromise);
+
+  try {
+    const identity = await registrationPromise;
+    return identity;
+  } finally {
+    // Always clean up pending registration, whether success or failure
+    pendingRegistrations.delete(config.gameTokenId);
+  }
+}
+
+/**
+ * Internal function that performs the actual registration.
+ * Separated to allow proper promise tracking for race condition prevention.
+ */
+async function performRegistration(
+  config: AgentIdentityConfig,
+): Promise<ChaosIdentity> {
   if (!serviceConfig) {
     logError(
       `[Token ${config.gameTokenId}] Service not initialized! Cannot register identity.`,
@@ -137,57 +193,86 @@ export async function registerAgentIdentity(
   const sdk = new ChaosChainSDK(sdkConfig);
   logInfo(`[Token ${config.gameTokenId}] SDK instance created successfully`);
 
-  // Register ERC-8004 identity (owned by agent's smart account)
-  logInfo(
-    `[Token ${config.gameTokenId}] Registering ERC-8004 identity on-chain...`,
-  );
-  const startTime = Date.now();
-  const { agentId } = await sdk.registerIdentity();
-  const registrationDuration = Date.now() - startTime;
-  logInfo(
-    `[Token ${config.gameTokenId}] Identity registered! Agent ID: ${agentId} (took ${registrationDuration}ms)`,
-  );
+  // Track if on-chain registration succeeded (for cleanup on partial failure)
+  let agentId: string | null = null;
 
-  // Store cross-reference metadata linking to game NFT
-  logInfo(`[Token ${config.gameTokenId}] Updating agent metadata...`);
-  const metadata = {
-    name: `OnchainPal #${config.gameTokenId}`,
-    description: `OnchainPal game agent - ${config.agentType}`,
-    capabilities: ["game_agent", config.agentType.toLowerCase()],
-    supportedTrust: ["reputation"],
-    // Custom fields for cross-referencing
-    gameContract: serviceConfig.gameContractAddress,
-    gameTokenId: config.gameTokenId.toString(),
-    gameAgentType: config.agentType,
-    gameNetwork: "base-sepolia",
-  };
-  logDebug(`[Token ${config.gameTokenId}] Metadata:`, metadata);
+  try {
+    // Register ERC-8004 identity (owned by agent's smart account)
+    logInfo(
+      `[Token ${config.gameTokenId}] Registering ERC-8004 identity on-chain...`,
+    );
+    const startTime = Date.now();
+    const result = await sdk.registerIdentity();
+    agentId = result.agentId;
+    const registrationDuration = Date.now() - startTime;
+    logInfo(
+      `[Token ${config.gameTokenId}] Identity registered! Agent ID: ${agentId} (took ${registrationDuration}ms)`,
+    );
 
-  const metadataStartTime = Date.now();
-  await sdk.updateAgentMetadata(BigInt(agentId), metadata);
-  const metadataDuration = Date.now() - metadataStartTime;
-  logInfo(
-    `[Token ${config.gameTokenId}] Metadata updated! (took ${metadataDuration}ms)`,
-  );
+    // Store SDK immediately after successful on-chain registration
+    // This ensures we don't lose the SDK reference if metadata update fails
+    sdkRegistry.set(config.gameTokenId, sdk);
 
-  const identity: ChaosIdentity = {
-    chaosAgentId: agentId.toString(),
-    gameTokenId: config.gameTokenId,
-    registeredAt: Date.now(),
-  };
+    // Store cross-reference metadata linking to game NFT
+    logInfo(`[Token ${config.gameTokenId}] Updating agent metadata...`);
+    const metadata = {
+      name: `OnchainPal #${config.gameTokenId}`,
+      description: `OnchainPal game agent - ${config.agentType}`,
+      capabilities: ["game_agent", config.agentType.toLowerCase()],
+      supportedTrust: ["reputation"],
+      // Custom fields for cross-referencing
+      gameContract: serviceConfig!.gameContractAddress,
+      gameTokenId: config.gameTokenId.toString(),
+      gameAgentType: config.agentType,
+      gameNetwork: "base-sepolia",
+    };
+    logDebug(`[Token ${config.gameTokenId}] Metadata:`, metadata);
 
-  // Store in registries
-  identityRegistry.set(config.gameTokenId, identity);
-  sdkRegistry.set(config.gameTokenId, sdk);
-  storageRefs.set(config.gameTokenId, []);
+    const metadataStartTime = Date.now();
+    await sdk.updateAgentMetadata(BigInt(agentId!), metadata);
+    const metadataDuration = Date.now() - metadataStartTime;
+    logInfo(
+      `[Token ${config.gameTokenId}] Metadata updated! (took ${metadataDuration}ms)`,
+    );
 
-  logInfo(`[Token ${config.gameTokenId}] Registration complete!`);
-  logInfo(`[Token ${config.gameTokenId}]   ChaosChain Agent ID: ${agentId}`);
-  logInfo(
-    `[Token ${config.gameTokenId}]   Total registrations: ${identityRegistry.size}`,
-  );
+    const identity: ChaosIdentity = {
+      chaosAgentId: agentId!.toString(),
+      gameTokenId: config.gameTokenId,
+      registeredAt: Date.now(),
+    };
 
-  return identity;
+    // Store in registries
+    identityRegistry.set(config.gameTokenId, identity);
+    storageRefs.set(config.gameTokenId, []);
+
+    logInfo(`[Token ${config.gameTokenId}] Registration complete!`);
+    logInfo(`[Token ${config.gameTokenId}]   ChaosChain Agent ID: ${agentId}`);
+    logInfo(
+      `[Token ${config.gameTokenId}]   Total registrations: ${identityRegistry.size}`,
+    );
+
+    return identity;
+  } catch (error) {
+    // Clean up SDK if registration failed but SDK was stored
+    if (sdkRegistry.has(config.gameTokenId)) {
+      logWarn(
+        `[Token ${config.gameTokenId}] Cleaning up SDK after registration failure...`,
+      );
+      sdkRegistry.delete(config.gameTokenId);
+    }
+
+    // If on-chain registration succeeded but metadata failed, log the orphaned identity
+    if (agentId) {
+      logError(
+        `[Token ${config.gameTokenId}] Registration partially failed. On-chain identity ${agentId} may be orphaned.`,
+      );
+      logError(
+        `[Token ${config.gameTokenId}] Manual cleanup may be required for ChaosChain Agent ID: ${agentId}`,
+      );
+    }
+
+    throw error;
+  }
 }
 
 /**
