@@ -100,6 +100,7 @@ export class Agent {
   async step() {
     const messages = await this.store.getMessages({ agentId: this.id });
     const observedMessages = (await this.observe?.(this.id)) || [];
+    console.log("observedMessages", observedMessages);
     // observedMessages.forEach((m) => {
     //   console.log(`[agent ${this.id}]\n${m.content}`);
     // });
@@ -141,12 +142,12 @@ export class Agent {
             //   //   // but AiMo Network may support it. If not, remove this.
             //   // },
             // },
-            providerOptions: {
-              openai: {
-                // Configure OpenAI provider options
-                // Note: The SDK should use /chat/completions by default
-              },
-            },
+            // providerOptions: {
+            //   openai: {
+            //     // Enable parallel tool calls to allow multiple tools to be called simultaneously
+            //     parallelToolCalls: true,
+            //   },
+            // },
           }),
           new Promise<never>((_, reject) =>
             setTimeout(
