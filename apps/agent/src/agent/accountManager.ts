@@ -1,5 +1,4 @@
-import { WalletClient, Hex } from "viem";
-import { CdpSmartWalletProvider } from "@coinbase/agentkit";
+import { Hex } from "viem";
 import { CdpClient, EvmSmartAccount } from "@coinbase/cdp-sdk";
 import { privateKeyToAccount } from "viem/accounts";
 import { keccak256, toBytes, stringToHex } from "viem";
@@ -11,7 +10,7 @@ import { keccak256, toBytes, stringToHex } from "viem";
  * @returns The wallet client for the agent's smart account
  */
 export async function createOrGetAgentAccount(
-  agentId: number
+  agentId: number,
 ): Promise<EvmSmartAccount> {
   // Get CDP configuration from environment variables
   // Support both the user's example format and the actual API format
@@ -22,7 +21,7 @@ export async function createOrGetAgentAccount(
 
   if (!apiKeyId || !apiKeySecret) {
     throw new Error(
-      "CDP_API_KEY_ID (or CDP_API_KEY_NAME) and CDP_API_KEY_SECRET (or CDP_PRIVATE_KEY) environment variables are required"
+      "CDP_API_KEY_ID (or CDP_API_KEY_NAME) and CDP_API_KEY_SECRET (or CDP_PRIVATE_KEY) environment variables are required",
     );
   }
 
@@ -60,7 +59,7 @@ export async function createOrGetAgentAccount(
   // Get the smart account address
   const agentAddress = smartWalletProvider.address;
   console.log(
-    `[Agent ${agentId}] Created deterministic smart account: ${agentAddress}`
+    `[Agent ${agentId}] Created deterministic smart account: ${agentAddress}`,
   );
 
   return smartWalletProvider;

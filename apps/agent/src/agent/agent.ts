@@ -2,6 +2,9 @@
 import { createOpenAI } from "@ai-sdk/openai";
 import { generateText, LanguageModel, ModelMessage, ToolSet } from "ai";
 import { InMemoryMessageStore, MessageStore } from "./store";
+import { AgentStorageManager } from "./services/storageManager";
+import { unregisterAgentIdentity } from "./services/chaoschain";
+import type { NetworkComponents } from "@onchain-pal/contract-client";
 
 const getAimoBaseURL = () => {
   if (process.env.AIMO_BASE_URL) {
@@ -19,7 +22,7 @@ const getAimoNetwork = () => {
     const apiKey = process.env.AIMO_API_KEY;
     if (!apiKey) {
       throw new Error(
-        "AIMO_API_KEY environment variable is required. Get your API key from https://aimo.network"
+        "AIMO_API_KEY environment variable is required. Get your API key from https://aimo.network",
       );
     }
 
@@ -45,8 +48,11 @@ export class Agent {
   readonly store: MessageStore;
   readonly tools?: ToolSet;
   readonly observe?: (id: number) => Promise<ModelMessage[]>;
+  readonly storageManager?: AgentStorageManager;
+  readonly components?: NetworkComponents;
 
   status: AgentStatus = "stopped";
+  private stepCount = 0;
 
   constructor({
     id,
@@ -55,6 +61,8 @@ export class Agent {
     store,
     tools,
     observe,
+    storageManager,
+    components,
   }: {
     id: number;
     model: LanguageModel | string;
@@ -62,6 +70,8 @@ export class Agent {
     store?: MessageStore;
     tools?: ToolSet;
     observe?: (id: number) => Promise<ModelMessage[]>;
+    storageManager?: AgentStorageManager;
+    components?: NetworkComponents;
   }) {
     this.id = id;
     // this.model = typeof model === "string" ? openrouter(model) : model;
@@ -70,6 +80,8 @@ export class Agent {
     this.store = store ?? new InMemoryMessageStore();
     this.tools = tools;
     this.observe = observe;
+    this.storageManager = storageManager;
+    this.components = components;
   }
 
   async start() {
@@ -91,13 +103,23 @@ export class Agent {
     }
   }
 
-  async stop() {
+  async stop(reason: "death" | "exit" | "manual" = "manual") {
     if (this.status === "running") {
       this.status = "stopping";
+    }
+
+    // Flush storage before cleanup
+    if (this.storageManager) {
+      await this.storageManager.onStop(reason);
+
+      // Clean up ChaosChain registry
+      unregisterAgentIdentity(this.id);
     }
   }
 
   async step() {
+    this.stepCount++;
+
     const messages = await this.store.getMessages({ agentId: this.id });
     const observedMessages = (await this.observe?.(this.id)) || [];
     console.log("observedMessages", observedMessages);
@@ -114,6 +136,56 @@ export class Agent {
       agentId: this.id,
       messages: [...observedMessages, ...generatedMessages],
     });
+
+    // Log decision to storage manager
+    if (this.storageManager) {
+      // Extract observation from observed messages
+      const observation =
+        observedMessages.length > 0
+          ? typeof observedMessages[0].content === "string"
+            ? observedMessages[0].content
+            : JSON.stringify(observedMessages[0].content)
+          : "";
+
+      // Extract tool call info from generated messages
+      let toolCalled: string | null = null;
+      let toolParams: Record<string, unknown> | null = null;
+      let result: string | null = null;
+      let reasoning = "";
+
+      for (const msg of generatedMessages) {
+        if (msg.role === "assistant") {
+          if (typeof msg.content === "string") {
+            reasoning = msg.content;
+          }
+        }
+        // Check for tool calls in the message
+        if ("toolCalls" in msg && Array.isArray(msg.toolCalls)) {
+          const firstToolCall = msg.toolCalls[0];
+          if (firstToolCall) {
+            toolCalled = firstToolCall.toolName || null;
+            toolParams =
+              (firstToolCall.args as Record<string, unknown>) || null;
+          }
+        }
+        // Check for tool results
+        if (msg.role === "tool" && "content" in msg) {
+          result =
+            typeof msg.content === "string"
+              ? msg.content
+              : JSON.stringify(msg.content);
+        }
+      }
+
+      this.storageManager.log({
+        step: this.stepCount,
+        observation,
+        reasoning,
+        toolCalled,
+        toolParams,
+        result,
+      });
+    }
   }
 
   async generate(messages: ModelMessage[]) {
@@ -152,8 +224,8 @@ export class Agent {
           new Promise<never>((_, reject) =>
             setTimeout(
               () => reject(new Error("AI call timeout after 30s")),
-              30_000
-            )
+              30_000,
+            ),
           ),
         ]);
 
@@ -179,7 +251,7 @@ export class Agent {
             `Tool calls: ${toolCalls.length} | ` +
             `Reasoning length: ${reasoningLength} chars | ` +
             `Observation size: ${observationSize} chars | ` +
-            `Total input: ${inputMessagesSize} chars`
+            `Total input: ${inputMessagesSize} chars`,
         );
 
         const logEntry = {
@@ -268,7 +340,7 @@ export const writeLogToFile = (log: any, heroId: number) => {
     } catch (error) {
       console.warn(
         `Failed to parse existing log file for agent ${heroId}:`,
-        error
+        error,
       );
       existingLog = {};
     }

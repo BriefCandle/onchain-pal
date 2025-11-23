@@ -1,0 +1,6515 @@
+{
+  "07af4cab-4c62-4057-be8d-9dbe2643c3dd": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_1KJ4s1YTqdGbJgB7mgfa9dnM",
+        "toolName": "move",
+        "input": {
+          "x": 5731,
+          "y": 2849,
+          "message": "Moving to a new random position within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_1KJ4s1YTqdGbJgB7mgfa9dnM",
+            "toolName": "move",
+            "input": {
+              "x": 5731,
+              "y": 2849,
+              "message": "Moving to a new random position within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_1KJ4s1YTqdGbJgB7mgfa9dnM",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:17:23.189Z",
+    "duration": 11840,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "38c5eb15-8636-485a-b440-938e6b965cdd": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_t3HKZVxq0j5F5Fg2piXupjgu",
+        "toolName": "move",
+        "input": {
+          "x": 5012,
+          "y": 9274,
+          "message": "Moving to a random coordinate within 0-10000 for exploration."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_t3HKZVxq0j5F5Fg2piXupjgu",
+            "toolName": "move",
+            "input": {
+              "x": 5012,
+              "y": 9274,
+              "message": "Moving to a random coordinate within 0-10000 for exploration."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_t3HKZVxq0j5F5Fg2piXupjgu",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:17:30.512Z",
+    "duration": 7071,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "d9741b03-4797-4e0f-9fcf-b44180fe5430": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_o4ngwboiGmqD7lsCihmTeKcN",
+        "toolName": "move",
+        "input": {
+          "x": 4723,
+          "y": 8291,
+          "message": "Move to a random coordinate within 0-10000 range as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_o4ngwboiGmqD7lsCihmTeKcN",
+            "toolName": "move",
+            "input": {
+              "x": 4723,
+              "y": 8291,
+              "message": "Move to a random coordinate within 0-10000 range as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_o4ngwboiGmqD7lsCihmTeKcN",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:17:39.100Z",
+    "duration": 8336,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "d0669093-5094-4cf7-b01a-d5bb78bb57fd": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_51eOBuVoR3h8HaVQ1EBbphoL",
+        "toolName": "move",
+        "input": {
+          "x": 7421,
+          "y": 1193,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_51eOBuVoR3h8HaVQ1EBbphoL",
+            "toolName": "move",
+            "input": {
+              "x": 7421,
+              "y": 1193,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_51eOBuVoR3h8HaVQ1EBbphoL",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:17:46.848Z",
+    "duration": 7496,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "84c7fa16-4c30-46e9-b6f3-0bb7e702f7f2": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_uHdwQsmwy1yyguOEmAaGyPXn",
+        "toolName": "move",
+        "input": {
+          "x": 5678,
+          "y": 1234,
+          "message": "Moving to a random coordinate as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_uHdwQsmwy1yyguOEmAaGyPXn",
+            "toolName": "move",
+            "input": {
+              "x": 5678,
+              "y": 1234,
+              "message": "Moving to a random coordinate as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_uHdwQsmwy1yyguOEmAaGyPXn",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:17:56.627Z",
+    "duration": 9528,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "26eb710d-507b-4718-9fa3-b42020507286": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_zNXm40Uka3HNMgdHLCFXLdzp",
+        "toolName": "move",
+        "input": {
+          "x": 3847,
+          "y": 7194,
+          "message": "Moving to a random coordinate within the requested bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_zNXm40Uka3HNMgdHLCFXLdzp",
+            "toolName": "move",
+            "input": {
+              "x": 3847,
+              "y": 7194,
+              "message": "Moving to a random coordinate within the requested bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_zNXm40Uka3HNMgdHLCFXLdzp",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:18:06.542Z",
+    "duration": 9662,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "058754f5-16c7-40f4-bb76-8896a5b4fdc3": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_2ROZwYiKtCyfJY3FPJ2izK1r",
+        "toolName": "move",
+        "input": {
+          "x": 8173,
+          "y": 6241,
+          "message": "Move to a random coordinate for exploration"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_2ROZwYiKtCyfJY3FPJ2izK1r",
+            "toolName": "move",
+            "input": {
+              "x": 8173,
+              "y": 6241,
+              "message": "Move to a random coordinate for exploration"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_2ROZwYiKtCyfJY3FPJ2izK1r",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:18:14.820Z",
+    "duration": 8027,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "6e4c7248-87b8-49c9-b15d-876ce1a63895": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_EBBekzkaDL4jwrbuodnr667l",
+        "toolName": "move",
+        "input": {
+          "x": 8315,
+          "y": 4720,
+          "message": "Moving to a random coordinate within 0-10000 for both axes."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_EBBekzkaDL4jwrbuodnr667l",
+            "toolName": "move",
+            "input": {
+              "x": 8315,
+              "y": 4720,
+              "message": "Moving to a random coordinate within 0-10000 for both axes."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_EBBekzkaDL4jwrbuodnr667l",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:18:21.381Z",
+    "duration": 6310,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "9bc40844-fa4a-4a3e-85c2-20871ed6461e": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_UDHApNcHCVJjLSxUcBcdd8AP",
+        "toolName": "move",
+        "input": {
+          "x": 5276,
+          "y": 9162,
+          "message": "Moving to a random coordinate within 0-10000 range as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_UDHApNcHCVJjLSxUcBcdd8AP",
+            "toolName": "move",
+            "input": {
+              "x": 5276,
+              "y": 9162,
+              "message": "Moving to a random coordinate within 0-10000 range as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_UDHApNcHCVJjLSxUcBcdd8AP",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:18:30.714Z",
+    "duration": 9081,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "dfd5bac5-ce57-4bbc-ae4a-c4a126450325": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_Zi8xA4OFczBTSrB007dHRGEn",
+        "toolName": "move",
+        "input": {
+          "x": 6123,
+          "y": 7489,
+          "message": "Moving to a random coordinate within the 0-10000 bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_Zi8xA4OFczBTSrB007dHRGEn",
+            "toolName": "move",
+            "input": {
+              "x": 6123,
+              "y": 7489,
+              "message": "Moving to a random coordinate within the 0-10000 bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_Zi8xA4OFczBTSrB007dHRGEn",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:18:38.337Z",
+    "duration": 7372,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "7d14ec61-6998-41f9-9174-6d3721bf6d48": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_10r0L32ZSMIlt09V8gesHzcr",
+        "toolName": "move",
+        "input": {
+          "x": 6420,
+          "y": 7891,
+          "message": "Move to a random coordinate within 0-10000 bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_10r0L32ZSMIlt09V8gesHzcr",
+            "toolName": "move",
+            "input": {
+              "x": 6420,
+              "y": 7891,
+              "message": "Move to a random coordinate within 0-10000 bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_10r0L32ZSMIlt09V8gesHzcr",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:18:45.392Z",
+    "duration": 6803,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "700021bc-b383-488c-b8bc-f0c312043132": "[agent 4] AI call failed (attempt 1/3) | error=Error | retriable=true | waiting 522ms | message: AI call timeout after 30s",
+  "f62ae6b6-bf89-4af8-9808-c406e1d7242a": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_cGUFsRKSDD2gpPaSkPwo0G09",
+        "toolName": "move",
+        "input": {
+          "x": 6421,
+          "y": 2950,
+          "message": "Moving to a random coordinate within 0-10000 for both axes as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_cGUFsRKSDD2gpPaSkPwo0G09",
+            "toolName": "move",
+            "input": {
+              "x": 6421,
+              "y": 2950,
+              "message": "Moving to a random coordinate within 0-10000 for both axes as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_cGUFsRKSDD2gpPaSkPwo0G09",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:19:41.607Z",
+    "duration": 55964,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "c1183716-1d5a-4df9-927c-e1daf496a773": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_GUt4vFmM8Y3BNQ2Oekbep8CM",
+        "toolName": "move",
+        "input": {
+          "x": 4023,
+          "y": 7890,
+          "message": "Move to a random coordinate within 0-10000 for both axes per instruction."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_GUt4vFmM8Y3BNQ2Oekbep8CM",
+            "toolName": "move",
+            "input": {
+              "x": 4023,
+              "y": 7890,
+              "message": "Move to a random coordinate within 0-10000 for both axes per instruction."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_GUt4vFmM8Y3BNQ2Oekbep8CM",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:19:50.679Z",
+    "duration": 8819,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "96cb9e40-f8dd-45da-93cf-04247acdc004": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_9fuaRkTeeXHR3D8yVCPg5nHA",
+        "toolName": "move",
+        "input": {
+          "x": 5273,
+          "y": 8391,
+          "message": "Moving to a random coordinate within the specified range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_9fuaRkTeeXHR3D8yVCPg5nHA",
+            "toolName": "move",
+            "input": {
+              "x": 5273,
+              "y": 8391,
+              "message": "Moving to a random coordinate within the specified range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_9fuaRkTeeXHR3D8yVCPg5nHA",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:19:57.840Z",
+    "duration": 6910,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "6a53a026-5eab-4ad2-96a7-71794c75f415": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_X5S4A8lPKQrUiPok3r4MM9PL",
+        "toolName": "move",
+        "input": {
+          "x": 8427,
+          "y": 3901,
+          "message": "Moving to a random location within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_X5S4A8lPKQrUiPok3r4MM9PL",
+            "toolName": "move",
+            "input": {
+              "x": 8427,
+              "y": 3901,
+              "message": "Moving to a random location within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_X5S4A8lPKQrUiPok3r4MM9PL",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:20:05.139Z",
+    "duration": 7046,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "3df6bf98-4806-44b6-a55d-b35f131cf1a9": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_ANbx1FgiFQe7LIhu1ObfgBwP",
+        "toolName": "move",
+        "input": {
+          "x": 4123,
+          "y": 9876,
+          "message": "Moving to a random coordinate as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_ANbx1FgiFQe7LIhu1ObfgBwP",
+            "toolName": "move",
+            "input": {
+              "x": 4123,
+              "y": 9876,
+              "message": "Moving to a random coordinate as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_ANbx1FgiFQe7LIhu1ObfgBwP",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:20:15.239Z",
+    "duration": 9847,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "eb203b36-ea34-4816-98df-4eab83c1dcf4": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_YYto8OvaNQPl3ddQfWNaHQwf",
+        "toolName": "move",
+        "input": {
+          "x": 4821,
+          "y": 9304,
+          "message": "Moving to a random coordinate for exploration."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_YYto8OvaNQPl3ddQfWNaHQwf",
+            "toolName": "move",
+            "input": {
+              "x": 4821,
+              "y": 9304,
+              "message": "Moving to a random coordinate for exploration."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_YYto8OvaNQPl3ddQfWNaHQwf",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:20:24.766Z",
+    "duration": 9276,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "cb8ba8de-926e-4732-a09c-ca01b396751c": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_NFVOxNF3jdz5u3llvz8lJaUL",
+        "toolName": "move",
+        "input": {
+          "x": 5237,
+          "y": 8912,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_NFVOxNF3jdz5u3llvz8lJaUL",
+            "toolName": "move",
+            "input": {
+              "x": 5237,
+              "y": 8912,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_NFVOxNF3jdz5u3llvz8lJaUL",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:20:32.897Z",
+    "duration": 7880,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "238f0171-0f10-4266-bc8f-97fa30fa30d8": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_gmE0psdq8Ea2CGyyeJUqY82u",
+        "toolName": "move",
+        "input": {
+          "x": 7421,
+          "y": 3852,
+          "message": "Moving to a random coordinate within the specified range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_gmE0psdq8Ea2CGyyeJUqY82u",
+            "toolName": "move",
+            "input": {
+              "x": 7421,
+              "y": 3852,
+              "message": "Moving to a random coordinate within the specified range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_gmE0psdq8Ea2CGyyeJUqY82u",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:20:41.772Z",
+    "duration": 8623,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "ec99da25-ff7d-480b-9022-5450e469d29d": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_RShSOrDcb4fbg0OAElZnXZsY",
+        "toolName": "move",
+        "input": {
+          "x": 7183,
+          "y": 2491,
+          "message": "Moving to a random coordinate within 0-10000 bounds as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_RShSOrDcb4fbg0OAElZnXZsY",
+            "toolName": "move",
+            "input": {
+              "x": 7183,
+              "y": 2491,
+              "message": "Moving to a random coordinate within 0-10000 bounds as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_RShSOrDcb4fbg0OAElZnXZsY",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:20:49.253Z",
+    "duration": 7229,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "0199fa99-a8b8-462a-8bd2-7a940cb9e11d": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_b13fvboJk80fjSml8bpx71TF",
+        "toolName": "move",
+        "input": {
+          "x": 6341,
+          "y": 2948,
+          "message": "Moving to a random coordinate as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_b13fvboJk80fjSml8bpx71TF",
+            "toolName": "move",
+            "input": {
+              "x": 6341,
+              "y": 2948,
+              "message": "Moving to a random coordinate as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_b13fvboJk80fjSml8bpx71TF",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:20:57.801Z",
+    "duration": 8294,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "c39d2dfd-69cf-4c40-b31e-2c7520a5de0a": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_hExNosI4KZ9FGKPLC3inviqx",
+        "toolName": "move",
+        "input": {
+          "x": 4721,
+          "y": 8392,
+          "message": "Move to a random coordinate within the required bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_hExNosI4KZ9FGKPLC3inviqx",
+            "toolName": "move",
+            "input": {
+              "x": 4721,
+              "y": 8392,
+              "message": "Move to a random coordinate within the required bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_hExNosI4KZ9FGKPLC3inviqx",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:21:04.813Z",
+    "duration": 6759,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "cb6585b2-069b-4a03-9f8a-d8b2f01b2d93": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_L48H824xIy7u7WVPLiGB5JkL",
+        "toolName": "move",
+        "input": {
+          "x": 4210,
+          "y": 7591,
+          "message": "Moving to a random coordinate within [0,10000] x [0,10000] as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_L48H824xIy7u7WVPLiGB5JkL",
+            "toolName": "move",
+            "input": {
+              "x": 4210,
+              "y": 7591,
+              "message": "Moving to a random coordinate within [0,10000] x [0,10000] as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_L48H824xIy7u7WVPLiGB5JkL",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:21:14.383Z",
+    "duration": 9317,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "b447cbdc-d841-421d-9c61-38a6e43fc05f": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_Y3KwymchplmteR7euV4ruZ4P",
+        "toolName": "move",
+        "input": {
+          "x": 3275,
+          "y": 8912,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_Y3KwymchplmteR7euV4ruZ4P",
+            "toolName": "move",
+            "input": {
+              "x": 3275,
+              "y": 8912,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_Y3KwymchplmteR7euV4ruZ4P",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:21:21.702Z",
+    "duration": 7066,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "370b23f1-c55b-4b17-901f-48de51880ab2": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_6wXLlhCItaPrU3SFoJrRoANa",
+        "toolName": "move",
+        "input": {
+          "x": 8496,
+          "y": 2310,
+          "message": "Moving to a random coordinate as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_6wXLlhCItaPrU3SFoJrRoANa",
+            "toolName": "move",
+            "input": {
+              "x": 8496,
+              "y": 2310,
+              "message": "Moving to a random coordinate as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_6wXLlhCItaPrU3SFoJrRoANa",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:21:31.075Z",
+    "duration": 9118,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "1d58d61c-c6c0-4e5d-9819-2b4258229997": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_Ksc4eJo4DP2fZAQcPzYHTGw0",
+        "toolName": "move",
+        "input": {
+          "x": 4821,
+          "y": 7592,
+          "message": "Moving to a random coordinate within 0-10000 range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_Ksc4eJo4DP2fZAQcPzYHTGw0",
+            "toolName": "move",
+            "input": {
+              "x": 4821,
+              "y": 7592,
+              "message": "Moving to a random coordinate within 0-10000 range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_Ksc4eJo4DP2fZAQcPzYHTGw0",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:21:37.453Z",
+    "duration": 6126,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "daa09d70-6d15-4f3d-91c4-a10479ca8b3b": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_lIWZOiAoEvngr1PROoffyD2S",
+        "toolName": "move",
+        "input": {
+          "x": 6421,
+          "y": 5273,
+          "message": "Moving to a random coordinate within bounds"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_lIWZOiAoEvngr1PROoffyD2S",
+            "toolName": "move",
+            "input": {
+              "x": 6421,
+              "y": 5273,
+              "message": "Moving to a random coordinate within bounds"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_lIWZOiAoEvngr1PROoffyD2S",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:21:44.527Z",
+    "duration": 6823,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "a1e094a5-42eb-49af-8845-7ef43b36504a": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_P2zvHA43lWIZ0EGwwY9H733V",
+        "toolName": "move",
+        "input": {
+          "x": 5123,
+          "y": 9867,
+          "message": "Moving to a randomly selected coordinate for exploration."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_P2zvHA43lWIZ0EGwwY9H733V",
+            "toolName": "move",
+            "input": {
+              "x": 5123,
+              "y": 9867,
+              "message": "Moving to a randomly selected coordinate for exploration."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_P2zvHA43lWIZ0EGwwY9H733V",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:21:53.032Z",
+    "duration": 8254,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "37bf2814-a98c-4e4c-92e1-f999b6ea8135": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_kyEFLHWNMetPomfqulD4RQ0H",
+        "toolName": "move",
+        "input": {
+          "x": 6723,
+          "y": 2916,
+          "message": "Moving to a random coordinate within 0-10000 for both axes."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_kyEFLHWNMetPomfqulD4RQ0H",
+            "toolName": "move",
+            "input": {
+              "x": 6723,
+              "y": 2916,
+              "message": "Moving to a random coordinate within 0-10000 for both axes."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_kyEFLHWNMetPomfqulD4RQ0H",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:22:02.614Z",
+    "duration": 9331,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "60efd6f9-c6b6-4a56-ae74-5bd02264b1dc": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_M2hEHDVnaj6q7tJzYnP5ID6t",
+        "toolName": "move",
+        "input": {
+          "x": 4729,
+          "y": 9138,
+          "message": "Moving to a random coordinate within the specified bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_M2hEHDVnaj6q7tJzYnP5ID6t",
+            "toolName": "move",
+            "input": {
+              "x": 4729,
+              "y": 9138,
+              "message": "Moving to a random coordinate within the specified bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_M2hEHDVnaj6q7tJzYnP5ID6t",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:22:10.959Z",
+    "duration": 8093,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "b6737fa5-b7dc-4851-b977-dbdbfc2b28e7": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_1zK5zPcprHvjJu9uHlSK4ifR",
+        "toolName": "move",
+        "input": {
+          "x": 4278,
+          "y": 9151,
+          "message": "Moving to a random coordinate within bounds"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_1zK5zPcprHvjJu9uHlSK4ifR",
+            "toolName": "move",
+            "input": {
+              "x": 4278,
+              "y": 9151,
+              "message": "Moving to a random coordinate within bounds"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_1zK5zPcprHvjJu9uHlSK4ifR",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:22:18.361Z",
+    "duration": 7149,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "b88866d4-cd32-4485-871d-c893bc8ce0de": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_d4tfoJQXM2YYPdtpluoc77vl",
+        "toolName": "move",
+        "input": {
+          "x": 7421,
+          "y": 1567,
+          "message": "Moving to a random coordinate for exploration"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_d4tfoJQXM2YYPdtpluoc77vl",
+            "toolName": "move",
+            "input": {
+              "x": 7421,
+              "y": 1567,
+              "message": "Moving to a random coordinate for exploration"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_d4tfoJQXM2YYPdtpluoc77vl",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:22:25.585Z",
+    "duration": 6972,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "4a834b78-f3c1-4f28-a6c0-914f031267b4": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_vwowo0lLCh6sK42mFmRSObZc",
+        "toolName": "move",
+        "input": {
+          "x": 3458,
+          "y": 9021,
+          "message": "Moving to a random coordinate within 0-10000 for both axes."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_vwowo0lLCh6sK42mFmRSObZc",
+            "toolName": "move",
+            "input": {
+              "x": 3458,
+              "y": 9021,
+              "message": "Moving to a random coordinate within 0-10000 for both axes."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_vwowo0lLCh6sK42mFmRSObZc",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:22:32.364Z",
+    "duration": 6528,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "f87cf43b-4b46-4153-a639-8534e4158ae8": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_MRdNl9V2FxDMnZfaZFSxDttj",
+        "toolName": "move",
+        "input": {
+          "x": 5123,
+          "y": 2489,
+          "message": "Moving to a random coordinate within the specified bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_MRdNl9V2FxDMnZfaZFSxDttj",
+            "toolName": "move",
+            "input": {
+              "x": 5123,
+              "y": 2489,
+              "message": "Moving to a random coordinate within the specified bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_MRdNl9V2FxDMnZfaZFSxDttj",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:22:43.201Z",
+    "duration": 10587,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "aff099d9-6060-4d9e-b764-54f57ade5ff0": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_PaRtMdCYLzfQwMFJrwdXAiMd",
+        "toolName": "move",
+        "input": {
+          "x": 8357,
+          "y": 4921,
+          "message": "Move to a new random coordinate."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_PaRtMdCYLzfQwMFJrwdXAiMd",
+            "toolName": "move",
+            "input": {
+              "x": 8357,
+              "y": 4921,
+              "message": "Move to a new random coordinate."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_PaRtMdCYLzfQwMFJrwdXAiMd",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:22:50.236Z",
+    "duration": 6784,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "30c6e6cc-cf48-4a76-b4a5-95137163d280": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_g8RF41JnJwWS58bgFdHhZbGR",
+        "toolName": "move",
+        "input": {
+          "x": 6427,
+          "y": 2918,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_g8RF41JnJwWS58bgFdHhZbGR",
+            "toolName": "move",
+            "input": {
+              "x": 6427,
+              "y": 2918,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_g8RF41JnJwWS58bgFdHhZbGR",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:22:58.322Z",
+    "duration": 7834,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "398cb3d3-f9f8-4861-856c-7ca2b2dd81bf": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_XWotUwx00zdqZHx8KNLP6ccg",
+        "toolName": "move",
+        "input": {
+          "x": 1234,
+          "y": 5678,
+          "message": "Move to a newly picked random coordinate."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_XWotUwx00zdqZHx8KNLP6ccg",
+            "toolName": "move",
+            "input": {
+              "x": 1234,
+              "y": 5678,
+              "message": "Move to a newly picked random coordinate."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_XWotUwx00zdqZHx8KNLP6ccg",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:23:04.479Z",
+    "duration": 5905,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "b0a7d54e-cddb-49bc-a042-a938fe363cc7": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_5suVnR1NVTNEYNo0lngWgO4u",
+        "toolName": "move",
+        "input": {
+          "x": 7421,
+          "y": 1563,
+          "message": "Moving to a random coordinate within 0..10000 range as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_5suVnR1NVTNEYNo0lngWgO4u",
+            "toolName": "move",
+            "input": {
+              "x": 7421,
+              "y": 1563,
+              "message": "Moving to a random coordinate within 0..10000 range as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_5suVnR1NVTNEYNo0lngWgO4u",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:23:15.370Z",
+    "duration": 10639,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "db7f7408-bcbe-46f6-a2f8-6f822463c9f9": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_ymzZDaDnmUZOJvtkxnviYSYB",
+        "toolName": "move",
+        "input": {
+          "x": 3047,
+          "y": 8569,
+          "message": "Moving to a random coordinate as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_ymzZDaDnmUZOJvtkxnviYSYB",
+            "toolName": "move",
+            "input": {
+              "x": 3047,
+              "y": 8569,
+              "message": "Moving to a random coordinate as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_ymzZDaDnmUZOJvtkxnviYSYB",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:23:22.455Z",
+    "duration": 6831,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "5691bacc-c31c-4803-82ab-a36167dd8faf": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_fkbmfyyhTVEI9MEdguifjp2m",
+        "toolName": "move",
+        "input": {
+          "x": 8123,
+          "y": 2745,
+          "message": "Moving to a random coordinate within 0-10000 for both axes as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_fkbmfyyhTVEI9MEdguifjp2m",
+            "toolName": "move",
+            "input": {
+              "x": 8123,
+              "y": 2745,
+              "message": "Moving to a random coordinate within 0-10000 for both axes as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_fkbmfyyhTVEI9MEdguifjp2m",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:23:30.879Z",
+    "duration": 8172,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "eda482ef-da37-47ae-8ffb-b68e97c3e001": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_IpTjzMedvvaRoMfHfIiB4HA5",
+        "toolName": "move",
+        "input": {
+          "x": 7246,
+          "y": 1923,
+          "message": "Moving to a random coordinate within [0,10000] x [0,10000]."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_IpTjzMedvvaRoMfHfIiB4HA5",
+            "toolName": "move",
+            "input": {
+              "x": 7246,
+              "y": 1923,
+              "message": "Moving to a random coordinate within [0,10000] x [0,10000]."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_IpTjzMedvvaRoMfHfIiB4HA5",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:23:38.436Z",
+    "duration": 7305,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "dc756379-e92b-4642-83f9-09065e974e51": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_XoSaMeRVNaosObdyS4BvfZzD",
+        "toolName": "move",
+        "input": {
+          "x": 6237,
+          "y": 9821,
+          "message": "Moving to a random coordinate within range"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_XoSaMeRVNaosObdyS4BvfZzD",
+            "toolName": "move",
+            "input": {
+              "x": 6237,
+              "y": 9821,
+              "message": "Moving to a random coordinate within range"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_XoSaMeRVNaosObdyS4BvfZzD",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:23:47.335Z",
+    "duration": 8646,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "b0faf513-acd6-4285-bd33-d76cc541849d": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_Ug2stwjTFmF2WmWF3C7mc7BC",
+        "toolName": "move",
+        "input": {
+          "x": 6074,
+          "y": 1746,
+          "message": "Moving to a random coordinate within 0-10000 range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_Ug2stwjTFmF2WmWF3C7mc7BC",
+            "toolName": "move",
+            "input": {
+              "x": 6074,
+              "y": 1746,
+              "message": "Moving to a random coordinate within 0-10000 range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_Ug2stwjTFmF2WmWF3C7mc7BC",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:23:56.366Z",
+    "duration": 8777,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "8e320918-1a1c-4731-8b30-ae7d97a6e799": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_K3qy0GVYuRGEpHp0OCsxdTKp",
+        "toolName": "move",
+        "input": {
+          "x": 1234,
+          "y": 9876,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_K3qy0GVYuRGEpHp0OCsxdTKp",
+            "toolName": "move",
+            "input": {
+              "x": 1234,
+              "y": 9876,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_K3qy0GVYuRGEpHp0OCsxdTKp",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:24:04.384Z",
+    "duration": 7762,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "bf28db95-84e3-4e69-933d-76712e686208": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_4m6SrgVOlpW9gUoauOdUfEl7",
+        "toolName": "move",
+        "input": {
+          "x": 4723,
+          "y": 9190,
+          "message": "Move to a random coordinate within bounds (0-10000)."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_4m6SrgVOlpW9gUoauOdUfEl7",
+            "toolName": "move",
+            "input": {
+              "x": 4723,
+              "y": 9190,
+              "message": "Move to a random coordinate within bounds (0-10000)."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_4m6SrgVOlpW9gUoauOdUfEl7",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:24:12.593Z",
+    "duration": 7954,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "0771afad-58f4-4eaf-8964-49aaf2308151": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_WRZtgaC61SBjFRzqo1WK9GFj",
+        "toolName": "move",
+        "input": {
+          "x": 1234,
+          "y": 5678,
+          "message": "Moving to a randomly selected coordinate within the specified bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_WRZtgaC61SBjFRzqo1WK9GFj",
+            "toolName": "move",
+            "input": {
+              "x": 1234,
+              "y": 5678,
+              "message": "Moving to a randomly selected coordinate within the specified bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_WRZtgaC61SBjFRzqo1WK9GFj",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:24:19.049Z",
+    "duration": 6203,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "43ec4f93-7b10-4bdb-b12c-eace1accf9d5": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_gxWvLyo9hHmaDIiM3Kl4STHS",
+        "toolName": "move",
+        "input": {
+          "x": 5231,
+          "y": 9876,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_gxWvLyo9hHmaDIiM3Kl4STHS",
+            "toolName": "move",
+            "input": {
+              "x": 5231,
+              "y": 9876,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_gxWvLyo9hHmaDIiM3Kl4STHS",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:24:26.521Z",
+    "duration": 7220,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "f19a9483-a8ed-4056-8446-59745d7daa96": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_C52YFhC4nEwjUHw2JuBsR6GZ",
+        "toolName": "move",
+        "input": {
+          "x": 7291,
+          "y": 4062,
+          "message": "Moving to a random exploration coordinate."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_C52YFhC4nEwjUHw2JuBsR6GZ",
+            "toolName": "move",
+            "input": {
+              "x": 7291,
+              "y": 4062,
+              "message": "Moving to a random exploration coordinate."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_C52YFhC4nEwjUHw2JuBsR6GZ",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:24:36.824Z",
+    "duration": 10050,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "deee92f1-cbe0-436b-b5f0-7da7230e98d5": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_R3BfX5MIlrHX08bS3UgIqS4H",
+        "toolName": "move",
+        "input": {
+          "x": 8123,
+          "y": 4672,
+          "message": "Moving to a random exploration point."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_R3BfX5MIlrHX08bS3UgIqS4H",
+            "toolName": "move",
+            "input": {
+              "x": 8123,
+              "y": 4672,
+              "message": "Moving to a random exploration point."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_R3BfX5MIlrHX08bS3UgIqS4H",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:24:44.521Z",
+    "duration": 7444,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "8d45e9ef-2440-4353-8768-bc2281cca3af": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_6psuwg8ANIcI1eecMaObD6Va",
+        "toolName": "move",
+        "input": {
+          "x": 6120,
+          "y": 3471,
+          "message": "Moving to a random coordinate within bounds as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_6psuwg8ANIcI1eecMaObD6Va",
+            "toolName": "move",
+            "input": {
+              "x": 6120,
+              "y": 3471,
+              "message": "Moving to a random coordinate within bounds as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_6psuwg8ANIcI1eecMaObD6Va",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:24:50.849Z",
+    "duration": 6075,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "9fdeaccf-d23a-4937-9226-52739ff7b16e": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_sjyTBN09Yz2lGpL02yWx78Do",
+        "toolName": "move",
+        "input": {
+          "x": 5123,
+          "y": 7461,
+          "message": "Moving to a random coordinate within 0-10000 range as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_sjyTBN09Yz2lGpL02yWx78Do",
+            "toolName": "move",
+            "input": {
+              "x": 5123,
+              "y": 7461,
+              "message": "Moving to a random coordinate within 0-10000 range as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_sjyTBN09Yz2lGpL02yWx78Do",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:24:58.706Z",
+    "duration": 7604,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "cde88afb-5a10-4ba8-b76e-40960dd84681": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_OCMxL8XjYTS2NjVqZwkcSOEK",
+        "toolName": "move",
+        "input": {
+          "x": 8124,
+          "y": 1943,
+          "message": "Move to a random coordinate as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_OCMxL8XjYTS2NjVqZwkcSOEK",
+            "toolName": "move",
+            "input": {
+              "x": 8124,
+              "y": 1943,
+              "message": "Move to a random coordinate as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_OCMxL8XjYTS2NjVqZwkcSOEK",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:25:07.960Z",
+    "duration": 9000,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "7113c777-11fd-4282-92ff-b104b35bd818": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_iKLbMP0M2c9KdY2wJhu8qKyh",
+        "toolName": "move",
+        "input": {
+          "x": 4296,
+          "y": 7310,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_iKLbMP0M2c9KdY2wJhu8qKyh",
+            "toolName": "move",
+            "input": {
+              "x": 4296,
+              "y": 7310,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_iKLbMP0M2c9KdY2wJhu8qKyh",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:25:17.028Z",
+    "duration": 8816,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "352e1fa7-aa52-4f41-8805-67d4b894e49a": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_Fm6RYjz84QhOXk5nYxXA2JY8",
+        "toolName": "move",
+        "input": {
+          "x": 3142,
+          "y": 8721,
+          "message": "Move to a random exploration coordinate."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_Fm6RYjz84QhOXk5nYxXA2JY8",
+            "toolName": "move",
+            "input": {
+              "x": 3142,
+              "y": 8721,
+              "message": "Move to a random exploration coordinate."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_Fm6RYjz84QhOXk5nYxXA2JY8",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:25:23.464Z",
+    "duration": 6184,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "34074980-e0d0-46dc-9016-80f359f0a274": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_Xe5dJKObpaLJgk16EUpxXOlp",
+        "toolName": "move",
+        "input": {
+          "x": 2567,
+          "y": 8291,
+          "message": "Moving to a random exploration target within the specified bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_Xe5dJKObpaLJgk16EUpxXOlp",
+            "toolName": "move",
+            "input": {
+              "x": 2567,
+              "y": 8291,
+              "message": "Moving to a random exploration target within the specified bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_Xe5dJKObpaLJgk16EUpxXOlp",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:25:29.897Z",
+    "duration": 6178,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "d6fe2dbe-7b81-46ec-a9d7-63684004c1e4": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_Cqoexc3ITFyb8Tzr53Tjnouz",
+        "toolName": "move",
+        "input": {
+          "x": 3721,
+          "y": 8291,
+          "message": "Moving to a randomly selected coordinate within the 0-10000 range as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_Cqoexc3ITFyb8Tzr53Tjnouz",
+            "toolName": "move",
+            "input": {
+              "x": 3721,
+              "y": 8291,
+              "message": "Moving to a randomly selected coordinate within the 0-10000 range as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_Cqoexc3ITFyb8Tzr53Tjnouz",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:25:36.701Z",
+    "duration": 6551,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "96e9820b-8c23-4f79-a7c8-726b3bfe55ec": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_pn6BlMtSV6csRgMVJg1cLYFP",
+        "toolName": "move",
+        "input": {
+          "x": 3059,
+          "y": 8142,
+          "message": "Moving to a new random coordinate as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_pn6BlMtSV6csRgMVJg1cLYFP",
+            "toolName": "move",
+            "input": {
+              "x": 3059,
+              "y": 8142,
+              "message": "Moving to a new random coordinate as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_pn6BlMtSV6csRgMVJg1cLYFP",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:25:45.964Z",
+    "duration": 9010,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "0b17ce72-01b2-4d50-974f-332b3bf851d4": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_cBgFhst4ZBW0nY0bt8Xh5GAo",
+        "toolName": "move",
+        "input": {
+          "x": 8127,
+          "y": 4512,
+          "message": "Moving to a random coordinate within the 0-10000 range for both axes."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_cBgFhst4ZBW0nY0bt8Xh5GAo",
+            "toolName": "move",
+            "input": {
+              "x": 8127,
+              "y": 4512,
+              "message": "Moving to a random coordinate within the 0-10000 range for both axes."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_cBgFhst4ZBW0nY0bt8Xh5GAo",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:25:53.736Z",
+    "duration": 7520,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "6420b20f-46cc-440b-8df6-eb169a536c57": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_qZFFLQuTMTRMOPaIyOxoTLuL",
+        "toolName": "move",
+        "input": {
+          "x": 3124,
+          "y": 9876,
+          "message": "Moving to a random coordinate within the allowed bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_qZFFLQuTMTRMOPaIyOxoTLuL",
+            "toolName": "move",
+            "input": {
+              "x": 3124,
+              "y": 9876,
+              "message": "Moving to a random coordinate within the allowed bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_qZFFLQuTMTRMOPaIyOxoTLuL",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:26:01.380Z",
+    "duration": 7392,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "0dba9f13-e496-4c60-bb77-97093d24482b": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_2bPby0Kghwau2bfH3wanvmQL",
+        "toolName": "move",
+        "input": {
+          "x": 6723,
+          "y": 4381,
+          "message": "Moving to a random coordinate with x in 0-10000 and y in 0-10000."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_2bPby0Kghwau2bfH3wanvmQL",
+            "toolName": "move",
+            "input": {
+              "x": 6723,
+              "y": 4381,
+              "message": "Moving to a random coordinate with x in 0-10000 and y in 0-10000."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_2bPby0Kghwau2bfH3wanvmQL",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:26:10.576Z",
+    "duration": 8943,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "1b9b6d23-de71-4188-a988-133712c15efd": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_AdaT812EXUlNTROoKzKqCZ60",
+        "toolName": "move",
+        "input": {
+          "x": 7421,
+          "y": 3862,
+          "message": "Moving to a random coordinate within the requested range (0-10000 for both x and y)."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_AdaT812EXUlNTROoKzKqCZ60",
+            "toolName": "move",
+            "input": {
+              "x": 7421,
+              "y": 3862,
+              "message": "Moving to a random coordinate within the requested range (0-10000 for both x and y)."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_AdaT812EXUlNTROoKzKqCZ60",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:26:17.332Z",
+    "duration": 6504,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "268fdbfe-1f89-4525-b84d-4ecf54b07c0b": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_SWdrjmySoVVkV89KS6RJgb9c",
+        "toolName": "move",
+        "input": {
+          "x": 6420,
+          "y": 3491,
+          "message": "Moving to a random coordinate within bounds"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_SWdrjmySoVVkV89KS6RJgb9c",
+            "toolName": "move",
+            "input": {
+              "x": 6420,
+              "y": 3491,
+              "message": "Moving to a random coordinate within bounds"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_SWdrjmySoVVkV89KS6RJgb9c",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:26:26.614Z",
+    "duration": 9029,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "81f3147f-632c-4ec6-8eb5-2279d7090795": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_iQpSxingGKTaOPgO75CxKWmU",
+        "toolName": "move",
+        "input": {
+          "x": 5372,
+          "y": 2949,
+          "message": "Moving to a random coordinate within bounds as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_iQpSxingGKTaOPgO75CxKWmU",
+            "toolName": "move",
+            "input": {
+              "x": 5372,
+              "y": 2949,
+              "message": "Moving to a random coordinate within bounds as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_iQpSxingGKTaOPgO75CxKWmU",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:26:34.838Z",
+    "duration": 7972,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "aa910a1e-33bb-4e73-9a45-53e9d6f2b81d": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_49ZONiFjtY97TcYd8xknNCmE",
+        "toolName": "move",
+        "input": {
+          "x": 8023,
+          "y": 1456,
+          "message": "Moving to a random coordinate within the required bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_49ZONiFjtY97TcYd8xknNCmE",
+            "toolName": "move",
+            "input": {
+              "x": 8023,
+              "y": 1456,
+              "message": "Moving to a random coordinate within the required bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_49ZONiFjtY97TcYd8xknNCmE",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:26:42.860Z",
+    "duration": 7768,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "9f78e52a-2eca-4d5c-ab31-693af34f2503": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_KVyj6AJG9ZhfpLkG5CKyiVog",
+        "toolName": "move",
+        "input": {
+          "x": 8147,
+          "y": 2659,
+          "message": "Moving to a random coordinate within [0,10000]x[0,10000]."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_KVyj6AJG9ZhfpLkG5CKyiVog",
+            "toolName": "move",
+            "input": {
+              "x": 8147,
+              "y": 2659,
+              "message": "Moving to a random coordinate within [0,10000]x[0,10000]."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_KVyj6AJG9ZhfpLkG5CKyiVog",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:26:49.884Z",
+    "duration": 6772,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "aa642398-5573-47b9-a5ef-4abad2f80e27": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_a4LRpznOStkpQbOVToXTn7AZ",
+        "toolName": "move",
+        "input": {
+          "x": 4217,
+          "y": 7865,
+          "message": "Moving to a random coordinate within 0-10000 for both axes as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_a4LRpznOStkpQbOVToXTn7AZ",
+            "toolName": "move",
+            "input": {
+              "x": 4217,
+              "y": 7865,
+              "message": "Moving to a random coordinate within 0-10000 for both axes as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_a4LRpznOStkpQbOVToXTn7AZ",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:26:58.571Z",
+    "duration": 8435,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "091e7094-6ba5-4f57-81f6-f1b07cf607ae": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_JyUUSxjiKRbYSXYmiTyrrThv",
+        "toolName": "move",
+        "input": {
+          "x": 5123,
+          "y": 7421,
+          "message": "Moving to a random coordinate within 0-10000 bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_JyUUSxjiKRbYSXYmiTyrrThv",
+            "toolName": "move",
+            "input": {
+              "x": 5123,
+              "y": 7421,
+              "message": "Moving to a random coordinate within 0-10000 bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_JyUUSxjiKRbYSXYmiTyrrThv",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:27:07.902Z",
+    "duration": 9078,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "4f17d837-92fa-4492-8e54-046f2a67f3c5": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_m9pvbAztOXDLWst4M3IEJwVS",
+        "toolName": "move",
+        "input": {
+          "x": 6427,
+          "y": 1903,
+          "message": "Move to a randomly chosen coordinate within 0-10000 for both axes as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_m9pvbAztOXDLWst4M3IEJwVS",
+            "toolName": "move",
+            "input": {
+              "x": 6427,
+              "y": 1903,
+              "message": "Move to a randomly chosen coordinate within 0-10000 for both axes as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_m9pvbAztOXDLWst4M3IEJwVS",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:27:17.175Z",
+    "duration": 9019,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "a4e723d5-75fb-45c0-afa9-4ff5e2b1189f": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_ZmNI6PMrDr0eHqoMPZfdNa55",
+        "toolName": "move",
+        "input": {
+          "x": 6421,
+          "y": 9857,
+          "message": "Move to a random coordinate within bounds"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_ZmNI6PMrDr0eHqoMPZfdNa55",
+            "toolName": "move",
+            "input": {
+              "x": 6421,
+              "y": 9857,
+              "message": "Move to a random coordinate within bounds"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_ZmNI6PMrDr0eHqoMPZfdNa55",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:27:25.499Z",
+    "duration": 8070,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "4a7cc54c-5322-46dc-8aa8-efd0531335f5": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_rT7ZJilZQNcpYeJIiUTQIedy",
+        "toolName": "move",
+        "input": {
+          "x": 5372,
+          "y": 8123,
+          "message": "Moving to a random coordinate within 0-10000 bounds as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_rT7ZJilZQNcpYeJIiUTQIedy",
+            "toolName": "move",
+            "input": {
+              "x": 5372,
+              "y": 8123,
+              "message": "Moving to a random coordinate within 0-10000 bounds as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_rT7ZJilZQNcpYeJIiUTQIedy",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:27:33.097Z",
+    "duration": 7346,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "b7c9531e-3b53-45f5-a7a9-e05ac324c6a7": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_hT3Wa7CDJatRI4OfH5LPmsEv",
+        "toolName": "move",
+        "input": {
+          "x": 4728,
+          "y": 8392,
+          "message": "Moving to a random coordinate within the 0-10000 bounds for both axes as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_hT3Wa7CDJatRI4OfH5LPmsEv",
+            "toolName": "move",
+            "input": {
+              "x": 4728,
+              "y": 8392,
+              "message": "Moving to a random coordinate within the 0-10000 bounds for both axes as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_hT3Wa7CDJatRI4OfH5LPmsEv",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:50:03.027Z",
+    "duration": 10741,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "24166448-8f3e-4be1-9826-33e44ec93015": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_5R1RNI1YLt8FXW1MdK908JKx",
+        "toolName": "move",
+        "input": {
+          "x": 6241,
+          "y": 8390,
+          "message": "Moving to a random coordinate within 0-10000 range for both axes"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_5R1RNI1YLt8FXW1MdK908JKx",
+            "toolName": "move",
+            "input": {
+              "x": 6241,
+              "y": 8390,
+              "message": "Moving to a random coordinate within 0-10000 range for both axes"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_5R1RNI1YLt8FXW1MdK908JKx",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:51:18.803Z",
+    "duration": 6770,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "784b0250-b53a-406d-8d5f-0b1ebce63680": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_ZaSGVkdiuEDLASVNXKPzTZMI",
+        "toolName": "move",
+        "input": {
+          "x": 8041,
+          "y": 2372,
+          "message": "Moving to a random coordinate within 0-10000 range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_ZaSGVkdiuEDLASVNXKPzTZMI",
+            "toolName": "move",
+            "input": {
+              "x": 8041,
+              "y": 2372,
+              "message": "Moving to a random coordinate within 0-10000 range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_ZaSGVkdiuEDLASVNXKPzTZMI",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:51:25.237Z",
+    "duration": 6180,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "de0cf06e-18eb-46e6-8c65-c8bcd309aa95": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_4cRCsUMQUnvmmydUL8z0vFQJ",
+        "toolName": "move",
+        "input": {
+          "x": 8123,
+          "y": 4210,
+          "message": "Moving to a random coordinate within the specified bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_4cRCsUMQUnvmmydUL8z0vFQJ",
+            "toolName": "move",
+            "input": {
+              "x": 8123,
+              "y": 4210,
+              "message": "Moving to a random coordinate within the specified bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_4cRCsUMQUnvmmydUL8z0vFQJ",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:51:32.471Z",
+    "duration": 6980,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "8a0f60db-b30b-46bb-bdff-87097db4a961": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_IxZO8rYBjJxMmy2KZEv80eKk",
+        "toolName": "move",
+        "input": {
+          "x": 5012,
+          "y": 7631,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_IxZO8rYBjJxMmy2KZEv80eKk",
+            "toolName": "move",
+            "input": {
+              "x": 5012,
+              "y": 7631,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_IxZO8rYBjJxMmy2KZEv80eKk",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:51:40.767Z",
+    "duration": 8043,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "28c84ddb-3896-4f98-b5ba-3a568aeedad5": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_qjK4mCmmXtQ2dbBIFXfKFPGk",
+        "toolName": "move",
+        "input": {
+          "x": 6183,
+          "y": 2417,
+          "message": "Moving to a random coordinate within the requested range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_qjK4mCmmXtQ2dbBIFXfKFPGk",
+            "toolName": "move",
+            "input": {
+              "x": 6183,
+              "y": 2417,
+              "message": "Moving to a random coordinate within the requested range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_qjK4mCmmXtQ2dbBIFXfKFPGk",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:51:47.541Z",
+    "duration": 6521,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "09f6d139-8e70-4e46-9d73-9e785d91ee34": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_VDqUpFrBsCxKxg4xgz4MVEJz",
+        "toolName": "move",
+        "input": {
+          "x": 6123,
+          "y": 9472,
+          "message": "Move to a random coordinate within the 0-10000 range for both axes."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_VDqUpFrBsCxKxg4xgz4MVEJz",
+            "toolName": "move",
+            "input": {
+              "x": 6123,
+              "y": 9472,
+              "message": "Move to a random coordinate within the 0-10000 range for both axes."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_VDqUpFrBsCxKxg4xgz4MVEJz",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:52:14.398Z",
+    "duration": 9317,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "1edff456-a7b8-4e59-9f6b-a3ab0078b755": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_lozsVVNH8A7fBwfndKJFnGEi",
+        "toolName": "move",
+        "input": {
+          "x": 7421,
+          "y": 3890,
+          "message": "Moving to a random coordinate within the requested bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_lozsVVNH8A7fBwfndKJFnGEi",
+            "toolName": "move",
+            "input": {
+              "x": 7421,
+              "y": 3890,
+              "message": "Moving to a random coordinate within the requested bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_lozsVVNH8A7fBwfndKJFnGEi",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:52:20.059Z",
+    "duration": 5409,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "d99e7985-1392-41b6-a9a6-cdc14561b7b9": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_mY85d1QjS1wgyWQLw5snCV4m",
+        "toolName": "move",
+        "input": {
+          "x": 2378,
+          "y": 9142,
+          "message": "Move to a random location within bounds"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_mY85d1QjS1wgyWQLw5snCV4m",
+            "toolName": "move",
+            "input": {
+              "x": 2378,
+              "y": 9142,
+              "message": "Move to a random location within bounds"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_mY85d1QjS1wgyWQLw5snCV4m",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:52:28.568Z",
+    "duration": 8255,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "4ee1b090-3581-4541-8aad-3a52f8f65d21": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_35HiJyFCcnXziB2mtsvH763t",
+        "toolName": "move",
+        "input": {
+          "x": 4823,
+          "y": 9172,
+          "message": "Moving to a random coordinate within the required bounds (0-10000 for both x and y)."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_35HiJyFCcnXziB2mtsvH763t",
+            "toolName": "move",
+            "input": {
+              "x": 4823,
+              "y": 9172,
+              "message": "Moving to a random coordinate within the required bounds (0-10000 for both x and y)."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_35HiJyFCcnXziB2mtsvH763t",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:52:36.801Z",
+    "duration": 7978,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "93bf80ff-b67d-4f25-9ed0-b1367823e133": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_G2Q38JBLnyiYJadoBbdeu6hA",
+        "toolName": "move",
+        "input": {
+          "x": 7421,
+          "y": 6582,
+          "message": "Moving to a new random location within bounds (0-10000 for both axes)."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_G2Q38JBLnyiYJadoBbdeu6hA",
+            "toolName": "move",
+            "input": {
+              "x": 7421,
+              "y": 6582,
+              "message": "Moving to a new random location within bounds (0-10000 for both axes)."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_G2Q38JBLnyiYJadoBbdeu6hA",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:52:42.832Z",
+    "duration": 5779,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "b55aca79-3c59-49bd-94b7-1d7b8cb4f435": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_HgzzBNcb16mBhKDNhKESa83b",
+        "toolName": "move",
+        "input": {
+          "x": 4397,
+          "y": 8921,
+          "message": "Move to a random coordinate within the 0-10000 bounds as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_HgzzBNcb16mBhKDNhKESa83b",
+            "toolName": "move",
+            "input": {
+              "x": 4397,
+              "y": 8921,
+              "message": "Move to a random coordinate within the 0-10000 bounds as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_HgzzBNcb16mBhKDNhKESa83b",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:52:50.191Z",
+    "duration": 7102,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "1881cbd4-3b03-4c89-993d-3ed82fd868c1": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_XZpasF1B81Z6N0OqXEC9wEOa",
+        "toolName": "move",
+        "input": {
+          "x": 4072,
+          "y": 9621,
+          "message": "Moving to a random coordinate within 0-10000 range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_XZpasF1B81Z6N0OqXEC9wEOa",
+            "toolName": "move",
+            "input": {
+              "x": 4072,
+              "y": 9621,
+              "message": "Moving to a random coordinate within 0-10000 range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_XZpasF1B81Z6N0OqXEC9wEOa",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:52:56.807Z",
+    "duration": 6363,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "e0b0b249-8fc4-4553-b727-10f9df9a6cd1": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_OHkhZQwjZmDOMKdZvNwiJrxR",
+        "toolName": "move",
+        "input": {
+          "x": 8712,
+          "y": 5409,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_OHkhZQwjZmDOMKdZvNwiJrxR",
+            "toolName": "move",
+            "input": {
+              "x": 8712,
+              "y": 5409,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_OHkhZQwjZmDOMKdZvNwiJrxR",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:54:52.287Z",
+    "duration": 8884,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "eb380ead-cef4-4b36-8125-a1ca23ad780b": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_c8ULSCMOjtNxPZgh1qxedjkl",
+        "toolName": "move",
+        "input": {
+          "x": 4731,
+          "y": 8294,
+          "message": "Moving to a randomly chosen coordinate within the allowed range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_c8ULSCMOjtNxPZgh1qxedjkl",
+            "toolName": "move",
+            "input": {
+              "x": 4731,
+              "y": 8294,
+              "message": "Moving to a randomly chosen coordinate within the allowed range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_c8ULSCMOjtNxPZgh1qxedjkl",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:55:00.129Z",
+    "duration": 7586,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "3503a83a-d90a-436d-97aa-001556077d95": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_cXmpX8dj9eCtp48SVXvJ3tRG",
+        "toolName": "move",
+        "input": {
+          "x": 4392,
+          "y": 7610,
+          "message": "Moving to a random coordinate for exploration."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_cXmpX8dj9eCtp48SVXvJ3tRG",
+            "toolName": "move",
+            "input": {
+              "x": 4392,
+              "y": 7610,
+              "message": "Moving to a random coordinate for exploration."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_cXmpX8dj9eCtp48SVXvJ3tRG",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:55:06.584Z",
+    "duration": 6200,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "f42c2be3-9a73-4250-834f-2c062e806017": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_wWuVrlQMKIf2qa8rbo7wF7Kb",
+        "toolName": "move",
+        "input": {
+          "x": 2839,
+          "y": 9150,
+          "message": "Moving to a random coordinate as requested."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_wWuVrlQMKIf2qa8rbo7wF7Kb",
+            "toolName": "move",
+            "input": {
+              "x": 2839,
+              "y": 9150,
+              "message": "Moving to a random coordinate as requested."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_wWuVrlQMKIf2qa8rbo7wF7Kb",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:55:14.200Z",
+    "duration": 7363,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "a7c78799-8764-4401-8d46-f891a039dfe3": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_vXL0cE7CBvQTUqaWA2rhhNAo",
+        "toolName": "move",
+        "input": {
+          "x": 5372,
+          "y": 9201,
+          "message": "Moving to a random coordinate within the 0-10000 range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_vXL0cE7CBvQTUqaWA2rhhNAo",
+            "toolName": "move",
+            "input": {
+              "x": 5372,
+              "y": 9201,
+              "message": "Moving to a random coordinate within the 0-10000 range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_vXL0cE7CBvQTUqaWA2rhhNAo",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:55:24.414Z",
+    "duration": 9959,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "2ac9005b-009d-4ba1-8e9e-92b11066cc57": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_dWjN1v0yCwl6KkghvNfLUYIj",
+        "toolName": "move",
+        "input": {
+          "x": 4839,
+          "y": 1298,
+          "message": "Moving to a random coordinate within bounds (0-10000 for both axes)."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_dWjN1v0yCwl6KkghvNfLUYIj",
+            "toolName": "move",
+            "input": {
+              "x": 4839,
+              "y": 1298,
+              "message": "Moving to a random coordinate within bounds (0-10000 for both axes)."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_dWjN1v0yCwl6KkghvNfLUYIj",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:55:31.191Z",
+    "duration": 6522,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "d02cc82e-a5c1-48e7-af8a-03d96596392f": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_mlprhTJwTpI1sBY6UtZE9juw",
+        "toolName": "move",
+        "input": {
+          "x": 6247,
+          "y": 3198,
+          "message": "Moving to a random coordinate within the 0-10000 range for both axes."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_mlprhTJwTpI1sBY6UtZE9juw",
+            "toolName": "move",
+            "input": {
+              "x": 6247,
+              "y": 3198,
+              "message": "Moving to a random coordinate within the 0-10000 range for both axes."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_mlprhTJwTpI1sBY6UtZE9juw",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:58:43.977Z",
+    "duration": 8510,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "d1be24ec-4069-4d40-8bff-8680c71a75ec": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_yF24jSPD6wh5YgRlXMwt0DdD",
+        "toolName": "move",
+        "input": {
+          "x": 7804,
+          "y": 4621,
+          "message": "Moving to a random coordinate within the specified bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_yF24jSPD6wh5YgRlXMwt0DdD",
+            "toolName": "move",
+            "input": {
+              "x": 7804,
+              "y": 4621,
+              "message": "Moving to a random coordinate within the specified bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_yF24jSPD6wh5YgRlXMwt0DdD",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:58:54.704Z",
+    "duration": 10474,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "540da62e-81e2-4341-bb40-67dfec7327fd": "[agent 4] AI call failed (attempt 1/3) | error=Error | retriable=true | waiting 573ms | message: AI call timeout after 30s",
+  "32dd499e-4a8f-4150-9bbe-8c91b5adb7fe": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_v1jjDQadltzRphYqNzubJf8p",
+        "toolName": "move",
+        "input": {
+          "x": 5874,
+          "y": 1234,
+          "message": "Moving to a random coordinate within bounds."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_v1jjDQadltzRphYqNzubJf8p",
+            "toolName": "move",
+            "input": {
+              "x": 5874,
+              "y": 1234,
+              "message": "Moving to a random coordinate within bounds."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_v1jjDQadltzRphYqNzubJf8p",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T01:59:31.258Z",
+    "duration": 36302,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "dbfc8286-6d8c-4f0a-988b-7ed05030d139": {
+    "heroId": 4,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_eEi0DdL2bPWrpa7QxFHXGkC3",
+        "toolName": "move",
+        "input": {
+          "x": 7291,
+          "y": 3084,
+          "message": "Moving to a random coordinate within the allowed range."
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "success"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool-call",
+            "toolCallId": "call_eEi0DdL2bPWrpa7QxFHXGkC3",
+            "toolName": "move",
+            "input": {
+              "x": 7291,
+              "y": 3084,
+              "message": "Moving to a random coordinate within the allowed range."
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_eEi0DdL2bPWrpa7QxFHXGkC3",
+            "toolName": "move",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "success"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T02:00:10.813Z",
+    "duration": 11772,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 0,
+      "inputSize": 30
+    }
+  },
+  "9ced1219-0dd4-4984-98d6-2f92c444541c": "[agent 4] AI call failed (attempt 1/3) | error=Error | retriable=true | waiting 565ms | message: AI call timeout after 30s"
+}

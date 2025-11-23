@@ -5,7 +5,10 @@ import { setup } from "@onchain-pal/contract-client";
 import express from "express";
 import http from "http";
 import { Hex, WatchEventReturnType } from "viem";
-import { createAgentSystem } from "./agent/createAgentSysten";
+import {
+  createAgentSystem,
+  initializeChaosChain,
+} from "./agent/createAgentSysten";
 
 const app = express();
 
@@ -35,6 +38,9 @@ export function cleanupEventWatchers() {
 
 server.listen(3001, async () => {
   console.log("backend server running on http://localhost:3001");
+
+  // Initialize ChaosChain service before setting up agents
+  initializeChaosChain();
 
   const setupResult = await setup();
   const {
