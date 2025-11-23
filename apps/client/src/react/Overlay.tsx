@@ -18,17 +18,16 @@ import { MintPanel } from "./panels/MintPanel";
 export function Overlay() {
   const { components } = useMUD();
 
-  const { SelectedEntity, PathUpdatedFlatEvent, TokenData, PlayerEntityCoord } =
-    components;
+  const { SelectedEntity, TokenData, PlayerEntityCoord } = components;
 
   // const source = useComponentValue(SelectedHero, SOURCE)?.tokenId;
 
   // // testing
   // const playerCoord = useComponentValue(PlayerEntityCoord, SOURCE);
   // console.log("playerCoord", playerCoord);
-  // const tests = useEntityQuery([Has(PathUpdatedFlatEvent)]);
+  // const tests = useEntityQuery([Has(PathUpdatedEvent)]);
   // tests.forEach((test) => {
-  //   console.log("test", test, getComponentValue(PathUpdatedFlatEvent, test));
+  //   console.log("test", test, getComponentValue(PathUpdatedEvent, test));
   // });
 
   // console.log(

@@ -22,7 +22,7 @@ import { readContract } from "viem/actions";
 import { tokenChunkSize } from "../constant";
 import { ClientComponents, NetworkComponents } from "../mud";
 import { Entity, getComponentValue, setComponent } from "@latticexyz/recs";
-import { safeGetAddress } from "../utils";
+import { safeGetAddress, unixTimeSecond } from "../utils";
 
 export async function syncGameMUD(
   components: NetworkComponents,
@@ -109,7 +109,7 @@ export const handleGameEvent = (
 ) => {
   const {
     TokenData,
-    PathUpdatedFlatEvent,
+    PathUpdatedEvent,
     AttackedEvent,
     CaptureAttemptedEvent,
     CaptureSettledEvent,
@@ -125,43 +125,88 @@ export const handleGameEvent = (
     const { tokenId, pathData } = data;
     const flatData: PathUpdatedEventFlatData = { tokenId, ...pathData };
     setTokenData(TokenData, flatData);
-    setComponent(PathUpdatedFlatEvent, tx as Entity, flatData);
+    setComponent(PathUpdatedEvent, tx as Entity, {
+      timestamp: unixTimeSecond(),
+      eventName,
+      tx,
+      ...flatData,
+    });
   } else if (eventName === "Attacked") {
     const data = args as unknown as AttackedEventData;
     console.log("Attacked event received", data);
-    setComponent(AttackedEvent, tx as Entity, data);
+    setComponent(AttackedEvent, tx as Entity, {
+      timestamp: unixTimeSecond(),
+      eventName,
+      tx,
+      ...data,
+    });
   } else if (eventName === "CaptureAttempted") {
     const data = args as unknown as CaptureAttemptedEventData;
     console.log("CaptureAttempted event received", data);
-    setComponent(CaptureAttemptedEvent, tx as Entity, data);
+    setComponent(CaptureAttemptedEvent, tx as Entity, {
+      timestamp: unixTimeSecond(),
+      eventName,
+      tx,
+      ...data,
+    });
   } else if (eventName === "CaptureSettled") {
     const data = args as unknown as CaptureSettledEventData;
     console.log("CaptureSettled event received", data);
-    setComponent(CaptureSettledEvent, tx as Entity, data);
+    setComponent(CaptureSettledEvent, tx as Entity, {
+      timestamp: unixTimeSecond(),
+      eventName,
+      tx,
+      ...data,
+    });
   } else if (eventName === "Spawned") {
     const data = args as unknown as SpawnedEventData;
     const flatData = data.tokenDataFlat;
     setTokenData(TokenData, flatData);
     console.log("Spawned event received", flatData);
-    setComponent(SpawnedEvent, tx as Entity, flatData);
+    setComponent(SpawnedEvent, tx as Entity, {
+      timestamp: unixTimeSecond(),
+      eventName,
+      tx,
+      ...flatData,
+    });
   } else if (eventName === "Defeated") {
     const data = args as unknown as DefeatedEventData;
     setTokenData(TokenData, data);
     console.log("Defeated event received", data);
-    setComponent(DefeatedEvent, tx as Entity, data);
+    setComponent(DefeatedEvent, tx as Entity, {
+      timestamp: unixTimeSecond(),
+      eventName,
+      tx,
+      ...data,
+    });
   } else if (eventName === "Revived") {
     const data = args as unknown as RevivedEventData;
     setTokenData(TokenData, data);
     console.log("Revived event received", data);
-    setComponent(RevivedEvent, tx as Entity, data);
+    setComponent(RevivedEvent, tx as Entity, {
+      timestamp: unixTimeSecond(),
+      eventName,
+      tx,
+      ...data,
+    });
   } else if (eventName === "Moved") {
     const data = args as unknown as MovedEventData;
     console.log("Moved event received", data);
-    setComponent(MovedEvent, tx as Entity, data);
+    setComponent(MovedEvent, tx as Entity, {
+      timestamp: unixTimeSecond(),
+      eventName,
+      tx,
+      ...data,
+    });
   } else if (eventName === "Talked") {
     const data = args as unknown as TalkedEventData;
     console.log("Talked event received", data);
-    setComponent(TalkedEvent, tx as Entity, data);
+    setComponent(TalkedEvent, tx as Entity, {
+      timestamp: unixTimeSecond(),
+      eventName,
+      tx,
+      ...data,
+    });
   }
 };
 

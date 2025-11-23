@@ -1,5 +1,6 @@
 import {
   AGENT_NFT_ADDRESS,
+  AgentType,
   gameContractConfig,
   NetworkComponents,
   world,
@@ -20,6 +21,7 @@ import {
   registerAgentIdentity,
 } from "./services/chaoschain";
 import { AgentStorageManager } from "./services/storageManager";
+import { deepseek } from "@ai-sdk/deepseek";
 
 export const agents = new Map<number, PalAgent>();
 // Store wallet clients for each agent
@@ -133,6 +135,11 @@ export const createAgentSystem = (components: NetworkComponents) => {
     const agent = new PalAgent({
       id: tokenId,
       model: "openai/gpt-5-nano",
+      // model: "openai/gpt-5-nano",
+      // model: "deepseek-r1",
+      model: deepseek("deepseek-chat"),
+      // model: "deepseek/deepseek-chat",
+      // model: "google/gemini-2.5-flash", // OpenRouter/AiMo Network with Gemini (use google/ prefix)
       components,
       gameAddress: gameContractConfig.address,
       walletClient,
@@ -166,7 +173,8 @@ export const createAgentSystem = (components: NetworkComponents) => {
     }
     const tokenData = getComponentValue(TokenData, entity);
     if (!tokenData) return;
-    const { health, tokenId } = tokenData;
+    const { health, tokenId, agentType } = tokenData;
+    if (agentType !== AgentType.PAL) return;
     // if health == 0, stop and delete agent
     if (health === 0) {
       stopAgent(Number(tokenId));

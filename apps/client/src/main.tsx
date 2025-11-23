@@ -15,10 +15,11 @@ import { MUDProvider } from "./MUDContext";
 import App from "./App";
 import "./index.css";
 import { createNoaLayer } from "./noa/createNoaLayer";
-import { setupPreComputed } from "./setup/setupPreComputed";
+import { setupPreComputed, syncPlayerTrainer } from "./setup/setupPreComputed";
 import { WagmiProvider } from "wagmi";
 import { wagmiConfig } from "./react/wallet/wagmiConfig";
 import { Toaster } from "@/components/ui/sonner";
+import { useWallet } from "./react/wallet/useWallet";
 // import { createMockSystem } from "./mock/createMockSystem";
 
 globalThis.Buffer = Buffer;
@@ -43,13 +44,15 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Analytics />
       </QueryClientProvider>
     </WagmiProvider>
-  </CDPHooksProvider>,
+  </CDPHooksProvider>
 );
 
 function Root() {
   const [result, setResult] = useState<any>(null);
   const [ready, setReady] = useState(false);
   const [error, setError] = useState<Error | null>(null);
+  const { address } = useWallet();
+  console.log(address);
 
   useEffect(() => {
     async function initialize() {
@@ -60,7 +63,11 @@ function Root() {
         // Setup network and components
         const setupResult = await setup();
 
-        setupPreComputed(setupResult.components);
+        setupPreComputed(
+          setupResult.components,
+          setupResult.network.world,
+          address
+        );
 
         // Initialize noa engine
         const noa = createNoaLayer(setupResult);
@@ -80,6 +87,11 @@ function Root() {
 
     initialize();
   }, []);
+
+  useEffect(() => {
+    if (!result || !address) return;
+    syncPlayerTrainer(result.components, result.network.world, address);
+  }, [address, result]);
 
   // Show loading screen while setup is in progress
   if (!ready) {

@@ -14,8 +14,12 @@ contract AllowedCaller is Ownable {
     allowedCallers[caller] = allowed;
   }
 
+  function isAllowedCaller(address caller) public view returns (bool) {
+    return allowedCallers[caller];
+  }
+
   modifier onlyAllowedCaller() {
-    if (!allowedCallers[msg.sender]) revert("NotAllowedCaller");
+    if (!isAllowedCaller(msg.sender)) revert("NotAllowedCaller");
     _;
   }
 }
