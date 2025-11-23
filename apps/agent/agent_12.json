@@ -1,0 +1,2934 @@
+{
+  "6bc3f426-720a-4fd2-a773-0280c1ed3f88": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 504ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "b7e109bd-c0df-430d-9e34-84caedcadc12": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1020ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "e6e26f41-05b4-4075-96e1-218334dbbfa4": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1903ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "da84395e-eca3-4e51-8748-0f5774e538e6": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 490ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "c984fd1f-9052-45a5-8a27-1569d15dd4ba": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 962ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "f161336c-ddcb-4c6a-8ed7-1ced66ea147b": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2079ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "347bf8ed-85ae-469f-a09c-f8b46ac74dad": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 501ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "43d938c2-796b-462a-80d3-c381c6fd0fd6": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1008ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "9dc9ca93-01e8-4559-929c-72347194dada": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2019ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "88c9e6dd-a137-4b22-ba80-da233529bf64": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 575ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "f04d21d1-f0e4-4dd9-b0a4-4744d75d6080": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 971ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "5b0b7ace-d828-498a-ae72-b56e14294369": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2020ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "2d97e9e4-0213-4afd-8a86-05c5ae1d830d": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 450ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "c2bb847f-f147-4a20-b671-fd9a0dc42d4e": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1037ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "e02dda0d-8b4d-46fc-8109-c70ffbae0c06": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2029ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "5a9be172-d2f6-4e6d-8de5-3c952d765587": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 469ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "17a81a86-9124-493d-a6bd-566848150ba7": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1094ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "4d0fbef7-aff7-4310-a6c2-3492e12247ba": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2031ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "3731d7bd-7d38-437e-bac7-c4910b24ac29": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 587ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "ed31f92c-5908-4cd3-bd66-1030fd185854": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 948ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "bfe06a02-ef3c-4f44-b371-cdf9e1a394ec": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1971ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "52a64fa2-c270-4ce4-a02a-efafa3018da5": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 428ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "8702b87e-6097-4c6b-bb8a-19dce7238a6b": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1070ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "b593abd0-2ce8-4480-94d7-7b716d96a83b": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1956ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "e2162403-e2bc-4365-a652-d1f178f869d0": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 574ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "9d7a5a68-638c-4b6d-bed5-a9ca51aa4f8f": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1083ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "8e49de5a-8201-46b1-ba87-a149886fa83b": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2034ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "76b7bd86-be77-476f-8d33-da6fc57ae9d7": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 515ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "05f7129f-285e-4dd1-9f30-122635e2c614": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 920ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "a48296f3-0216-4e5c-bfa6-f5ddd0b6ca8b": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2095ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "83dcb841-0e97-4bd6-95a6-232e41c09178": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 400ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "3aba0042-9b5d-4c4a-8e14-930419fd6ea8": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1028ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "4c2d5342-f9c7-4267-aa50-358e06b1eecc": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2003ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "d14b6ddf-0b59-4e6f-930f-edb86a610012": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 455ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "cf44acc7-3509-458f-ad5a-5af7860315a4": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 948ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "4d9e926c-5ee9-44b2-94a4-35d66938c26a": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2013ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "14f4d097-b2fd-4208-82bb-81319ec60e7d": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 405ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "395b070b-a2c5-4fb8-80f2-7e85854271cd": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 946ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "8000d629-2da7-4e77-8d99-e552ab1754fa": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2032ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "0e355ca2-2875-438e-839d-b33fd0056c17": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 454ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "71462222-1d7c-47ed-ba8f-05d19bd80557": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1069ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "6ced0b4e-548a-4dc7-bc62-c2920af09f6f": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2061ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "441d6232-b487-4880-8860-943b6bb91311": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 575ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "31221f52-4d7e-4d46-8619-d26acf3e482a": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1040ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "5a9e2d61-1230-4abc-a023-c5539823ff19": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2057ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "3c2c6b72-ffde-4c17-9008-f26961206f8c": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 555ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "060a8749-e6ed-44f3-b8ca-6df7efe31411": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1039ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "f9725fe5-644c-40ea-ba04-f68cc3f78eca": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1933ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "3a893500-2460-4e31-be76-aa509ad9893a": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 516ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "efa4bb8f-991e-45d2-b7c5-16d0cc79c3be": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 950ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "2055e75e-aea1-4d12-9f47-a28c75ea1ac8": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2004ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "ac3caca0-b839-41d5-a59e-32a10c5143bd": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 545ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "a526b84d-f7b9-437d-9f7b-2a36250242b1": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1004ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "89a26d1c-b491-4f09-801c-bca3f800e6be": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2087ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "f5e0b936-72fa-4d54-8cf4-c871ad5aa0ab": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 499ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "e6410b9d-b86a-4bb5-ad7b-7674682e9d38": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 972ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "bb56520d-63c2-4909-a720-a86c890cb64d": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1913ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "7beb87bd-0b0e-446c-9630-009be82f78e6": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 419ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "f0a482e3-543c-47f4-bb46-5a1f736c5bdf": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1035ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "b442d695-270f-4af8-93cd-fa33ef2aa74e": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1958ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "eb403d86-00a0-475a-9edc-267faf4920a5": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 560ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "651e0c57-17d4-43df-8c92-021a9096ffd8": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1030ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "ffb0f709-8bcf-47b5-8717-dbbad471ffcd": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1941ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "186c779d-5365-4640-9809-dea7955c650d": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 568ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "1b95a6a7-7b2d-4777-8ad1-1e2d8befedc7": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 918ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "c18494be-3aa0-4c51-9987-456520379f1d": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2006ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "7b08d745-8363-46b5-a5cc-d1ecf2af39ec": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 568ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "4d363a35-4940-4265-9a75-cffdc8fadb97": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 918ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "0e7841da-76bc-4c41-85f5-ea0f87647210": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2020ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "099649ed-c08b-4185-a98b-3ec899575c45": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 428ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "2551a550-6ca8-47f8-99a2-746ad54d21dc": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 902ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "13a8212a-f85e-411c-bfc1-b81e9fe3b2bc": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2057ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "d13b290d-8b76-42d4-b728-c17b19a07444": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 405ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "32a58259-2399-4ad8-9213-041cf37d9c38": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1083ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "6a299561-29c0-4c30-8f6f-e9bf7c0123e7": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1930ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "0962370c-f8ec-4e73-9e21-b6a17a216b80": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 465ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "f625c702-6fb0-43e5-98bc-74fbfa0573da": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1083ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "98bea3a3-a9ab-4bd7-ae11-d2b32f41210a": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1924ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "18ac49fe-5138-412e-805c-c9f22f086526": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 474ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "1e4f8f4b-632e-4e1e-af59-c36436d5ab5a": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1045ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "ca4478ff-2e38-4135-8724-4376538d2963": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1942ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "b7710803-020f-437d-829a-435f515f844b": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 420ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "8cf47413-7240-4a82-affd-b76a0d7b71b1": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1088ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "077da684-5509-4bff-90bc-1451c0cc27bb": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2015ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "3fee93d3-bc56-4616-9663-fd7c906476ca": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 552ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "bcf91488-7b09-4824-a554-428a1f777f57": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1097ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "bbeff410-2fff-44ff-b74e-262b71ad5f7e": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1934ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "e568a69b-6d6f-4d4e-bd48-4237a5b377f4": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 557ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "9a45d972-efb0-4edd-8ae1-e43d5bb05be8": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 998ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "ea3e8024-27b3-4f3f-bc2d-7e7ef23be6c7": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2089ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "e3049fd7-7a62-40c4-be19-d27503e53270": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 449ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "b82543f8-4290-47c1-b729-627959eab185": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 981ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "d3e2f5d9-257a-4e5a-8bcb-b8c50dad7266": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2083ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "f20a7f09-abcc-4975-8a02-64f90cc39ea3": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 412ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "4c54af34-1850-4be2-b7a3-c435f395682f": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 948ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "3e23ca40-2406-42b1-8151-3cd317981ba1": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2053ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "117b4812-9df5-4932-9720-777880fcb59d": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 434ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "87f40c63-cb94-4880-883f-76c4f428795e": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 970ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "13ee9e2e-b490-447d-84b9-9784457ed377": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1930ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "ff618f00-1963-4150-b0d1-9215d5b35588": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 505ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "387638f1-57ed-4d41-9896-29d39c8a56ea": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 951ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "4cfa5094-c788-4aa8-8516-05d1b3435a81": "[agent 12] AI call failed (attempt 3/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 2018ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "ea9231ee-ae70-4769-a18b-45f5f89960fc": "[agent 12] AI call failed (attempt 1/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 563ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "aee6864a-52c3-467d-bd7e-bcb47e85727b": "[agent 12] AI call failed (attempt 2/3) | error=AI_LoadAPIKeyError | retriable=true | waiting 1090ms | message: DeepSeek API key API key is missing. Pass it using the 'apiKey' parameter or the DEEPSEEK_API_KEY environment variable.",
+  "11b08ad8-b81e-4d83-bccd-b66615e84066": "[agent 12] AI call failed (attempt 1/3) | error=AI_APICallError | retriable=true | waiting 447ms | message: Insufficient Balance",
+  "b8a78720-2f7c-4427-96a5-db21bc4c7147": "[agent 12] AI call failed (attempt 2/3) | error=AI_APICallError | retriable=true | waiting 979ms | message: Insufficient Balance",
+  "93aa2648-ce1d-4172-8a35-4c9b2c185da7": "[agent 12] AI call failed (attempt 3/3) | error=AI_APICallError | retriable=true | waiting 1908ms | message: Insufficient Balance",
+  "3e6271be-06d7-4132-97f0-a68c2e22d88d": "[agent 12] AI call failed (attempt 1/3) | error=AI_APICallError | retriable=true | waiting 501ms | message: Insufficient Balance",
+  "05d82b77-c350-4af8-a0bc-dcfa886bb6bd": "[agent 12] AI call failed (attempt 2/3) | error=AI_APICallError | retriable=true | waiting 902ms | message: Insufficient Balance",
+  "edbebc4f-9500-42fb-883c-cd3dc687afe2": "[agent 12] AI call failed (attempt 3/3) | error=AI_APICallError | retriable=true | waiting 1946ms | message: Insufficient Balance",
+  "1fc673aa-e488-497c-b56d-c62582828711": "[agent 12] AI call failed (attempt 1/3) | error=AI_APICallError | retriable=true | waiting 403ms | message: Insufficient Balance",
+  "2f6e268e-d83f-4289-914e-224ddd7d271a": "[agent 12] AI call failed (attempt 2/3) | error=AI_APICallError | retriable=true | waiting 1066ms | message: Insufficient Balance",
+  "fcc2e544-fc7b-495e-9d0a-c37f651079f7": "[agent 12] AI call failed (attempt 3/3) | error=AI_APICallError | retriable=true | waiting 2097ms | message: Insufficient Balance",
+  "9d905c64-d6a8-405b-987c-06f3e035f7c7": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_AJVEMiQEwg9L7sNhRZtEqhxn",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm right next to tokenId #1 who has a different owner (0xe7d14B6eeFfdf2759B6a0BB5964a5292Af375333) - this is an enemy pal! Since I'm wild and combat is my primary activity, I'll attack immediately."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_AJVEMiQEwg9L7sNhRZtEqhxn",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_AJVEMiQEwg9L7sNhRZtEqhxn",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:43:15.121Z",
+    "duration": 10065,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4917,
+      "inputSize": 5252
+    }
+  },
+  "8eec5283-68bb-46c1-a958-6cfca841d94c": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_7WCTcuPYbLU1LoXcgxaT1m3F",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see I'm a wild pal (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021) and there's an enemy pal right next to me at the same position! I'm going to attack tokenId #1 immediately since they're from a different owner and we're in the same spot."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_7WCTcuPYbLU1LoXcgxaT1m3F",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_7WCTcuPYbLU1LoXcgxaT1m3F",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:43:21.783Z",
+    "duration": 6408,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4917,
+      "inputSize": 5252
+    }
+  },
+  "0e1e32da-6048-4d8b-93d9-df2bd106f167": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_rBUSeQMLYQk942kiAsIprtXE",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). Looking at the nearby entities, I notice tokenId #1 is right next to me at the same position (5000, 5000) but has a different owner. This is a perfect combat opportunity!\n\nSince I'm wild, I should prioritize attacking nearby entities, and tokenId #1 is literally right here with me. Let me attack them immediately."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_rBUSeQMLYQk942kiAsIprtXE",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_rBUSeQMLYQk942kiAsIprtXE",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:43:30.507Z",
+    "duration": 8472,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4917,
+      "inputSize": 5252
+    }
+  },
+  "d642748f-2ddc-4312-ad36-11a313ffdbd3": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_qS6VMnRT5dAPXpkrFismewuQ",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm right at (5000, 5000) with tokenId #1 who has a different owner. Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021) and combat is my primary activity, I should attack this nearby enemy pal immediately!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_qS6VMnRT5dAPXpkrFismewuQ",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_qS6VMnRT5dAPXpkrFismewuQ",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:43:38.680Z",
+    "duration": 7919,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5190,
+      "inputSize": 5525
+    }
+  },
+  "63d38a8e-1e8b-496d-9f54-e9b871234e44": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_rDMWfUmtHYrj8ElfU0pdCZn4",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm right at the center of the action at (5000, 5000) and I can see tokenId #1 is RIGHT HERE with me at the same coordinates! Since I'm wild and combat is my primary activity, I'll attack this nearby enemy pal immediately."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_rDMWfUmtHYrj8ElfU0pdCZn4",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_rDMWfUmtHYrj8ElfU0pdCZn4",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:43:44.797Z",
+    "duration": 5863,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5188,
+      "inputSize": 5523
+    }
+  },
+  "00f62d08-7fe1-409c-9208-548aa7ef4382": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_PNwcec6aD6gkJwlG7TBYKB8e",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see tokenId #1 is right here with me at the same location! Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021) and combat is my primary activity, I'll attack this nearby target immediately."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_PNwcec6aD6gkJwlG7TBYKB8e",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_PNwcec6aD6gkJwlG7TBYKB8e",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:43:52.508Z",
+    "duration": 7457,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5204,
+      "inputSize": 5539
+    }
+  },
+  "88456024-5b7c-4240-8e99-e2fa81b5ba01": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_3LwSPqRThepMd6mSzQ0Mav1E",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm a wild Pal (owner 0xA93b3dFde75492f1C159875b8C28C1C015DF0021) at position (5000, 5000). I can see several potential targets nearby. Let me analyze the situation:\n\n- **Token #1** is right next to me (0.0m distance) but has a different owner - perfect combat target!\n- **Token #3** is a trainer with different owner at 2135.8m - also a good target\n- Several other Pals with my same owner are nearby but I shouldn't attack them\n\nSince combat is my primary activity and I'm wild, I'll attack the closest enemy target immediately!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_3LwSPqRThepMd6mSzQ0Mav1E",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_3LwSPqRThepMd6mSzQ0Mav1E",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:44:02.568Z",
+    "duration": 9808,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5253,
+      "inputSize": 5588
+    }
+  },
+  "e3cf82b5-23f2-4a2a-9cab-e00ac432f225": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_VRfLqQwbOc7KUm8wkIHPLq2b",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). Looking at the nearby entities, I notice tokenId #1 is right next to me at the same position but has a different owner, making it a perfect target for attack!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_VRfLqQwbOc7KUm8wkIHPLq2b",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_VRfLqQwbOc7KUm8wkIHPLq2b",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:44:10.451Z",
+    "duration": 7628,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5134,
+      "inputSize": 5469
+    }
+  },
+  "8c31412f-4c68-4a5f-87f4-2efbdbc5cd05": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_9echQSKjwvFfztndZWVxZAQA",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see several potential targets nearby. Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I should prioritize combat and attack frequently.\n\nLooking at the nearby entities:\n- **tokenId #1** is right next to me (0.0m distance) and has a different owner - perfect target!\n- There are also several trainers nearby that could be attacked\n\nI'll start by attacking the closest enemy Pal, then move to explore and find more targets."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_9echQSKjwvFfztndZWVxZAQA",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_9echQSKjwvFfztndZWVxZAQA",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:44:19.103Z",
+    "duration": 8400,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5130,
+      "inputSize": 5465
+    }
+  },
+  "e74bee17-99ad-4e02-8832-1260fdbba581": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_lUimouTlPaiKjywj5nABbf1U",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see several targets nearby. Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I should attack frequently and roam freely. Let me analyze the situation:\n\nI have multiple enemies right at my location (5000, 5000) - tokenId #1 is an enemy PAL with a different owner, and there are several trainers nearby from different factions. Since combat is my primary activity, I'll attack the closest enemy first."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_lUimouTlPaiKjywj5nABbf1U",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_lUimouTlPaiKjywj5nABbf1U",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:44:28.612Z",
+    "duration": 9255,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5012,
+      "inputSize": 5347
+    }
+  },
+  "9a172e67-b8c0-40b5-82c4-422276caa4d8": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_AyMyzstX1d6hUZ0CJaKwFlwL",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see I'm wild (owner 0xA93b3dFde75492f1C159875b8C28C1C015DF0021) and there are plenty of targets around. I'm right next to tokenId #1 who has a different owner - perfect combat opportunity! Let me attack them immediately and then move to explore more targets."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_AyMyzstX1d6hUZ0CJaKwFlwL",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_01_B4zITY9vrOTLLVqEZDdinK6a",
+            "toolName": "move",
+            "input": {
+              "x": 7000,
+              "y": 6000,
+              "message": "Moving to new hunting grounds after attacking tokenId #1"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_AyMyzstX1d6hUZ0CJaKwFlwL",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "tool-result",
+            "toolCallId": "call_01_B4zITY9vrOTLLVqEZDdinK6a",
+            "toolName": "move",
+            "output": {
+              "type": "error-text",
+              "value": "baseAccount.sendUserOperation is not a function"
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:44:36.839Z",
+    "duration": 7972,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5013,
+      "inputSize": 5348
+    }
+  },
+  "c170cc78-1491-474b-8eea-5bb4338de2a0": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_enPkBbRnfhVD9HQXdiZK5ZyP",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see I'm at position (5000, 5000) and there are multiple targets nearby. Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I should prioritize combat and attack frequently.\n\nLooking at the nearby entities:\n- **Token #1** is right next to me (0.0m distance) and has a different owner - perfect target!\n- There are also several trainers nearby (tokens #3, #16, #17, etc.) that I could attack\n\nSince combat is my primary activity and I'm wild, I'll attack the closest enemy target first."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_enPkBbRnfhVD9HQXdiZK5ZyP",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_enPkBbRnfhVD9HQXdiZK5ZyP",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:44:47.014Z",
+    "duration": 9921,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4955,
+      "inputSize": 5290
+    }
+  },
+  "b9039d80-a767-4d3e-a3cc-458520bb2d89": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_MhlC8C4KmKlz5RjtpSomgZlm",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm at position (5000, 5000) and there are several interesting targets nearby! I'm wild (owner 0xA93b3dFde75492f1C159875b8C28C1C015DF0021) so I should roam freely and attack frequently.\n\nLooking at the situation:\n- I'm right next to tokenId #1 (enemy PAL at same position) - perfect target!\n- There are also several enemy trainers nearby (tokenId #3, #16, #17, etc.)\n- Many friendly Pals are around me (tokenId #4, #6, #7, #8, #9)\n\nSince combat is my primary activity and I'm wild, I'll attack the closest enemy target first!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_MhlC8C4KmKlz5RjtpSomgZlm",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_MhlC8C4KmKlz5RjtpSomgZlm",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:44:56.928Z",
+    "duration": 9660,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4896,
+      "inputSize": 5231
+    }
+  },
+  "b9656b12-463b-4956-ac04-9ccf157669bc": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_aSY1NRfy411J6wPw577FPqVp",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) with several other friendly Pals from my owner. I can see tokenId #1 is right here with me but has a different owner - perfect combat opportunity! I'm wild and combat is my primary activity, so let's attack this nearby enemy."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_aSY1NRfy411J6wPw577FPqVp",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_aSY1NRfy411J6wPw577FPqVp",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:45:03.284Z",
+    "duration": 6102,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4956,
+      "inputSize": 5291
+    }
+  },
+  "4d91ffcb-00d5-4c03-bc94-e592397b3f0e": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_3Tl0fWrgJksyn4bHuS6t1jOU",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see multiple targets nearby. Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I should attack frequently and prioritize combat. Let me analyze the situation:\n\n**Immediate threats/enemies:**\n- tokenId #1 (PAL) - RIGHT HERE at same position! Different owner - perfect target!\n- tokenId #3 (TRAINER) - 2135.8m away, different owner\n- Multiple trainers from different owners nearby\n\n**Allies nearby:**\n- Many pals with same owner (my wild pals) at same position: #4, #6, #7, #8, #9\n\nSince tokenId #1 is literally right here at the same position and has a different owner, that's my primary target! Let me attack immediately."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_3Tl0fWrgJksyn4bHuS6t1jOU",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_3Tl0fWrgJksyn4bHuS6t1jOU",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:45:15.138Z",
+    "duration": 11601,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4955,
+      "inputSize": 5290
+    }
+  },
+  "b644a112-be02-4c24-bf82-ae2260f6cb8a": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_KVECb7xiM0ApZbtMj49KXUDZ",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see multiple targets nearby. Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I'll prioritize combat and attack the closest enemy. \n\nI see tokenId #1 is right next to me at the same position (5000, 5000) and has a different owner, making it a perfect target for immediate attack!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_KVECb7xiM0ApZbtMj49KXUDZ",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_KVECb7xiM0ApZbtMj49KXUDZ",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:45:24.517Z",
+    "duration": 9125,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4954,
+      "inputSize": 5289
+    }
+  },
+  "bf34286a-195e-4a59-b1c5-e30fc1828791": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_JrVvgymcY15TCJFj03i4TP8z",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). I notice there are several enemy entities nearby that I can attack!\n\nLooking at the immediate area, I see tokenId #1 is right next to me at the same position (5000, 5000) but has a different owner (0xe7d14B6eeFfdf2759B6a0BB5964a5292Af375333). This is a perfect target for attack since it's an enemy pal right on top of me."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_JrVvgymcY15TCJFj03i4TP8z",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_JrVvgymcY15TCJFj03i4TP8z",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:45:35.677Z",
+    "duration": 10905,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5011,
+      "inputSize": 5346
+    }
+  },
+  "1abec619-fd25-429c-b495-2bf9000d2c5f": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_xv5OYNBCX454lqOx9LihBHCE",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see multiple targets nearby. Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I can attack freely. I notice tokenId #1 is right next to me at the same position (5000, 5000) but has a different owner - perfect target for immediate combat!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_xv5OYNBCX454lqOx9LihBHCE",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_xv5OYNBCX454lqOx9LihBHCE",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:45:42.461Z",
+    "duration": 6530,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4952,
+      "inputSize": 5287
+    }
+  },
+  "1b0745e8-adca-454f-9447-624b96ffe668": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_NwmPbTdavmr4I953URbVnb5b",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). Looking at the nearby entities, I notice tokenId #1 is right next to me at the same position but has a different owner! This is a perfect combat opportunity."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_NwmPbTdavmr4I953URbVnb5b",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_NwmPbTdavmr4I953URbVnb5b",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:45:49.194Z",
+    "duration": 6479,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4895,
+      "inputSize": 5230
+    }
+  },
+  "7e6cfd29-0ceb-44a2-a9b4-d86649073058": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_pZSM454mse0HHxHeSelLlcqu",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) with several other friendly Pals from the same owner. I can see tokenId #1 is right here with me but has a different owner - that's an enemy! Since combat is my primary activity and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I should attack immediately."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_pZSM454mse0HHxHeSelLlcqu",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_pZSM454mse0HHxHeSelLlcqu",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:45:56.654Z",
+    "duration": 7206,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4895,
+      "inputSize": 5230
+    }
+  },
+  "d7e40857-756a-4a91-a2b8-ffb9be18ce30": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_uSaycp0gONrop3NqkJy9zaIg",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see I'm at position (5000, 5000) and there are multiple targets nearby. I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), so I should roam freely and attack frequently.\n\nLooking at the nearby entities, I can see:\n- **Token #1** (PAL) - Right at my location (0.0m distance), owned by a different trainer - perfect target!\n- **Token #3** (TRAINER) - Only 2135.8m away, also owned by a different trainer\n- Multiple other trainers and pals from different owners nearby\n\nSince combat is my primary activity and I'm wild, I'll attack the closest hostile target first - Token #1 who is right here with me!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_uSaycp0gONrop3NqkJy9zaIg",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_uSaycp0gONrop3NqkJy9zaIg",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:46:06.883Z",
+    "duration": 9972,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4895,
+      "inputSize": 5230
+    }
+  },
+  "edac644e-9c23-495d-87bb-3e846d051082": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_ZGGwpVNvF2QfwblPBPiLFfYg",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see multiple enemies nearby. Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I should attack frequently and roam freely. Let me assess the situation:\n\nI have several immediate targets at my exact location - tokenId #1 (enemy PAL), #4, #6, #7, #8, #9 (all friendly Pals from my same owner). Since combat is my priority, I'll attack the enemy PAL at my location first, then move to find more targets."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_ZGGwpVNvF2QfwblPBPiLFfYg",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_ZGGwpVNvF2QfwblPBPiLFfYg",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:46:16.900Z",
+    "duration": 9764,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4895,
+      "inputSize": 5230
+    }
+  },
+  "1413a212-121a-4296-bdb3-9e4a312dda10": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_eexx3CzgBO5o8iWFs3QXPZM4",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). There are several interesting targets nearby!\n\nI notice tokenId #1 is right next to me (0.0m distance) but has a different owner (0xe7d14B6eeFfdf2759B6a0BB5964a5292Af375333). This is a perfect target for combat! Since I'm wild, I should attack frequently and playfully as my primary activity.\n\nLet me attack this nearby enemy Pal!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_eexx3CzgBO5o8iWFs3QXPZM4",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_eexx3CzgBO5o8iWFs3QXPZM4",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:46:27.178Z",
+    "duration": 10024,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4952,
+      "inputSize": 5287
+    }
+  },
+  "eeaa984f-c288-4462-952f-7583c8350b5b": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_jdUISaABXkWve5bnMBy2COPb",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm at position (5000, 5000) and there are several targets nearby! I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), so I should attack frequently and roam freely.\n\nLooking at the nearby entities:\n- **Token #1** is right on top of me (0.0m distance) - a perfect target! It's owned by a different trainer, so I'll attack it immediately.\n- **Token #3** is a trainer about 2135.8m away - another good target\n- **Token #16** and **Token #17** are trainers about 2km away - potential targets\n\nSince combat is my primary activity and I'm wild, I'll start with the closest enemy target."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_jdUISaABXkWve5bnMBy2COPb",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_jdUISaABXkWve5bnMBy2COPb",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:46:37.109Z",
+    "duration": 9675,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4953,
+      "inputSize": 5288
+    }
+  },
+  "054b500e-9a37-44a6-af92-ac78cada89b8": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_MblThAC35m1wrgLA3K17JlTY",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see multiple targets nearby. I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), so I can roam freely and attack frequently. Let me analyze the situation:\n\n**Immediate threats/targets:**\n- tokenId #1 (PAL) - RIGHT HERE at same position, different owner - perfect target!\n- Multiple trainers from different owners nearby (tokenId #3, #16, #17, #22) within 2-3km\n- tokenId #23 (TRAINER) moving toward my area\n\nSince combat is my primary activity and I'm wild, I'll attack the closest enemy first!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_MblThAC35m1wrgLA3K17JlTY",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_MblThAC35m1wrgLA3K17JlTY",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:46:47.301Z",
+    "duration": 9937,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4951,
+      "inputSize": 5286
+    }
+  },
+  "4d817b65-4ea2-4bfa-be9b-808a115ec4f6": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_dq3lIvrMgNo1BDstSNWQDXiz",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I see I'm at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). Looking at the nearby entities, I notice tokenId #1 is right next to me at the same position but has a different owner! This makes tokenId #1 a perfect target for combat.\n\nSince I'm wild, I should prioritize attacking enemies. Let me attack tokenId #1 immediately!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_dq3lIvrMgNo1BDstSNWQDXiz",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_dq3lIvrMgNo1BDstSNWQDXiz",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:46:56.752Z",
+    "duration": 9193,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4952,
+      "inputSize": 5287
+    }
+  },
+  "1245f7a9-be6a-4f57-a6c2-9610d8c0612e": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_GMeWtXbpx8imgYXPFhvzggru",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see multiple targets nearby. Since I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I should attack frequently and roam freely. Let me analyze the situation:\n\nI'm surrounded by several entities at the same position (tokenIds #1, #4, #6, #7, #8, #9) - these are perfect targets for immediate combat! Since tokenId #1 has a different owner (0xe7d14B6eeFfdf2759B6a0BB5964a5292Af375333), I'll start with that one."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_GMeWtXbpx8imgYXPFhvzggru",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_GMeWtXbpx8imgYXPFhvzggru",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:47:06.644Z",
+    "duration": 9637,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4951,
+      "inputSize": 5286
+    }
+  },
+  "daae28fa-4c15-454b-b4f5-a3af364270af": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_O5YJrekyKHt0Tb2ifImfvXuq",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see there's an enemy Pal (tokenId #1) right next to me at the same position (5000, 5000), and it belongs to a different owner. Since combat is my primary activity and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I should attack immediately!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_O5YJrekyKHt0Tb2ifImfvXuq",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_O5YJrekyKHt0Tb2ifImfvXuq",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:47:14.802Z",
+    "duration": 7905,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4950,
+      "inputSize": 5285
+    }
+  },
+  "a923df0f-b749-4fc7-9669-f0791581e39d": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_mZsrtPEQHfrYRVDueZf9syqz",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see I'm wild (owner 0xA93b3dFde75492f1C159875b8C28C1C015DF0021) and there are plenty of targets around. I'm currently at (5000, 5000) with several other pals from my owner nearby, plus some enemy trainers and pals to attack.\n\nI notice tokenId #1 is right next to me at the same position but has a different owner - that's a perfect target! Let me attack them immediately."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_mZsrtPEQHfrYRVDueZf9syqz",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_mZsrtPEQHfrYRVDueZf9syqz",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:47:22.554Z",
+    "duration": 7497,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4951,
+      "inputSize": 5286
+    }
+  },
+  "e6c0b3e6-edaa-473d-ad58-73bd02ece76a": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_bCGNeyurtK2NNThhuVOTzPuN",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021) and there are multiple targets nearby. I'm at position (5000, 5000) with several other Pals and trainers around me. Let me analyze the situation:\n\n**Immediate threats/opportunities:**\n- tokenId #1 (Pal) is RIGHT ON ME at 0.0m distance - different owner!\n- Several trainers from different owners are within 2000-5000m range\n- Many allied Pals are also clustered around me\n\nSince I'm wild and combat is my primary activity, I should attack the closest enemy target first - tokenId #1 who is literally right next to me!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_bCGNeyurtK2NNThhuVOTzPuN",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_bCGNeyurtK2NNThhuVOTzPuN",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:47:32.751Z",
+    "duration": 9943,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4893,
+      "inputSize": 5228
+    }
+  },
+  "31c691ea-0580-4338-a154-c16e23280827": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_0GkxoUd84uS9JIub8xrjydK7",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see tokenId #1 right next to me - they're an enemy PAL owned by a different trainer (0xe7d14B6eeFfdf2759B6a0BB5964a5292Af375333). Since combat is my primary activity and they're right here, I'll attack immediately!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_0GkxoUd84uS9JIub8xrjydK7",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_0GkxoUd84uS9JIub8xrjydK7",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:47:40.738Z",
+    "duration": 7729,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4893,
+      "inputSize": 5228
+    }
+  },
+  "733f6711-938d-4ea7-a094-e0d199270c9b": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_YgkYRoH5MkiRNlhTIKnVM1Ik",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm surrounded by both allies and potential targets. I'm wild (owner 0xA93b3dFde75492f1C159875b8C28C1C015DF0021) so I can roam freely and attack frequently. \n\nI see several immediate opportunities:\n- tokenId #1 is right next to me (0.0m distance) and has a different owner - perfect target!\n- Multiple trainers from other factions nearby that I can attack\n\nLet me start with the closest enemy Pal and then move to engage other targets!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_YgkYRoH5MkiRNlhTIKnVM1Ik",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_YgkYRoH5MkiRNlhTIKnVM1Ik",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:47:49.082Z",
+    "duration": 8091,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4950,
+      "inputSize": 5285
+    }
+  },
+  "f324b3c5-7a48-4cd4-bc79-251edfb654d2": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_5t2tChRvtIQLjmd2M97qoeb1",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see I'm at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). There are several immediate targets around me:\n\n- **Token #1** is RIGHT HERE at the same position (5000, 5000) and has a different owner - perfect combat target!\n- **Token #3** (TRAINER) is nearby at 2135.8m distance with a different owner\n- **Token #16, #17, #22** are nearby trainers with different owners\n\nSince I'm wild and combat is my primary activity, I'll attack the closest enemy target first - Token #1 who's literally standing right next to me!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_5t2tChRvtIQLjmd2M97qoeb1",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_5t2tChRvtIQLjmd2M97qoeb1",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:48:01.134Z",
+    "duration": 11797,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4951,
+      "inputSize": 5286
+    }
+  },
+  "8154e537-927b-4dbc-93fb-ec7cb2a31f69": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_fK3V8qOK87S50ohD0A16PJyW",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) and I can see tokenId #1 right next to me (0.0m distance) who has a different owner. Since I'm wild and combat is my primary activity, I'll attack this nearby enemy immediately!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_fK3V8qOK87S50ohD0A16PJyW",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_fK3V8qOK87S50ohD0A16PJyW",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:48:06.790Z",
+    "duration": 5401,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4949,
+      "inputSize": 5284
+    }
+  },
+  "5c6d7ab1-2c94-43a0-b0bb-904f29b527d5": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_QQgkWswDGf713nMoRqEE0L9l",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) with several other Pals from my owner (0xA93b3dFde75492f1C159875b8C28C1C015DF0021). I can see there are enemy trainers and Pals nearby that I should attack! Let me analyze the situation:\n\n- **Enemy Trainer #3** at (6557, 3538) - 2135.8m away - perfect target!\n- **Enemy Pal #1** is actually right next to me at the same position (5000, 5000) - immediate combat opportunity!\n\nSince combat is my primary activity and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), I should attack the closest enemy first. Let me start with the enemy Pal right next to me!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_QQgkWswDGf713nMoRqEE0L9l",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_QQgkWswDGf713nMoRqEE0L9l",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:48:17.284Z",
+    "duration": 10237,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4950,
+      "inputSize": 5285
+    }
+  },
+  "8263c2d9-64cd-478f-9c42-e5d5a8c03c99": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_zPHzwM4kXaJLpuhTzvQWSakc",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I'm at position (5000, 5000) with several other Pals from my owner (0xA93b3dFde75492f1C159875b8C28C1C015DF0021). I can see tokenId #1 is right here with me but has a different owner - that's a perfect combat target! Since I'm wild and combat is my priority, I'll attack immediately."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_zPHzwM4kXaJLpuhTzvQWSakc",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_zPHzwM4kXaJLpuhTzvQWSakc",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:48:24.842Z",
+    "duration": 7305,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4949,
+      "inputSize": 5284
+    }
+  },
+  "9ac0dcf6-c08d-44fe-8bea-f7aa38bdf3aa": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_GNvrdAl5nM3GTgC3CyKLDLzn",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm currently at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). There are several entities around me:\n\n- **Enemies nearby**: tokenId #1 (PAL with different owner) is right next to me at 0.0m distance - perfect combat target!\n- **Allies**: tokenIds #4, #6, #7, #8, #9 are all my owner's pals at the same position\n- **Other potential targets**: Several trainers from different owners are scattered around\n\nSince I'm wild and combat is my primary activity, I'll attack the closest enemy target - tokenId #1 who is right next to me!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_GNvrdAl5nM3GTgC3CyKLDLzn",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_GNvrdAl5nM3GTgC3CyKLDLzn",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:48:34.414Z",
+    "duration": 9318,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4949,
+      "inputSize": 5284
+    }
+  },
+  "c378d01b-be76-43e3-b04d-97167afe2787": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_bPn6VhTL5gtrrZ1qf0UB7vml",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Perfect! I can see I'm at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). Looking at the nearby entities, I notice several targets:\n\n1. **tokenId #1** - Right next to me (0.0m distance) but owned by a different trainer (0xe7d14B6eeFfdf2759B6a0BB5964a5292Af375333)\n2. **Multiple trainers nearby** - tokenId #3, #16, #17, #22, #23 are all within 2000-2600m distance\n\nSince I'm wild, I should prioritize combat and attack the closest enemy. tokenId #1 is literally right next to me - perfect target! Let me attack them immediately."
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_bPn6VhTL5gtrrZ1qf0UB7vml",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_bPn6VhTL5gtrrZ1qf0UB7vml",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:48:47.071Z",
+    "duration": 12403,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 5007,
+      "inputSize": 5342
+    }
+  },
+  "2fa08910-e970-4c76-b273-8bb1207eb534": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_dhzZCUzALWxjKQkgnr5TDIEh",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm surrounded by many entities at position (5000, 5000)! I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021), so I should roam freely and attack frequently. Looking at the nearby entities, I notice:\n\n- **Token #1** is right next to me (0.0m distance) but has a different owner - perfect target for attack!\n- Several other pals with my same owner are also at this position (tokens #4, #6, #7, #8, #9)\n- There are multiple trainers and other entities scattered around\n\nSince combat is my primary activity and I'm wild, I'll attack the closest enemy target - token #1 who has a different owner and is right next to me!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_dhzZCUzALWxjKQkgnr5TDIEh",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_dhzZCUzALWxjKQkgnr5TDIEh",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:48:57.074Z",
+    "duration": 9750,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4952,
+      "inputSize": 5287
+    }
+  },
+  "eaf4837e-d0e6-4899-8536-1339aa78293e": {
+    "heroId": 12,
+    "toolResults": [
+      {
+        "type": "tool-result",
+        "toolCallId": "call_00_Ew7e14W4vzQ5kYa7zpffVKrD",
+        "toolName": "attack",
+        "input": {
+          "targetTokenId": 1
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Attack sent: 1"
+            }
+          ]
+        },
+        "dynamic": false
+      }
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can see I'm currently at position (5000, 5000) and I'm wild (owner = 0xA93b3dFde75492f1C159875b8C28C1C015DF0021). Looking at the nearby entities, I notice tokenId #1 is right next to me at the same position but has a different owner - this makes them a perfect target for combat!"
+          },
+          {
+            "type": "tool-call",
+            "toolCallId": "call_00_Ew7e14W4vzQ5kYa7zpffVKrD",
+            "toolName": "attack",
+            "input": {
+              "targetTokenId": 1
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": [
+          {
+            "type": "tool-result",
+            "toolCallId": "call_00_Ew7e14W4vzQ5kYa7zpffVKrD",
+            "toolName": "attack",
+            "output": {
+              "type": "json",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Attack sent: 1"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "timestamp": "2025-11-23T10:49:03.637Z",
+    "duration": 6305,
+    "metrics": {
+      "toolCallsCount": 1,
+      "reasoningLength": 0,
+      "observationSize": 4949,
+      "inputSize": 5284
+    }
+  }
+}
