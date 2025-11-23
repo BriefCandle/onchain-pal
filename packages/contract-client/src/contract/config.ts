@@ -44,9 +44,9 @@ export const publicClient = createPublicClient({
 
 // // base sepolia--test1
 export const RNG_PROVIDER_ADDRESS =
-  "0x11010884b32cec72f8087Ad07F3c697f4d2e4456";
-export const AGENT_NFT_ADDRESS = "0x1Ffcd9658AF6Cfc442205727F4c17881FA91D408";
-export const GAME_ADDRESS = "0x0037C3F66a86f2B134ED0Ce4d0aA5032Be46F5a8";
+  "0x6712619ef89c8aCF5d6407b4b57c807f05c29252";
+export const AGENT_NFT_ADDRESS = "0xe0a3f19BeD468a3cF938162A91ea60d2E898Eb13";
+export const GAME_ADDRESS = "0xA93b3dFde75492f1C159875b8C28C1C015DF0021";
 
 export const gameContractConfig = {
   address: GAME_ADDRESS,

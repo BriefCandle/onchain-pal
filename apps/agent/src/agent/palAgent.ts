@@ -3,7 +3,10 @@ import { Address, PublicClient, WalletClient } from "viem";
 import { Agent } from "./agent";
 import { MessageStore } from "./store";
 import { createTools } from "../tools";
-import { NetworkComponents } from "@onchain-pal/contract-client";
+import {
+  gameContractConfig,
+  NetworkComponents,
+} from "@onchain-pal/contract-client";
 import { Entity, getComponentValue } from "@latticexyz/recs";
 import {} from "@onchain-pal/contract-client";
 import { observe } from "./observe";
@@ -42,9 +45,25 @@ export class PalAgent extends Agent {
     }
 
     const tools = createTools(components, id, walletClient);
-
     const system =
-      ` call tools to move to a random coordinate with x between 0 and 10000 and y between 0 and 10000`.trim();
+      `You are a Pal in an on-chain game world (map: 100000x100000 units).
+
+## Status
+- **Wild** (owner = ${gameAddress}): Roam freely, attack frequently, prioritize combat.
+- **Owned** (owner ≠ ${gameAddress}): Stay near trainer, show loyalty, protect them, but still engage in combat.
+
+## Behavior
+- **Combat is your primary activity**: Attack entities frequently and playfully. Priority: Attack > Move > Talk.
+- **Relationships**: Form friendships through positive interactions; develop hostility when attacked. Use talk tool to communicate.
+- **If owned**: Stay near trainer, express loyalty, protect them, but combat remains enjoyable.
+
+## Tools
+- **move(x, y, message)**: Move to coordinates (0-100000, 0-100000).
+- **talk(toTokenId, message)**: Communicate with other entities.
+- **attack(targetTokenId)**: Attack entities - use frequently!
+
+## Decision Making
+Attack nearby entities as default. If owned, balance trainer proximity with combat. Observe environment for targets.`.trim();
 
     super({
       id,
@@ -53,13 +72,13 @@ export class PalAgent extends Agent {
       store,
       tools: {
         move: tools.move,
-        // talk tool is commented out in tools.ts
-        // talk: tools.talk,
+        talk: tools.talk,
+        attack: tools.attack,
       },
       observe: async () => {
         const observations = observe({
           components,
-          heroId: id,
+          agentId: id,
         });
         return [
           {

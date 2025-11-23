@@ -261,8 +261,8 @@ export class PalEntity {
     // this.textMesh.alwaysSelectAsActiveMesh = true;
 
     // Create texture with initial text (tokenId)
-    const initialText =
-      "Pal testing area 123 blahblahblahblahblahb; Pal testing area 123 blahblahblahblahblahb; Pal testing area 123 blahblahblahblahblahb"; // this.tokenId.toString();
+    const initialText = "Token #" + this.tokenId;
+    // "Pal testing area 123 blahblahblahblahblahb; Pal testing area 123 blahblahblahblahblahb; Pal testing area 123 blahblahblahblahblahb"; // this.tokenId.toString();
     this.currentText = initialText; // Track initial text
     const textTexture = this.setTextLabel(initialText);
     if (!textTexture) {

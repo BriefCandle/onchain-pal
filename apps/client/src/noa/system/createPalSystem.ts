@@ -34,7 +34,13 @@ export const createPalSystem = (result: SetupResult, noa: Engine) => {
     network: { world },
     components,
   } = result;
-  const { TokenData, PathUpdatedFlatEvent, SelectedEntity } = components;
+  const {
+    TokenData,
+    PathUpdatedEvent,
+    SelectedEntity,
+    TalkedEvent,
+    MovedEvent,
+  } = components;
 
   // Set up tick handler once
   setupMovementTick(noa);
@@ -71,9 +77,9 @@ export const createPalSystem = (result: SetupResult, noa: Engine) => {
     return palEntity;
   }
 
-  defineSystem(world, [Has(PathUpdatedFlatEvent)], ({ entity, type }) => {
+  defineSystem(world, [Has(PathUpdatedEvent)], ({ entity, type }) => {
     if (type === UpdateType.Exit) return;
-    const eventData = getComponentValue(PathUpdatedFlatEvent, entity)!;
+    const eventData = getComponentValue(PathUpdatedEvent, entity)!;
     const { tokenId, fromX, fromY, toX, toY, lastUpdated, duration } =
       eventData;
     const tokenEntity = tokenId.toString() as Entity;
@@ -96,13 +102,30 @@ export const createPalSystem = (result: SetupResult, noa: Engine) => {
     attachPlayerToPal(noa, tokenId);
   });
 
-  // define system to update text when token data changes
-  // mock: update text every 10 seconds
-  setInterval(() => {
-    for (const [tokenEntity, palEntity] of entityMap.entries()) {
-      palEntity.updateText(`${Math.random()}`);
-    }
-  }, 10000);
+  // // define system to update text when token data changes
+  // // mock: update text every 10 seconds
+  // setInterval(() => {
+  //   for (const [tokenEntity, palEntity] of entityMap.entries()) {
+  //     palEntity.updateText(`${Math.random()}`);
+  //   }
+  // }, 10000);
+  defineSystem(world, [Has(TalkedEvent)], ({ entity, type }) => {
+    if (type === UpdateType.Exit) return;
+    const eventData = getComponentValue(TalkedEvent, entity)!;
+    const { fromTokenId, toTokenId, message } = eventData;
+    const fromPalEntity = getPalEntity(Number(fromTokenId));
+    if (!fromPalEntity) return;
+    fromPalEntity.updateText(`Talked to token #${toTokenId}: ${message}`);
+  });
+
+  defineSystem(world, [Has(MovedEvent)], ({ entity, type }) => {
+    if (type === UpdateType.Exit) return;
+    const eventData = getComponentValue(MovedEvent, entity)!;
+    const { tokenId, message } = eventData;
+    const fromPalEntity = getPalEntity(Number(tokenId));
+    if (!fromPalEntity) return;
+    fromPalEntity.updateText(`token #${tokenId}: ${message}`);
+  });
 };
 
 let tickHandlerSetup = false;
