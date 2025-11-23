@@ -47,43 +47,72 @@ export function createNetworkComponents() {
     // ------- game data -------
     TokenData: defineComponent(world, tokenDataSchema),
     // ------- game events -------
-    PathUpdatedFlatEvent: defineComponent(world, {
+    PathUpdatedEvent: defineComponent(world, {
       tokenId: Type.BigInt,
       ...pathDataSchema,
+      timestamp: Type.Number,
+      eventName: Type.String,
+      tx: Type.String,
     }),
     AttackedEvent: defineComponent(world, {
       attackerTokenId: Type.BigInt,
       targetTokenId: Type.BigInt,
       inRange: Type.Boolean,
       defeated: Type.Boolean,
+      timestamp: Type.Number,
+      eventName: Type.String,
+      tx: Type.String,
     }),
-    SpawnedEvent: defineComponent(world, tokenDataSchema),
+    SpawnedEvent: defineComponent(world, {
+      ...tokenDataSchema,
+      timestamp: Type.Number,
+      eventName: Type.String,
+      tx: Type.String,
+    }),
     CaptureAttemptedEvent: defineComponent(world, {
       attackerTokenId: Type.BigInt,
       targetTokenId: Type.BigInt,
       inRange: Type.Boolean,
+      timestamp: Type.Number,
+      eventName: Type.String,
+      tx: Type.String,
     }),
     CaptureSettledEvent: defineComponent(world, {
       targetTokenId: Type.BigInt,
       playerAddress: Type.String,
       caught: Type.Boolean,
+      timestamp: Type.Number,
+      eventName: Type.String,
+      tx: Type.String,
     }),
     DefeatedEvent: defineComponent(world, {
       tokenId: Type.BigInt,
       lastDeadTime: Type.Number,
+      timestamp: Type.Number,
+      eventName: Type.String,
+      tx: Type.String,
     }),
     RevivedEvent: defineComponent(world, {
       tokenId: Type.BigInt,
       health: Type.Number,
+      timestamp: Type.Number,
+      eventName: Type.String,
+      tx: Type.String,
     }),
     MovedEvent: defineComponent(world, {
       tokenId: Type.BigInt,
       message: Type.String,
+      timestamp: Type.Number,
+      eventName: Type.String,
+      tx: Type.String,
     }),
     TalkedEvent: defineComponent(world, {
       fromTokenId: Type.BigInt,
       toTokenId: Type.BigInt,
       message: Type.String,
+      timestamp: Type.Number,
+      eventName: Type.String,
+      tx: Type.String,
     }),
   };
   return components;
