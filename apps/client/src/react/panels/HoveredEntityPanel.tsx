@@ -7,6 +7,7 @@ import { useCurrPositionMUD } from "../hooks/usePath";
 import { Entity } from "@latticexyz/recs";
 import { AttackPanel } from "./AttackPanel";
 import { CatchPanel } from "./CatchPanel";
+import { TalkPanel } from "./TalkPanel";
 
 export function HoeverEntityPanel() {
   const { components } = useMUD();
@@ -14,7 +15,7 @@ export function HoeverEntityPanel() {
   const targetId = useComponentValue(HoveredTarget, TARGET)?.tokenId ?? 0;
   const targetData = useComponentValue(
     TokenData,
-    targetId.toString() as Entity,
+    targetId.toString() as Entity
   );
   const trainerId = useComponentValue(SelectedTrainer, SOURCE)?.tokenId ?? 0;
   const trainerCoord = useCurrPositionMUD(components, trainerId);
@@ -31,6 +32,7 @@ export function HoeverEntityPanel() {
         </span>
         <AttackPanel />
         <CatchPanel />
+        <TalkPanel />
       </div>
     </div>
   );

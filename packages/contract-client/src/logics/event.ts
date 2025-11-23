@@ -36,13 +36,13 @@ export const getTokenAllEventsTexts = (
   const talkedEvents = getAllEventValues(
     components,
     "Talked",
-    "fromHeroId",
+    "fromTokenId",
     tokenId
   );
   const talkedToEvents = getAllEventValues(
     components,
     "Talked",
-    "toHeroId",
+    "toTokenId",
     tokenId
   );
   const captureAttemptedEvents = getAllEventValues(
@@ -106,6 +106,7 @@ export const getGameEventText = (eventData: ComponentValue) => {
   }
 
   const eventName = eventData.eventName as EventComponentKeys;
+  console.log("eventName", eventName);
 
   // Return null if eventType is not a valid EventComponentKeys
   const validEventTypes: EventComponentKeys[] = [

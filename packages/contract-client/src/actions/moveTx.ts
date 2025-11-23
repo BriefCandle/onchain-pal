@@ -7,7 +7,6 @@ import { EvmSmartAccount } from "@coinbase/cdp-sdk";
 
 export const moveTx = async (
   walletClient: WalletClient,
-  components: NetworkComponents,
   tokenId: number,
   toCoord: Vector,
   message: string

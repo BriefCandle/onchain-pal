@@ -2,8 +2,11 @@ import { tool, ToolSet } from "ai";
 import { z } from "zod";
 import { WalletClient } from "viem";
 import {
+  attackTx,
   attackTxWithSmartAccount,
+  moveTx,
   NetworkComponents,
+  talkTx,
   talkTxWithSmartAccount,
 } from "@onchain-pal/contract-client";
 import { EvmSmartAccount } from "@coinbase/cdp-sdk";
@@ -12,7 +15,7 @@ import { moveTxWithSmartAccount } from "@onchain-pal/contract-client";
 export function createTools(
   components: NetworkComponents,
   agentId: number,
-  smartAccount: EvmSmartAccount
+  smartAccount: EvmSmartAccount | WalletClient
 ): ToolSet {
   const tools = {
     move: tool({
@@ -34,7 +37,22 @@ export function createTools(
         message: z.string().max(400).describe("Brief reason for this action"),
       }),
       execute: async ({ x, y, message }) => {
-        await moveTxWithSmartAccount(smartAccount, agentId, { x, y }, message);
+        // if is smart wallet, use smart account, otherwise use wallet client
+        if (smartAccount.type === "evm-smart") {
+          await moveTxWithSmartAccount(
+            smartAccount as EvmSmartAccount,
+            agentId,
+            { x, y },
+            message
+          );
+        } else {
+          await moveTx(
+            smartAccount as WalletClient,
+            agentId,
+            { x, y },
+            message
+          );
+        }
         return {
           content: [
             {
@@ -63,7 +81,21 @@ export function createTools(
           ),
       }),
       execute: async ({ toTokenId, message }) => {
-        await talkTxWithSmartAccount(smartAccount, agentId, toTokenId, message);
+        if (smartAccount.type === "evm-smart") {
+          await talkTxWithSmartAccount(
+            smartAccount as EvmSmartAccount,
+            agentId,
+            toTokenId,
+            message
+          );
+        } else {
+          await talkTx(
+            smartAccount as WalletClient,
+            agentId,
+            toTokenId,
+            message
+          );
+        }
         return {
           content: [
             {
@@ -86,7 +118,15 @@ export function createTools(
           .describe("The tokenId of the entity to attack"),
       }),
       execute: async ({ targetTokenId }) => {
-        await attackTxWithSmartAccount(smartAccount, agentId, targetTokenId);
+        if (smartAccount.type === "evm-smart") {
+          await attackTxWithSmartAccount(
+            smartAccount as EvmSmartAccount,
+            agentId,
+            targetTokenId
+          );
+        } else {
+          await attackTx(smartAccount as WalletClient, agentId, targetTokenId);
+        }
         return {
           content: [
             {

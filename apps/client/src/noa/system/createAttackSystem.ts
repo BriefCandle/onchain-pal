@@ -78,7 +78,7 @@ export const createAttackSystem = (result: SetupResult, noa: Engine) => {
     }
 
     // Shoot one large ball from attacker to target
-    shootAttackBall(noa, attackerEntity, targetEntity, 0, 1, 1, 5);
+    shootAttackBall(noa, targetEntity, targetEntity, 0, 1, 1.5, 5);
   });
 };
 
@@ -111,7 +111,7 @@ export function shootAttackBall(
   targetEntity: any,
   index: number = 0,
   total: number = 1,
-  radius: number = 0.2,
+  radius: number = 0.4,
   speed: number = 50
 ) {
   const ents = noa.entities;

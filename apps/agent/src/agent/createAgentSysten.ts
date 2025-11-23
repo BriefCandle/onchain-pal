@@ -1,8 +1,10 @@
 import {
+  adminWallet,
   AGENT_NFT_ADDRESS,
   AgentType,
   gameContractConfig,
   NetworkComponents,
+  publicClient,
   world,
 } from "@onchain-pal/contract-client";
 import { PalAgent } from "./palAgent";
@@ -15,6 +17,7 @@ import {
 } from "@latticexyz/recs";
 import { createOrGetAgentAccount } from "./accountManager";
 import { keccak256, toBytes, stringToHex, Hex } from "viem";
+import { baseSepolia } from "viem/chains";
 import { EvmSmartAccount } from "@coinbase/cdp-sdk";
 import {
   initializeChaosChainService,
@@ -76,8 +79,11 @@ export const createAgentSystem = (components: NetworkComponents) => {
       return agents.get(tokenId)!;
     }
 
+    const chain = publicClient.chain;
+    const isBaseSepolia = chain.id === (baseSepolia.id as number);
+
     // Create or get wallet for this agent
-    let walletClient = agentWallets.get(tokenId);
+    let walletClient = isBaseSepolia ? agentWallets.get(tokenId) : adminWallet;
     if (!walletClient) {
       console.log(`[Agent ${tokenId}] Creating new smart account...`);
       walletClient = await createOrGetAgentAccount(tokenId);
