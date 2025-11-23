@@ -48,13 +48,13 @@ export function initializeChaosChain(): void {
 
   if (!adminPrivateKey) {
     console.warn(
-      "[ChaosChain Init] ADMIN_PRIVATE_KEY not set. ChaosChain features disabled.",
+      "[ChaosChain Init] ADMIN_PRIVATE_KEY not set. ChaosChain features disabled."
     );
     return;
   }
 
   console.log(
-    "[ChaosChain Init] All required config present. Initializing service...",
+    "[ChaosChain Init] All required config present. Initializing service..."
   );
 
   initializeChaosChainService({
@@ -92,7 +92,7 @@ export const createAgentSystem = (components: NetworkComponents) => {
     // Get agent type from token data (default to PAL)
     const tokenData = getComponentValue(
       TokenData,
-      tokenId.toString() as Entity,
+      tokenId.toString() as Entity
     );
     const agentType: "PAL" | "TRAINER" = "PAL"; // Could be derived from tokenData if available
 
@@ -104,7 +104,7 @@ export const createAgentSystem = (components: NetworkComponents) => {
     const agentPrivateKey = keccak256(seedBytes) as Hex;
     console.log(`[Agent ${tokenId}]   Agent type: ${agentType}`);
     console.log(
-      `[Agent ${tokenId}] Starting ChaosChain identity registration (async)...`,
+      `[Agent ${tokenId}] Starting ChaosChain identity registration (async)...`
     );
     registerAgentIdentity({
       agentPrivateKey,
@@ -113,28 +113,28 @@ export const createAgentSystem = (components: NetworkComponents) => {
     })
       .then((identity) => {
         console.log(
-          `[Agent ${tokenId}] ChaosChain identity registration SUCCESS!`,
+          `[Agent ${tokenId}] ChaosChain identity registration SUCCESS!`
         );
         console.log(
-          `[Agent ${tokenId}]   ChaosChain Agent ID: ${identity.chaosAgentId}`,
+          `[Agent ${tokenId}]   ChaosChain Agent ID: ${identity.chaosAgentId}`
         );
         console.log(
-          `[Agent ${tokenId}]   Registered at: ${new Date(identity.registeredAt).toISOString()}`,
+          `[Agent ${tokenId}]   Registered at: ${new Date(identity.registeredAt).toISOString()}`
         );
       })
       .catch((err) => {
         console.error(
-          `[Agent ${tokenId}] ChaosChain identity registration FAILED:`,
+          `[Agent ${tokenId}] ChaosChain identity registration FAILED:`
         );
         console.error(`[Agent ${tokenId}]   Error:`, err);
         console.log(
-          `[Agent ${tokenId}] Agent will continue running without ChaosChain features.`,
+          `[Agent ${tokenId}] Agent will continue running without ChaosChain features.`
         );
       });
 
     const agent = new PalAgent({
       id: tokenId,
-      model: "openai/gpt-5-nano",
+      // model: "openai/gpt-5-nano",
       // model: "openai/gpt-5-nano",
       // model: "deepseek-r1",
       model: deepseek("deepseek-chat"),
