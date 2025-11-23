@@ -70,7 +70,8 @@ export const createAgentSystem = (components: NetworkComponents) => {
     }
     const tokenData = getComponentValue(TokenData, entity);
     if (!tokenData) return;
-    const { health, tokenId } = tokenData;
+    const { health, tokenId, agentType } = tokenData;
+    if (agentType !== AgentType.PAL) return;
     // if health == 0, stop and delete agent
     if (health === 0) {
       // stopAndDeleteAgent(heroId);
