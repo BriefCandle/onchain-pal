@@ -27,7 +27,7 @@ export function MovePanel() {
         address: gameContractConfig.address as Hex,
         abi: gameContractConfig.abi,
         functionName: "move",
-        args: [BigInt(trainerId), toX, toY],
+        args: [BigInt(trainerId), toX, toY, ""],
       });
     } catch (error) {
       console.error("Move tx failed:", error);
