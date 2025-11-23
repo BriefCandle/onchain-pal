@@ -29,13 +29,13 @@ export class PalAgent extends Agent {
     components: NetworkComponents;
     gameAddress: string;
     publicClient?: PublicClient;
-    walletClient?: EvmSmartAccount;
+    walletClient?: EvmSmartAccount | WalletClient;
     store?: MessageStore;
     storageManager?: AgentStorageManager;
   }) {
     const agentInfo = getComponentValue(
       components.TokenData,
-      id.toString() as Entity,
+      id.toString() as Entity
     );
     if (!agentInfo)
       throw new Error(`PalAgent: heroInfo not found for heroId ${id}`);

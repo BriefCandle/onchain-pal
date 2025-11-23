@@ -1,6 +1,7 @@
 import "dotenv/config";
 
 import {
+  adminWallet,
   gameContractConfig,
   moveTx,
   publicClient,
@@ -9,7 +10,6 @@ import {
 } from "@onchain-pal/contract-client";
 import express from "express";
 import http from "http";
-import { walletClient } from "./config";
 
 const app = express();
 
@@ -24,14 +24,14 @@ server.listen(PORT, async () => {
   // monitor current proxy for its startGameBlock;
   const unwatch = watchRNGRequestedEvents(
     publicClient as any,
-    walletClient as any
+    adminWallet as any
   );
   console.log("✅ watching RNGRequested events");
 
   // Start RNG key management (commit and reveal keys every day)
   const stopKeyManagement = startRNGKeyManagement(
     publicClient as any,
-    walletClient as any,
+    adminWallet as any,
     60 * 60 * 1000 // 1 hour interval
   );
   console.log("✅ started RNG key management");

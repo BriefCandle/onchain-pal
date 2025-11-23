@@ -7,7 +7,6 @@ import { EvmSmartAccount } from "@coinbase/cdp-sdk";
 
 export const attackTx = async (
   walletClient: WalletClient,
-  components: ClientComponents,
   tokenId: number,
   targetTokenId: number
 ) => {
